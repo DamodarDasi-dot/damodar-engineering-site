@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Damodar Engineering Design: concept to fabrication-ready design. 3D models, GA and shop drawings for skids, packages, tanks and fuel systems, with fabrication and FAT/SAT support. Sharjah, UAE.">
+<meta property="og:title" content="Damodar Engineering Design">
+<meta property="og:description" content="Concept to Shop Drawing. Design partner for fabricators and EPCs in the UAE, GCC and India.">
+<meta name="theme-color" content="#0B2E50">
+<title>Damodar Engineering Design</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByb2xlPSJpbWciIGFyaWEtbGFiZWw9IkRhbW9kYXIgRW5naW5lZXJpbmcgRGVzaWduIj48dGl0bGU+RGFtb2RhciBFbmdpbmVlcmluZyBEZXNpZ248L3RpdGxlPjxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgcng9IjE0LjEiIGZpbGw9IiMwQjJFNTAiLz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzLjg0IDMuODQpIHNjYWxlKDAuNDY5MykiPjxkZWZzPjxjbGlwUGF0aCBpZD0iaWNvbG9yRmFsc2V0Ij48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTIwIiBoZWlnaHQ9Ijc5LjIiLz48L2NsaXBQYXRoPjxjbGlwUGF0aCBpZD0iaWNvbG9yRmFsc2ViIj48cmVjdCB4PSIwIiB5PSI4MS4yIiB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIi8+PC9jbGlwUGF0aD48L2RlZnM+PHBhdGggZD0iTTM0IDRWMTE0TTE0IDk1SDU4IiBmaWxsPSJub25lIiBzdHJva2U9IiM4RkE2QkQiIHN0cm9rZS13aWR0aD0iMy40IiBzdHJva2UtbGluZWNhcD0ic3F1YXJlIi8+PHBhdGggZD0iTTI4IDE4SDY2QTQyIDQyIDAgMCAxIDY2IDEwMkg0MFY4OEg2NkEyOCAyOCAwIDAgMCA2NiAzMkg0MloiIGZpbGw9IiNGRkZGRkYiIGNsaXAtcGF0aD0idXJsKCNpY29sb3JGYWxzZXQpIi8+PHBhdGggZD0iTTI4IDE4SDY2QTQyIDQyIDAgMCAxIDY2IDEwMkg0MFY4OEg2NkEyOCAyOCAwIDAgMCA2NiAzMkg0MloiIGZpbGw9IiM1QUE2RTYiIGNsaXAtcGF0aD0idXJsKCNpY29sb3JGYWxzZWIpIi8+PHJlY3QgeD0iMjYuNTYiIHk9Ijg3LjU2IiB3aWR0aD0iMTQuODgiIGhlaWdodD0iMTQuODgiIGZpbGw9IiMwQjJFNTAiIHN0cm9rZT0iIzhGQTZCRCIgc3Ryb2tlLXdpZHRoPSIzLjQiLz48L2c+PC9zdmc+Cg==">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: Stitch "Industrial Precision" system — navy masthead, tonal blueprint compartments, 12-col grid collapsing to one column. */
+:root{
+  --canvas:#F2F5F8; --surface:#FFFFFF; --recess:#E8EDF3; --line:#CBD5E1;
+  --ink:#0F172A; --muted:#475569; --navy:#101C2C; --navy-2:#1E293B;
+  --blue:#2878D0; --blue-ink:#005FAF; --amber:#D9900B; --on-navy:#FFFFFF; --navy-muted:#94A3B8;
+  --f-sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --canvas:#0B121C; --surface:#111B28; --recess:#172334; --line:#26364A;
+  --ink:#E6ECF3; --muted:#9AA9BB; --navy:#060C15; --navy-2:#1E293B;
+  --blue:#6AA8EE; --blue-ink:#7DB5F2; --amber:#F0AE3C; --on-navy:#F1F5F9; --navy-muted:#8899AE; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --canvas:#0B121C; --surface:#111B28; --recess:#172334; --line:#26364A;
+  --ink:#E6ECF3; --muted:#9AA9BB; --navy:#060C15; --navy-2:#1E293B;
+  --blue:#6AA8EE; --blue-ink:#7DB5F2; --amber:#F0AE3C; --on-navy:#F1F5F9; --navy-muted:#8899AE; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--canvas);color:var(--ink);font-family:var(--f-sans);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--navy)}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{margin:0;text-wrap:balance;letter-spacing:-.02em;line-height:1.15}
+p{margin:0}
+a{color:inherit}
+.code{font-family:var(--f-mono);font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+.eyebrow{color:var(--blue-ink)}
+.muted{color:var(--muted)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--navy);color:var(--on-navy);border-bottom:1px solid var(--navy-2)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
+.logo{height:44px;width:auto;display:block;flex:none;max-width:62vw}
+.brand-name{display:flex;flex-direction:column;line-height:1.1;min-width:0}
+.brand-name strong{font-size:16px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+.brand-name span{color:var(--navy-muted);font-size:10px}
+.nav{display:flex;gap:4px;align-items:center}
+.nav a{text-decoration:none;font-size:13px;font-weight:500;padding:8px 12px;border-radius:4px;color:var(--navy-muted)}
+.nav a:hover{color:var(--on-navy);background:var(--navy-2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:46px;padding:0 20px;border-radius:4px;font:600 13px var(--f-sans);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;cursor:pointer;border:1px solid transparent;transition:background .15s,border-color .15s,color .15s}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-blue:hover{background:var(--blue-ink)}
+.btn-navy{background:var(--navy);color:var(--on-navy);border-color:var(--navy)}
+.btn-navy:hover{background:var(--navy-2)}
+.btn-line{background:var(--surface);color:var(--ink);border-color:var(--line)}
+.btn-line:hover{border-color:var(--blue);color:var(--blue-ink)}
+.top .btn{height:38px;padding:0 14px;font-size:12px}
+
+/* hero */
+.hero{padding-block:56px 48px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.hero .wrap>*{min-width:0}
+.meta{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;background:var(--recess);border:1px solid var(--line);border-radius:4px;padding:6px 12px;margin-bottom:22px}
+.meta .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--blue);margin-right:6px;vertical-align:middle}
+.hero h1{font-size:clamp(2.2rem,4.6vw,3.5rem);font-weight:800;letter-spacing:-.03em;margin-bottom:18px}
+.hero h1 em{font-style:normal;color:var(--blue-ink)}
+.lead{font-size:17px;color:var(--muted);max-width:56ch;margin-bottom:20px}
+.badge{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:6px 12px;font-size:13px;font-weight:500;margin-bottom:24px}
+.badge svg{color:var(--blue)}
+.ctas{display:flex;gap:10px;flex-wrap:wrap}
+.fig{background:var(--surface);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.fig-head,.fig-foot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:10px 14px;background:var(--recess)}
+.fig-head{border-bottom:1px solid var(--line)}
+.fig-foot{border-top:1px solid var(--line)}
+.fig svg{display:block;width:100%;height:auto;padding:14px;color:var(--ink)}
+.fig .fill-a{fill:color-mix(in srgb,var(--blue) 14%,transparent)}
+.fig .fill-b{fill:var(--recess)}
+.fig .acc{fill:var(--blue)}
+.fig .dim{stroke:var(--muted)}
+.fig text{fill:currentColor;font-family:var(--f-mono);font-weight:600}
+.fig text.dimt{fill:var(--muted)}
+.fig .flow{stroke:var(--blue);stroke-width:1.6;stroke-dasharray:4 3}
+@media (prefers-reduced-motion:no-preference){.fig .flow{animation:flow 1.4s linear infinite}@keyframes flow{to{stroke-dashoffset:-14}}}
+
+/* hero (adapted from 21st.dev hero-1) */
+.hero2{position:relative;overflow:hidden;background:var(--surface);border-bottom:1px solid var(--line)}
+.hero2::before{content:"";position:absolute;inset:-56px 0 0;background:radial-gradient(38% 80% at 50% 0%,color-mix(in srgb,var(--blue) 16%,transparent),transparent);pointer-events:none}
+.hero2-grid{position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:40px 40px;opacity:.35;-webkit-mask-image:radial-gradient(60% 70% at 50% 30%,#000,transparent);mask-image:radial-gradient(60% 70% at 50% 30%,#000,transparent);pointer-events:none}
+.hero2-in{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:22px;padding-block:clamp(72px,11vw,128px) clamp(64px,9vw,112px);max-width:1024px}
+.rails{position:absolute;inset:0;pointer-events:none}
+.rails i{position:absolute;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,var(--line) 40%,var(--line))}
+.rails .r1{left:16px}.rails .r2{right:16px}.rails .r3{left:32px;opacity:.5}.rails .r4{right:32px;opacity:.5}
+@media (min-width:768px){.rails .r1{left:32px}.rails .r2{right:32px}.rails .r3{left:48px}.rails .r4{right:48px}}
+.pill{display:inline-flex;align-items:center;gap:10px;padding:6px 14px;border:1px solid var(--line);border-radius:999px;background:var(--surface);box-shadow:0 1px 2px rgba(15,23,42,.06);font-size:13px;color:var(--ink);text-decoration:none}
+.pill svg{color:var(--blue)}
+.pill-div{width:1px;height:18px;background:var(--line)}
+.pill-arrow{transition:transform .15s ease-out}
+.pill:hover .pill-arrow{transform:translateX(4px)}
+.hero2 h1{font-size:clamp(2.4rem,6vw,4.1rem);font-weight:800;letter-spacing:-.035em;line-height:1.05;max-width:16ch;text-shadow:0 0 50px color-mix(in srgb,var(--ink) 12%,transparent)}
+.hero2 h1 em{font-style:normal;color:var(--blue-ink)}
+.hero2-lead{font-size:clamp(16px,1.6vw,19px);color:var(--muted);max-width:52ch;letter-spacing:.005em}
+.hero2-ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;padding-top:4px}
+.btn-pill{display:inline-flex;align-items:center;gap:8px;height:50px;padding:0 24px;border-radius:999px;font:600 15px var(--f-sans);text-decoration:none;transition:background .15s,transform .15s}
+.btn-pill:hover{transform:translateY(-1px)}
+.btn-pill.soft{background:var(--recess);color:var(--ink);border:1px solid var(--line)}
+.btn-pill.solid{background:var(--navy);color:var(--on-navy)}
+.btn-pill.solid:hover{background:var(--blue)}
+.hero2-by{color:var(--muted)}
+@media (prefers-reduced-motion:no-preference){
+  .rise{animation:rise .55s ease-out both}
+  .d1{animation-delay:.1s}.d2{animation-delay:.2s}.d3{animation-delay:.3s}.d4{animation-delay:.4s}.d5{animation-delay:.05s}
+  @keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+}
+.codes-strip{background:var(--surface);border-bottom:1px solid var(--line);padding-block:26px 30px;display:flex;flex-direction:column;gap:16px}
+.codes-strip h2{text-align:center;font-size:clamp(16px,1.8vw,19px);font-weight:500;color:var(--muted);letter-spacing:-.01em;padding-inline:16px}
+.codes-strip h2 span{color:var(--ink)}
+.marquee{overflow:hidden;max-width:960px;margin:0 auto;width:100%;-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.track{display:flex;gap:12px;width:max-content;list-style:none;margin:0;padding:0}
+.track li{flex:none;padding:8px 16px;border:1px solid var(--line);border-radius:4px;background:var(--canvas);color:var(--ink)}
+@media (prefers-reduced-motion:no-preference){.track{animation:marq 38s linear infinite}.marquee:hover .track{animation-play-state:paused}@keyframes marq{to{transform:translateX(calc(-50% - 6px))}}}
+@media (prefers-reduced-motion:reduce){.track{flex-wrap:wrap;width:auto;justify-content:center;padding-inline:16px}.track li[aria-hidden]{display:none}}
+
+/* stats */
+.stats{border-block:1px solid var(--line);background:var(--surface)}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:22px 20px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:4px}
+.stat:last-child{border-right:0}
+.stat b{font-size:clamp(1.6rem,3vw,2.1rem);font-weight:800;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
+.stat span:last-child{font-size:13px;color:var(--muted)}
+
+/* sections */
+section.band{padding-block:72px}
+section.alt{background:var(--recess);border-block:1px solid var(--line)}
+.sec-head{display:flex;flex-direction:column;gap:8px;margin-bottom:32px;max-width:680px}
+.sec-head h2{font-size:clamp(1.6rem,3vw,2.15rem);font-weight:700}
+.grid{display:grid;gap:16px}
+.g4{grid-template-columns:repeat(4,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g2{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:8px;display:flex;flex-direction:column;min-width:0}
+.card-head{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;padding:12px 16px;border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--recess) 60%,var(--surface))}
+.card-body{padding:16px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card h3{font-size:17px;font-weight:700}
+.card ul{margin:0;padding-left:18px;color:var(--muted);font-size:14px;display:grid;gap:4px}
+.tag{display:inline-block;background:var(--recess);border:1px solid var(--line);border-radius:4px;padding:2px 8px}
+.tag.ink{background:var(--navy);border-color:var(--navy);color:var(--on-navy)}
+.card-foot{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;padding:10px 16px;border-top:1px solid var(--line)}
+.card-foot a{font-size:13px;font-weight:600;color:var(--blue-ink);text-decoration:none}
+.card-foot a:hover{text-decoration:underline}
+
+/* projects */
+.filters{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;margin-bottom:18px}
+.filters button{flex:none;font-family:var(--f-mono);font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:8px 14px;border-radius:4px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--navy);color:var(--on-navy);border-color:var(--navy)}
+.spec{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;background:var(--canvas);border:1px solid var(--line);border-radius:4px;padding:10px 12px;margin:0}
+.spec dt{font-family:var(--f-mono);font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding-top:2px}
+.spec dd{margin:0;font-size:13px;font-weight:600;font-variant-numeric:tabular-nums}
+.spec dd.c{color:var(--blue-ink)}
+.status{display:flex;align-items:center;gap:6px;color:var(--muted)}
+.status::before{content:"";width:7px;height:7px;border-radius:50%;background:#16A34A}
+
+/* codes */
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+
+/* process */
+.journey{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:16px;counter-reset:j}
+.journey li{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--blue);border-radius:8px;padding:18px 16px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.journey h3{font-size:16px;font-weight:700}
+.journey p{font-size:14px;color:var(--muted)}
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(7,1fr);gap:0;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--surface);counter-reset:s}
+.steps li{counter-increment:s;padding:18px 16px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:8px;min-width:0}
+.steps li:last-child{border-right:0}
+.steps li::before{content:counter(s,decimal-leading-zero);font-family:var(--f-mono);font-size:11px;font-weight:600;width:28px;height:28px;display:grid;place-items:center;border-radius:4px;background:var(--navy);color:var(--on-navy)}
+.steps h3{font-size:14px;font-weight:700}
+.steps p{font-size:13px;color:var(--muted)}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:start}
+.contact>*{min-width:0}
+form.card{padding:20px;gap:14px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.field label{font-family:var(--f-mono);font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.field input,.field select,.field textarea{width:100%;font:15px var(--f-sans);color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:11px 12px}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--blue);outline:none}
+.field textarea{resize:vertical;min-height:110px}
+.note{display:flex;gap:8px;align-items:flex-start;background:var(--recess);border:1px solid var(--line);border-radius:4px;padding:10px 12px;font-size:13px;color:var(--muted)}
+.form-msg{font-size:13px;color:var(--blue-ink)}
+.chan{display:flex;flex-direction:column;gap:10px}
+.ch{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.ch>div{min-width:0}
+.ch .v{display:block;font-weight:600;font-size:14px;overflow-wrap:anywhere;user-select:all}
+.ch .act{flex:none;font-family:var(--f-mono);font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:7px 12px;border-radius:4px;border:1px solid var(--line);background:var(--canvas);color:var(--blue-ink);text-decoration:none;cursor:pointer}
+.ch .act.solid{background:var(--blue);border-color:var(--blue);color:#fff}
+
+/* footer title block */
+footer{background:var(--navy);color:var(--on-navy);padding-block:28px}
+.tb{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1.4fr;border:1px solid var(--navy-2);border-radius:4px}
+.tb div{padding:12px 14px;border-right:1px solid var(--navy-2);display:flex;flex-direction:column;gap:2px;min-width:0}
+.tb div:last-child{border-right:0}
+.tb span{color:var(--navy-muted)}
+.tb strong{font-family:var(--f-mono);font-size:13px;font-weight:600}
+.copy{margin-top:14px;font-size:12px;color:var(--navy-muted)}
+
+/* responsive */
+@media (max-width:1080px){
+  .journey{grid-template-columns:repeat(3,1fr)}
+  .g4{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(4,1fr)}
+  .steps li:nth-child(4){border-right:0}
+  .steps li:nth-child(-n+4){border-bottom:1px solid var(--line)}
+}
+@media (max-width:880px){
+  .nav{display:none}
+  .hero .wrap,.contact{grid-template-columns:1fr}
+  .g3,.g2{grid-template-columns:1fr}
+  .stats .wrap{grid-template-columns:1fr 1fr}
+  .stat:nth-child(2){border-right:0}
+  .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .tb{grid-template-columns:1fr 1fr}
+  .tb div{border-bottom:1px solid var(--navy-2)}
+  .tb div:nth-child(2n){border-right:0}
+  .tb div:last-child{grid-column:1/-1;border-bottom:0}
+  section.band{padding-block:52px}
+}
+@media (max-width:560px){
+  .journey{grid-template-columns:1fr}
+  .g4,.row2{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .steps li{border-right:0;border-bottom:1px solid var(--line);flex-direction:row;align-items:flex-start;gap:12px}
+  .steps li::before{flex:none}
+  .steps li:last-child{border-bottom:0}
+  .brand-name span{display:none}
+  .hero{padding-block:32px 36px}
+  .ctas .btn{flex:1 1 100%}
+}
+</style>
+</head>
+<body>
+
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Damodar Engineering Design home"><svg class="logo" viewBox="0 0 209.1 46" width="209" height="46" role="img" aria-label="Damodar Engineering Design"><g transform="translate(0.00 0.00) scale(0.3833)"><defs><clipPath id="hdrt"><rect x="0" y="0" width="120" height="79.2"/></clipPath><clipPath id="hdrb"><rect x="0" y="81.2" width="120" height="40"/></clipPath></defs><path d="M34 4V114M14 95H58" fill="none" stroke="#9FB3C8" stroke-width="1.6" stroke-linecap="square"/><path d="M28 18H66A42 42 0 0 1 66 102H40V88H66A28 28 0 0 0 66 32H42Z" fill="#FFFFFF" clip-path="url(#hdrt)"/><path d="M28 18H66A42 42 0 0 1 66 102H40V88H66A28 28 0 0 0 66 32H42Z" fill="#5AA6E6" clip-path="url(#hdrb)"/><path d="M65.00 60.00L65.00 39.00M65.00 60.00L46.81 70.50M65.00 60.00L83.19 70.50" fill="none" stroke="#DCE6F0" stroke-width="1.9" stroke-dasharray="3.2 2.6" stroke-linecap="butt"/><path d="M65.00 39.00L83.19 49.50L83.19 70.50L65.00 81.00L46.81 70.50L46.81 49.50ZM65.00 60.00L46.81 49.50M65.00 60.00L83.19 49.50M65.00 60.00L65.00 81.00" fill="none" stroke="#DCE6F0" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/><rect x="30.50" y="91.50" width="7.00" height="7.00" fill="#0B2E50" stroke="#9FB3C8" stroke-width="1.6"/></g><path d="M61.75 22.5V5.0H70.025Q72.925 5.0 75.125 6.074999999999999Q77.325 7.149999999999999 78.5625 9.099999999999998Q79.8 11.049999999999999 79.8 13.75Q79.8 16.425 78.5625 18.387500000000003Q77.325 20.35 75.125 21.425Q72.925 22.5 70.025 22.5ZM66.7 18.55H69.825Q71.325 18.55 72.4375 17.9875Q73.55 17.425 74.175 16.3375Q74.8 15.25 74.8 13.75Q74.8 12.225 74.175 11.149999999999999Q73.55 10.075 72.4375 9.5125Q71.325 8.95 69.825 8.95H66.7ZM80.80 22.50L90.08 5.00L91.87 5.00L101.15 22.50ZM86.25 22.50L90.98 13.84L95.70 22.50ZM88.33 22.50L90.98 18.51L93.62 22.50ZM103.05000000000001 22.5V5.0H107.12500000000001L113.275 15.1L119.275 5.0H123.35000000000001L123.4 22.5H118.85000000000001L118.80000000000001 13.225L114.30000000000001 20.775H112.10000000000001L107.62500000000001 13.475V22.5ZM136.225 22.85Q134.125 22.85 132.35000000000002 22.175Q130.57500000000002 21.5 129.26250000000002 20.2625Q127.95 19.025 127.225 17.375Q126.5 15.725 126.5 13.75Q126.5 11.774999999999999 127.225 10.125Q127.95 8.475 129.26250000000002 7.2375Q130.57500000000002 6.0 132.35000000000002 5.324999999999999Q134.125 4.649999999999999 136.225 4.649999999999999Q138.35 4.649999999999999 140.1125 5.324999999999999Q141.875 6.0 143.175 7.2375Q144.475 8.475 145.2125 10.125Q145.95000000000002 11.774999999999999 145.95000000000002 13.75Q145.95000000000002 15.725 145.2125 17.3875Q144.475 19.05 143.175 20.275Q141.875 21.5 140.1125 22.175Q138.35 22.85 136.225 22.85ZM136.225 18.75Q137.225 18.75 138.0875 18.4Q138.95000000000002 18.05 139.5875 17.387500000000003Q140.225 16.725 140.5875 15.8Q140.95000000000002 14.875 140.95000000000002 13.75Q140.95000000000002 12.6 140.5875 11.6875Q140.225 10.774999999999999 139.5875 10.112499999999999Q138.95000000000002 9.45 138.0875 9.1Q137.225 8.75 136.225 8.75Q135.225 8.75 134.3625 9.1Q133.5 9.45 132.8625 10.112499999999999Q132.225 10.774999999999999 131.8625 11.6875Q131.5 12.6 131.5 13.75Q131.5 14.875 131.8625 15.8Q132.225 16.725 132.8625 17.387500000000003Q133.5 18.05 134.3625 18.4Q135.225 18.75 136.225 18.75ZM149.05 22.5V5.0H157.32500000000002Q160.22500000000002 5.0 162.425 6.074999999999999Q164.625 7.149999999999999 165.8625 9.099999999999998Q167.10000000000002 11.049999999999999 167.10000000000002 13.75Q167.10000000000002 16.425 165.8625 18.387500000000003Q164.625 20.35 162.425 21.425Q160.22500000000002 22.5 157.32500000000002 22.5ZM154.0 18.55H157.125Q158.625 18.55 159.7375 17.9875Q160.85000000000002 17.425 161.47500000000002 16.3375Q162.10000000000002 15.25 162.10000000000002 13.75Q162.10000000000002 12.225 161.47500000000002 11.149999999999999Q160.85000000000002 10.075 159.7375 9.5125Q158.625 8.95 157.125 8.95H154.0ZM168.10 22.50L177.38 5.00L179.17 5.00L188.45 22.50ZM173.55 22.50L178.28 13.84L183.00 22.50ZM175.63 22.50L178.28 18.51L180.92 22.50ZM190.35000000000002 22.5V5.0H198.175Q202.00000000000003 5.0 204.06250000000003 6.7375Q206.12500000000003 8.475 206.12500000000003 11.475Q206.12500000000003 13.45 205.175 14.875Q204.27500000000003 16.25 202.70000000000002 17.0L206.47500000000002 22.5H201.175L198.00000000000003 17.85H195.3V22.5ZM195.3 14.025H198.05Q199.60000000000002 14.025 200.3625 13.35Q201.12500000000003 12.674999999999999 201.12500000000003 11.475Q201.12500000000003 10.25 200.3625 9.575Q199.60000000000002 8.899999999999999 198.05 8.899999999999999H195.3Z" fill="#FFFFFF" fill-rule="evenodd"/><path d="M60.846 38.0V31.7H65.445V32.681H62.016V34.319H65.05799999999999V35.282H62.016V37.019H65.571V38.0ZM69.35864705882354 38.0V31.7H70.32164705882353L73.79564705882353 35.966V31.7H74.95664705882353V38.0H73.99364705882353L70.51964705882354 33.734V38.0ZM82.07429411764706 38.09Q81.33629411764706 38.09 80.71979411764706 37.8515Q80.10329411764705 37.613 79.64429411764706 37.176500000000004Q79.18529411764706 36.74 78.93329411764705 36.146Q78.68129411764706 35.552 78.68129411764706 34.85Q78.68129411764706 34.148 78.93329411764705 33.554Q79.18529411764706 32.96 79.64879411764706 32.5235Q80.11229411764705 32.087 80.73329411764706 31.8485Q81.35429411764706 31.61 82.09229411764706 31.61Q82.89329411764706 31.61 83.53679411764705 31.871Q84.18029411764705 32.132 84.62129411764705 32.636L83.88329411764705 33.356Q83.51429411764705 32.987 83.08679411764706 32.8115Q82.65929411764705 32.636 82.14629411764706 32.636Q81.65129411764705 32.636 81.22829411764705 32.798Q80.80529411764705 32.96 80.49929411764705 33.257000000000005Q80.19329411764706 33.554 80.02679411764706 33.959Q79.86029411764706 34.364 79.86029411764706 34.85Q79.86029411764706 35.327 80.02679411764706 35.732Q80.19329411764706 36.137 80.49929411764705 36.438500000000005Q80.80529411764705 36.74 81.21929411764705 36.902Q81.63329411764705 37.064 82.13729411764706 37.064Q82.60529411764705 37.064 83.04629411764705 36.911Q83.24429411764706 36.848 83.43329411764705 36.74V34.778H84.54029411764705V37.289Q84.04529411764706 37.685 83.39279411764706 37.8875Q82.74029411764705 38.09 82.07429411764706 38.09ZM88.5619411764706 38.0V31.7H89.7319411764706V38.0ZM93.91558823529414 38.0V31.7H94.87858823529413L98.35258823529414 35.966V31.7H99.51358823529414V38.0H98.55058823529413L95.07658823529414 33.734V38.0ZM103.68823529411766 38.0V31.7H108.28723529411765V32.681H104.85823529411766V34.319H107.90023529411766V35.282H104.85823529411766V37.019H108.41323529411765V38.0ZM112.20088235294119 38.0V31.7H116.79988235294118V32.681H113.3708823529412V34.319H116.41288235294118V35.282H113.3708823529412V37.019H116.92588235294119V38.0ZM120.71352941176472 38.0V31.7H123.29652941176472Q124.55652941176473 31.7 125.27202941176472 32.294Q125.98752941176473 32.888 125.98752941176473 33.941Q125.98752941176473 34.634 125.66352941176473 35.1335Q125.33952941176472 35.633 124.74552941176472 35.894Q124.70052941176472 35.921 124.64652941176472 35.939L126.09552941176472 38.0H124.83552941176472L123.54852941176472 36.155Q123.43152941176471 36.164 123.30552941176472 36.164H121.88352941176473V38.0ZM121.88352941176473 35.201H123.25152941176472Q124.02552941176472 35.201 124.41702941176473 34.867999999999995Q124.80852941176472 34.535 124.80852941176472 33.941Q124.80852941176472 33.338 124.41702941176473 33.013999999999996Q124.02552941176472 32.69 123.25152941176472 32.69H121.88352941176473ZM129.77517647058824 38.0V31.7H130.94517647058822V38.0ZM135.12882352941176 38.0V31.7H136.09182352941176L139.56582352941174 35.966V31.7H140.72682352941175V38.0H139.76382352941175L136.28982352941176 33.734V38.0ZM147.8444705882353 38.09Q147.1064705882353 38.09 146.48997058823534 37.8515Q145.87347058823534 37.613 145.41447058823533 37.176500000000004Q144.95547058823533 36.74 144.70347058823532 36.146Q144.4514705882353 35.552 144.4514705882353 34.85Q144.4514705882353 34.148 144.70347058823532 33.554Q144.95547058823533 32.96 145.4189705882353 32.5235Q145.88247058823532 32.087 146.5034705882353 31.8485Q147.1244705882353 31.61 147.8624705882353 31.61Q148.66347058823533 31.61 149.30697058823534 31.871Q149.95047058823533 32.132 150.39147058823534 32.636L149.65347058823534 33.356Q149.2844705882353 32.987 148.8569705882353 32.8115Q148.42947058823532 32.636 147.9164705882353 32.636Q147.4214705882353 32.636 146.9984705882353 32.798Q146.57547058823533 32.96 146.26947058823532 33.257000000000005Q145.9634705882353 33.554 145.7969705882353 33.959Q145.6304705882353 34.364 145.6304705882353 34.85Q145.6304705882353 35.327 145.7969705882353 35.732Q145.9634705882353 36.137 146.26947058823532 36.438500000000005Q146.57547058823533 36.74 146.98947058823535 36.902Q147.40347058823534 37.064 147.90747058823533 37.064Q148.37547058823532 37.064 148.81647058823532 36.911Q149.01447058823533 36.848 149.20347058823532 36.74V34.778H150.31047058823532V37.289Q149.8154705882353 37.685 149.16297058823534 37.8875Q148.51047058823534 38.09 147.8444705882353 38.09ZM159.29876470588238 38.0V31.7H162.05276470588237Q163.07876470588238 31.7 163.85276470588238 32.096Q164.62676470588238 32.492 165.05876470588237 33.194Q165.49076470588238 33.896 165.49076470588238 34.85Q165.49076470588238 35.795 165.05876470588237 36.5015Q164.62676470588238 37.208 163.85276470588238 37.604Q163.07876470588238 38.0 162.05276470588237 38.0ZM160.46876470588236 37.01H161.99876470588237Q162.70076470588236 37.01 163.22276470588235 36.739999999999995Q163.74476470588237 36.47 164.02826470588238 35.983999999999995Q164.31176470588238 35.498 164.31176470588238 34.85Q164.31176470588238 34.193 164.02826470588238 33.7115Q163.74476470588237 33.230000000000004 163.22276470588235 32.96Q162.70076470588236 32.69 161.99876470588237 32.69H160.46876470588236ZM169.2154117647059 38.0V31.7H173.81441176470588V32.681H170.38541176470588V34.319H173.42741176470588V35.282H170.38541176470588V37.019H173.94041176470589V38.0ZM179.6810588235294 38.09Q178.9430588235294 38.09 178.26805882352943 37.8785Q177.59305882352942 37.667 177.1970588235294 37.334L177.6020588235294 36.425Q177.98005882352942 36.722 178.5380588235294 36.92Q179.0960588235294 37.118 179.6810588235294 37.118Q180.17605882352942 37.118 180.48205882352943 37.010000000000005Q180.7880588235294 36.902 180.93205882352942 36.7175Q181.0760588235294 36.533 181.0760588235294 36.299Q181.0760588235294 36.011 180.8690588235294 35.835499999999996Q180.6620588235294 35.66 180.33355882352942 35.5565Q180.0050588235294 35.453 179.6045588235294 35.363Q179.2040588235294 35.273 178.8035588235294 35.1515Q178.4030588235294 35.03 178.0745588235294 34.8365Q177.7460588235294 34.643 177.5390588235294 34.319Q177.3320588235294 33.995 177.3320588235294 33.491Q177.3320588235294 32.978 177.60655882352938 32.5505Q177.8810588235294 32.123 178.4435588235294 31.8665Q179.0060588235294 31.61 179.8700588235294 31.61Q180.4370588235294 31.61 180.9950588235294 31.753999999999998Q181.5530588235294 31.898 181.9670588235294 32.168L181.5980588235294 33.077Q181.1750588235294 32.825 180.72505882352942 32.703500000000005Q180.2750588235294 32.582 179.86105882352942 32.582Q179.3750588235294 32.582 179.0735588235294 32.699Q178.7720588235294 32.816 178.6325588235294 33.005Q178.4930588235294 33.194 178.4930588235294 33.437Q178.4930588235294 33.725 178.69555882352938 33.9005Q178.8980588235294 34.076 179.2265588235294 34.175Q179.5550588235294 34.274 179.9600588235294 34.3685Q180.3650588235294 34.463 180.7655588235294 34.58Q181.1660588235294 34.697 181.49455882352942 34.886Q181.8230588235294 35.075 182.02555882352942 35.399Q182.2280588235294 35.723 182.2280588235294 36.218Q182.2280588235294 36.722 181.95355882352942 37.1495Q181.6790588235294 37.577 181.11205882352942 37.8335Q180.54505882352942 38.09 179.6810588235294 38.09ZM185.87170588235296 38.0V31.7H187.04170588235294V38.0ZM194.16835294117647 38.09Q193.43035294117647 38.09 192.8138529411765 37.8515Q192.1973529411765 37.613 191.7383529411765 37.176500000000004Q191.27935294117648 36.74 191.02735294117647 36.146Q190.77535294117646 35.552 190.77535294117646 34.85Q190.77535294117646 34.148 191.02735294117647 33.554Q191.27935294117648 32.96 191.74285294117647 32.5235Q192.20635294117648 32.087 192.82735294117646 31.8485Q193.44835294117647 31.61 194.18635294117647 31.61Q194.98735294117648 31.61 195.6308529411765 31.871Q196.2743529411765 32.132 196.7153529411765 32.636L195.9773529411765 33.356Q195.60835294117646 32.987 195.18085294117645 32.8115Q194.75335294117647 32.636 194.24035294117647 32.636Q193.74535294117646 32.636 193.32235294117646 32.798Q192.8993529411765 32.96 192.59335294117648 33.257000000000005Q192.28735294117647 33.554 192.12085294117645 33.959Q191.95435294117647 34.364 191.95435294117647 34.85Q191.95435294117647 35.327 192.12085294117645 35.732Q192.28735294117647 36.137 192.59335294117648 36.438500000000005Q192.8993529411765 36.74 193.3133529411765 36.902Q193.7273529411765 37.064 194.23135294117648 37.064Q194.69935294117647 37.064 195.14035294117647 36.911Q195.33835294117648 36.848 195.52735294117647 36.74V34.778H196.63435294117647V37.289Q196.13935294117647 37.685 195.4868529411765 37.8875Q194.8343529411765 38.09 194.16835294117647 38.09ZM200.65600000000003 38.0V31.7H201.61900000000003L205.09300000000002 35.966V31.7H206.25400000000002V38.0H205.29100000000003L201.81700000000004 33.734V38.0Z" fill="#C5D1DE"/></svg></a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#services">Services</a><a href="#projects">Projects</a><a href="#codes">Codes</a><a href="#process">Process</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn-blue" href="#contact">Request quote</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero2" aria-labelledby="hero-title">
+  <div class="hero2-grid" aria-hidden="true"></div>
+  <div class="wrap hero2-in">
+    <div class="rails" aria-hidden="true"><i class="r1"></i><i class="r2"></i><i class="r3"></i><i class="r4"></i></div>
+    <a class="pill rise d5" href="#deliver">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l9 5v10l-9 5-9-5V7z"/><path d="M3 7l9 5 9-5M12 12v10"/></svg>
+      <span>Concept → 3D model → shop drawings</span>
+      <span class="pill-div"></span>
+      <svg class="pill-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+    <h1 id="hero-title" class="rise d1">Concept to <em>fabrication&#8209;ready</em> design</h1>
+    <p class="hero2-lead rise d2">3D models, GA and shop drawings for skids, packages, tanks and fuel systems, with your design partner on call through fabrication, FAT and SAT.</p>
+    <div class="hero2-ctas rise d3">
+      <a class="btn-pill soft" href="https://wa.me/971509633421" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Book a call</a>
+      <a class="btn-pill solid" href="#contact">Send your spec<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <p class="hero2-by code rise d4">Led by Damodar Dasi · Principal Design Engineer · 6+ yrs UAE/GCC</p>
+  </div>
+</section>
+
+<section class="codes-strip" aria-labelledby="codes-title">
+  <h2 id="codes-title">Designed to the codes <span>your project specifies</span></h2>
+  <div class="marquee">
+    <ul class="track code">
+      <li>ASME VIII Div 1</li><li>ASME B31.3</li><li>API 650</li><li>API 617</li><li>API 614</li><li>API 692</li><li>UL 142</li><li>UL 2085</li><li>ADR</li><li>ATEX</li><li>IEC 60079</li><li>ISO 8573-1</li><li>IS 2825</li><li>ABS Rules</li>
+      <li aria-hidden="true">ASME VIII Div 1</li><li aria-hidden="true">ASME B31.3</li><li aria-hidden="true">API 650</li><li aria-hidden="true">API 617</li><li aria-hidden="true">API 614</li><li aria-hidden="true">API 692</li><li aria-hidden="true">UL 142</li><li aria-hidden="true">UL 2085</li><li aria-hidden="true">ADR</li><li aria-hidden="true">ATEX</li><li aria-hidden="true">IEC 60079</li><li aria-hidden="true">ISO 8573-1</li><li aria-hidden="true">IS 2825</li><li aria-hidden="true">ABS Rules</li>
+    </ul>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="wrap">
+    <div class="stat"><span class="code eyebrow">Track record</span><b>6+ yrs</b><span>UAE &amp; GCC execution</span></div>
+    <div class="stat"><span class="code eyebrow">Tanks designed</span><b>25+</b><span>500 L to 60 kL capacity</span></div>
+    <div class="stat"><span class="code eyebrow">Fuel stations</span><b>7 units</b><span>Up to 42,600 L gross</span></div>
+    <div class="stat"><span class="code eyebrow">Code families</span><b>ASME · API</b><span>UL · ISO · IEC · ADR</span></div>
+  </div>
+</div>
+
+<section class="band" id="deliver">
+  <div class="wrap">
+    <div class="sec-head"><span class="code eyebrow">Your design partner</span><h2>From first sketch to the shop floor</h2><p class="muted">One design partner across the whole journey, so your workshop receives drawings it can build from first time.</p></div>
+    <ol class="journey">
+      <li><span class="code eyebrow">01 · Concept</span><h3>Concept &amp; layout</h3><p>Design basis, codes, footprint and equipment arrangement agreed with you.</p></li>
+      <li><span class="code eyebrow">02 · 3D model</span><h3>3D model</h3><p>Full SolidWorks assembly with frame, piping, access and centre of gravity checked.</p></li>
+      <li><span class="code eyebrow">03 · Drawings</span><h3>GA &amp; shop drawings</h3><p>GA, fabrication and assembly drawings, isometrics, BOM and MTO in your title block.</p></li>
+      <li><span class="code eyebrow">04 · Workshop</span><h3>Fabrication support</h3><p>Fast answers to shop-floor queries, concessions and as-built markups.</p></li>
+      <li><span class="code eyebrow">05 · Testing</span><h3>FAT &amp; SAT support</h3><p>Test procedures, inspection support and final handover of native CAD files.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band alt" id="services">
+  <div class="wrap">
+    <div class="sec-head"><span class="code eyebrow">Design services</span><h2>What we can take off your desk</h2><p class="muted">Each service runs as a complete design package or as a single deliverable that plugs into your team's workflow.</p></div>
+    <div class="grid g4">
+      <article class="card"><div class="card-head code"><span class="tag ink">SVC-01</span><span class="muted">B31.3 · ISO 8573-1</span></div><div class="card-body"><h3>Skid &amp; package design</h3><ul><li>3D SolidWorks modelling &amp; GA</li><li>Fabrication, welding &amp; assembly drawings</li><li>Piping isometrics &amp; BOM schedules</li><li>Base frames, drip trays &amp; lifting lugs</li></ul></div><div class="card-foot code"><span class="eyebrow">3D CAD + DWG + BOM</span><a href="#contact">Enquire →</a></div></article>
+      <article class="card"><div class="card-head code"><span class="tag ink">SVC-02</span><span class="muted">API 614 · 617 · 692</span></div><div class="card-body"><h3>Compressor &amp; compander package design</h3><ul><li>Process piping integration &amp; nozzle orientation</li><li>Lube-oil consoles &amp; seal-gas rack layouts</li><li>Heavy base frames &amp; acoustic enclosures</li><li>Nozzle loads, vibration isolation &amp; FAT support</li></ul></div><div class="card-foot code"><span class="eyebrow">Skid GA + oil console</span><a href="#contact">Enquire →</a></div></article>
+      <article class="card"><div class="card-head code"><span class="tag ink">SVC-03</span><span class="muted">ISO 8573-1 · ASME VIII</span></div><div class="card-body"><h3>PSA nitrogen &amp; compressed air design</h3><ul><li>Twin-tower CMS generator integration</li><li>Air receivers &amp; N₂ buffer vessels</li><li>Valve manifolds &amp; filtration skids</li><li>Utility tie-ins &amp; vent silencing</li></ul></div><div class="card-foot code"><span class="eyebrow">Skid ISO + P&amp;ID</span><a href="#contact">Enquire →</a></div></article>
+      <article class="card"><div class="card-head code"><span class="tag ink">SVC-04</span><span class="muted">API 650 · UL 142 · IS 2825</span></div><div class="card-body"><h3>Storage tank &amp; pressure vessel design</h3><ul><li>Single &amp; double-wall fuel tanks</li><li>Shell/head sizing, nozzles &amp; manways</li><li>Baffles, vortex breakers &amp; hydrotest fixtures</li><li>Weight, BOM &amp; centre of gravity</li></ul></div><div class="card-foot code"><span class="eyebrow">Fab DWG + hydro spec</span><a href="#contact">Enquire →</a></div></article>
+      <article class="card"><div class="card-head code"><span class="tag ink">SVC-05</span><span class="muted">UL 2085 · ADR · ATEX</span></div><div class="card-body"><h3>Mobile fuelling station &amp; fuel skid design</h3><ul><li>20 ft &amp; 40 ft containerised stations</li><li>Dual-compartment tanks with spill containment</li><li>Stage 1 vapour recovery &amp; ATG</li><li>Hazardous-area zoning to IEC 60079</li></ul></div><div class="card-foot code"><span class="eyebrow">Fit-out + ATEX GA</span><a href="#contact">Enquire →</a></div></article>
+      <article class="card"><div class="card-head code"><span class="tag ink">SVC-06</span><span class="muted">ASME B31.3 · B16.5</span></div><div class="card-body"><h3>Piping &amp; structural base frame design</h3><ul><li>Beam selection, gussets &amp; anchor layouts</li><li>Suction/discharge piping &amp; tie-ins</li><li>Pump baseplates &amp; vibration pads</li><li>Spreader-beam input &amp; CoG reports</li></ul></div><div class="card-foot code"><span class="eyebrow">Spools + MTO</span><a href="#contact">Enquire →</a></div></article>
+      <article class="card"><div class="card-head code"><span class="tag ink">SVC-07</span><span class="muted">Client specs · TRAKHEES</span></div><div class="card-body"><h3>Technical bid &amp; tender support</h3><ul><li>Compliance matrices against client specs</li><li>Datasheets &amp; technical queries</li><li>Preliminary bid GA &amp; footprint checks</li><li>Submittal packages for EPC pre-award</li></ul></div><div class="card-foot code"><span class="eyebrow">Compliance grid + GA</span><a href="#contact">Enquire →</a></div></article>
+      <article class="card"><div class="card-head code"><span class="tag ink">SVC-08</span><span class="muted">Your formats · your title blocks</span></div><div class="card-body"><h3>Drawing checking &amp; design review</h3><ul><li>Independent P&amp;ID &amp; mechanical review</li><li>Pre-fabrication checks for clashes &amp; welds</li><li>Vendor 3D model audits</li><li>Mentoring for junior designers</li></ul></div><div class="card-foot code"><span class="eyebrow">Redlines + QC log</span><a href="#contact">Enquire →</a></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="projects">
+  <div class="wrap">
+    <div class="sec-head"><span class="code eyebrow">Project register</span><h2>Work delivered across the GCC and beyond</h2><p class="muted">Design scope delivered by Damodar Dasi on each project.</p></div>
+    <div class="filters" role="group" aria-label="Filter projects">
+      <button type="button" id="f-all" data-f="all" aria-pressed="true">All projects</button>
+      <button type="button" id="f-comp" data-f="comp" aria-pressed="false">Compressors</button>
+      <button type="button" id="f-fuel" data-f="fuel" aria-pressed="false">Fuel systems</button>
+      <button type="button" id="f-n2" data-f="n2" aria-pressed="false">PSA nitrogen</button>
+      <button type="button" id="f-tank" data-f="tank" aria-pressed="false">Tanks &amp; vessels</button>
+    </div>
+    <div class="grid g3" id="plist">
+      <article class="card" data-c="fuel"><div class="card-head code"><span class="eyebrow">Ref F-01</span><span class="tag">Dubai, UAE</span></div><div class="card-body"><h3>Emarat 40 ft mobile fuelling unit</h3><p class="muted" style="font-size:14px">Lead mechanical designer, from tender stage through site acceptance testing and commissioning.</p><dl class="spec"><dt>Capacity</dt><dd>42,600 L gross</dd><dt>Codes</dt><dd class="c">UL 142 · UL 2085 · ADR</dd><dt>Systems</dt><dd>Dispenser, ATG, vapour recovery</dd></dl></div><div class="card-foot code"><span class="status">Commissioned in UAE</span></div></article>
+      <article class="card" data-c="comp"><div class="card-head code"><span class="eyebrow">Ref C-01</span><span class="tag">Shipyard newbuild</span></div><div class="card-body"><h3>N₂ compander package, marine</h3><p class="muted" style="font-size:14px">Package layout with lube-oil console, process gas piping and ABS marine rules coordination.</p><dl class="spec"><dt>Stages / flow</dt><dd>4-stage · 29,605 kg/h</dd><dt>Pressure</dt><dd>7.4 to 35.3 bar(a)</dd><dt>Codes</dt><dd class="c">API 617 · API 614 · ABS</dd></dl></div><div class="card-foot code"><span class="status">FAT tested</span></div></article>
+      <article class="card" data-c="comp"><div class="card-head code"><span class="eyebrow">Ref C-03</span><span class="tag">Singapore FAT</span></div><div class="card-body"><h3>4-stage natural gas compressor redesign</h3><p class="muted" style="font-size:14px">Full 3D redesign of process piping, lube-oil console, dry gas seal racks and acoustic hood.</p><dl class="spec"><dt>Flow</dt><dd>36,980 kg/h</dd><dt>Pressure</dt><dd>13.21 to 50.8 bar(a)</dd><dt>Codes</dt><dd class="c">API 617 · API 692 · B31.3</dd></dl></div><div class="card-foot code"><span class="status">FAT witnessed in Singapore</span></div></article>
+      <article class="card" data-c="n2"><div class="card-head code"><span class="eyebrow">Ref P-01</span><span class="tag">National operator, India</span></div><div class="card-body"><h3>PSA nitrogen generation package</h3><p class="muted" style="font-size:14px">High-purity nitrogen unit with carbon molecular sieve towers, buffer vessels and valve skids.</p><dl class="spec"><dt>Vessels</dt><dd>12 m³ receiver + 25 m³ buffer</dd><dt>Output</dt><dd>99.9% purity @ 6 barg</dd><dt>Codes</dt><dd class="c">ASME VIII Div 1 · IS 2825</dd></dl></div><div class="card-foot code"><span class="status">Delivered to site</span></div></article>
+      <article class="card" data-c="fuel"><div class="card-head code"><span class="eyebrow">Ref F-07</span><span class="tag">Commercial fleet, UAE</span></div><div class="card-body"><h3>Maser portable fuelling unit</h3><p class="muted" style="font-size:14px">Integration of Maser Italia fleet telemetry, explosion-proof dispensing and skid drip containment.</p><dl class="spec"><dt>Integration</dt><dd>Maser Italia fleet console</dd><dt>Protection</dt><dd class="c">ATEX Zone 1 · Ex-proof</dd></dl></div><div class="card-foot code"><span class="status">Built &amp; commissioned in UAE</span></div></article>
+      <article class="card" data-c="tank"><div class="card-head code"><span class="eyebrow">Ref S-01</span><span class="tag">Storage &amp; filtration</span></div><div class="card-body"><h3>6,000 L filter vessel &amp; heavy tanks</h3><p class="muted" style="font-size:14px">Shell and dished-head calculations, nozzle orientations, hydrotest fixtures and transport tie-downs.</p><dl class="spec"><dt>Code</dt><dd class="c">ASME VIII Div 1</dd><dt>Rating</dt><dd>8.0 bar design pressure</dd></dl></div><div class="card-foot code"><span class="status">Deliverables approved</span></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="band alt" id="codes">
+  <div class="wrap">
+    <div class="sec-head"><span class="code eyebrow">Tooling &amp; compliance</span><h2>CAD stack and governing codes</h2><p class="muted">Codes are applied as set by each project's design basis.</p></div>
+    <div class="grid g3" style="margin-bottom:16px">
+      <div class="card"><div class="card-body"><span class="code eyebrow">3D</span><h3>SolidWorks master assemblies</h3><p class="muted" style="font-size:14px">Parametric 3D packages with interference checks, piping routing and structural frames.</p></div></div>
+      <div class="card"><div class="card-body"><span class="code eyebrow">2D / 3D</span><h3>AutoCAD &amp; Inventor</h3><p class="muted" style="font-size:14px">Fabrication drawings, P&amp;IDs, nozzle orientation charts and weld symbols to AWS/ISO.</p></div></div>
+      <div class="card"><div class="card-body"><span class="code eyebrow">Calcs</span><h3>Engineering reports</h3><p class="muted" style="font-size:14px">Foundation loads, weight and CoG, MTO/BOM exports and hydrotest procedures.</p></div></div>
+    </div>
+    <div class="grid g4">
+      <div class="card"><div class="card-head code"><span class="eyebrow">Rotating machinery</span></div><div class="card-body chips code"><span class="tag">API 614</span><span class="tag">API 617</span><span class="tag">API 619</span><span class="tag">API 672</span><span class="tag">API 692</span></div></div>
+      <div class="card"><div class="card-head code"><span class="eyebrow">Vessels &amp; tanks</span></div><div class="card-body chips code"><span class="tag">ASME VIII Div 1</span><span class="tag">API 650</span><span class="tag">UL 142</span><span class="tag">UL 2085</span><span class="tag">IS 2825</span></div></div>
+      <div class="card"><div class="card-head code"><span class="eyebrow">Piping &amp; fittings</span></div><div class="card-body chips code"><span class="tag">ASME B31.3</span><span class="tag">ASME B16.5</span><span class="tag">ASME B16.9</span></div></div>
+      <div class="card"><div class="card-head code"><span class="eyebrow">Hazardous area &amp; quality</span></div><div class="card-body chips code"><span class="tag">ATEX 2014/34/EU</span><span class="tag">IEC 60079</span><span class="tag">ADR</span><span class="tag">ISO 8573-1</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="process">
+  <div class="wrap">
+    <div class="sec-head"><span class="code eyebrow">Execution pipeline</span><h2>From enquiry to issued drawings</h2><p class="muted">Seven stages that keep revisions off the shop floor.</p></div>
+    <ol class="steps">
+      <li><div><h3>Enquiry &amp; scope</h3><p>Share specs, P&amp;ID and battery limits. Agree deliverables and timeline.</p></div></li>
+      <li><div><h3>Design basis</h3><p>Fix codes, materials, design pressures and authority requirements.</p></div></li>
+      <li><div><h3>Sizing &amp; vendors</h3><p>Footprint sizing, datasheet checks and nozzle orientation freeze.</p></div></li>
+      <li><div><h3>3D design &amp; piping</h3><p>Frame, piping routing, valve access and CoG checks in SolidWorks.</p></div></li>
+      <li><div><h3>GA, drawings &amp; BOM</h3><p>GA, isometrics, weld details, cut lists and multi-level BOMs.</p></div></li>
+      <li><div><h3>Fabrication support</h3><p>Answers to shop-floor queries, concessions and as-built markups.</p></div></li>
+      <li><div><h3>FAT / SAT &amp; handover</h3><p>Test protocols, inspection sign-off and native CAD handover.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band alt">
+  <div class="wrap">
+    <div class="sec-head"><span class="code eyebrow">Collaboration</span><h2>Ways to work together</h2><p class="muted">Engagement modes for fabrication yards, EPC contractors and OEM integrators.</p></div>
+    <div class="grid g3">
+      <div class="card"><div class="card-head code"><span class="tag">One-off</span></div><div class="card-body"><h3>Per deliverable</h3><p class="muted" style="font-size:14px">A tank drawing set, a skid GA or a bid package, priced up front with agreed revisions.</p></div><div class="card-foot code"><span class="eyebrow">Single tenders</span></div></div>
+      <div class="card"><div class="card-head code"><span class="tag">Turnkey</span></div><div class="card-body"><h3>Per project</h3><p class="muted" style="font-size:14px">Full package design from concept to shop drawings, with fabrication and FAT/SAT support.</p></div><div class="card-foot code"><span class="eyebrow">New package orders</span></div></div>
+      <div class="card"><div class="card-head code"><span class="tag">On demand</span></div><div class="card-body"><h3>Monthly retainer</h3><p class="muted" style="font-size:14px">A set pool of engineering hours each month for your design or bid team.</p></div><div class="card-foot code"><span class="eyebrow">Peak tender periods</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="contact">
+  <div class="wrap">
+    <div class="sec-head"><span class="code eyebrow">Project enquiries</span><h2>Send us your spec or tender</h2><p class="muted">Tell us what you're building, the governing codes and your schedule. We reply within one working day.</p></div>
+    <div class="contact">
+      <form class="card" id="rfq" novalidate>
+        <div class="row2">
+          <div class="field"><label for="q-name">Full name *</label><input id="q-name" name="name" type="text" autocomplete="name" required></div>
+          <div class="field"><label for="q-email">Business email *</label><input id="q-email" name="email" type="email" autocomplete="email" required></div>
+        </div>
+        <div class="row2">
+          <div class="field"><label for="q-company">Company *</label><input id="q-company" name="company" type="text" autocomplete="organization" required></div>
+          <div class="field"><label for="q-loc">Project location</label><select id="q-loc" name="location"><option>Sharjah / Dubai, UAE</option><option>Abu Dhabi, UAE</option><option>Saudi Arabia</option><option>Qatar / Oman / Kuwait / Bahrain</option><option>India</option><option>International / other</option></select></div>
+        </div>
+        <div class="field"><label for="q-type">Package type *</label><select id="q-type" name="type"><option>Skid &amp; package design</option><option>Compressor / compander package</option><option>Mobile fuelling station</option><option>Storage tanks &amp; pressure vessels</option><option>PSA nitrogen / compressed air skid</option><option>Bid &amp; tender support</option><option>Drawing checking / design review</option><option>Other</option></select></div>
+        <div class="field"><label for="q-codes">Governing codes</label><input id="q-codes" name="codes" type="text" placeholder="e.g. ASME B31.3, API 650, UL 142"></div>
+        <div class="field"><label for="q-msg">Scope &amp; target schedule *</label><textarea id="q-msg" name="msg" required placeholder="Capacity, media, deliverables needed and deadline"></textarea></div>
+        <div class="note"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="flex:none;margin-top:2px"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span>Your drawings and data stay confidential, and we're happy to sign an NDA. To share a spec, P&amp;ID or RFQ, attach it to the email this form opens.</span></div>
+        <button class="btn btn-navy" type="submit">Prepare enquiry email</button>
+        <p class="form-msg" id="q-status" role="status" hidden></p>
+      </form>
+      <div class="chan">
+        <span class="code eyebrow">Direct channels</span>
+        <div class="ch"><div><span class="code muted">Enquiries</span><span class="v" id="e-info">info@damodarengineering.com</span></div><button class="act" type="button" data-copy="e-info">Copy</button></div>
+        <div class="ch"><div><span class="code muted">Direct</span><span class="v" id="e-dd">dd@damodarengineering.com</span></div><button class="act" type="button" data-copy="e-dd">Copy</button></div>
+        <div class="ch"><div><span class="code muted">Phone / WhatsApp</span><span class="v" id="e-ph">+971 50 963 3421</span></div><a class="act solid" href="https://wa.me/971509633421" target="_blank" rel="noopener">WhatsApp</a></div>
+        <div class="ch"><div><span class="code muted">LinkedIn</span><span class="v">Damodar Dasi</span></div><a class="act" href="https://www.linkedin.com/in/damodar-dasi-3188b331a" target="_blank" rel="noopener">Connect</a></div>
+        <div class="ch"><div><span class="code muted">Based in</span><span class="v">Sharjah, UAE · serving UAE, GCC &amp; India</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="tb code">
+      <div><span>Title</span><strong>Damodar Engineering Design</strong></div>
+      <div><span>Dwg no.</span><strong>DE-001</strong></div>
+      <div><span>Rev</span><strong>A · 2026</strong></div>
+      <div><span>Scale</span><strong>NTS</strong></div>
+      <div><span>Location</span><strong>Sharjah, UAE</strong></div>
+    </div>
+    <p class="copy">© 2026 Damodar Engineering Design · Concept to Shop Drawing</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btns=document.querySelectorAll('.filters button'), cards=document.querySelectorAll('#plist [data-c]');
+  btns.forEach(function(b){b.addEventListener('click',function(){
+    btns.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+    var f=b.getAttribute('data-f');
+    cards.forEach(function(c){c.hidden=!(f==='all'||c.getAttribute('data-c')===f)});
+  })});
+
+  document.querySelectorAll('[data-copy]').forEach(function(b){b.addEventListener('click',function(){
+    var el=document.getElementById(b.getAttribute('data-copy')), t=el.textContent;
+    function ok(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1600)}
+    function sel(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected'}
+    try{navigator.clipboard.writeText(t).then(ok,sel)}catch(e){sel()}
+  })});
+
+  var form=document.getElementById('rfq'), st=document.getElementById('q-status');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var bad=[].slice.call(form.querySelectorAll('[required]')).filter(function(i){return !i.value.trim()||(i.type==='email'&&!/^\S+@\S+\.\S+$/.test(i.value))});
+    st.hidden=false;
+    if(bad.length){st.textContent='Please fill in your name, a valid email, company and scope.';bad[0].focus();return}
+    var v=function(id){return document.getElementById(id).value.trim()};
+    var subject='Design RFQ: '+v('q-type')+' – '+v('q-company');
+    var body='Name: '+v('q-name')+'\nCompany: '+v('q-company')+'\nEmail: '+v('q-email')+'\nLocation: '+v('q-loc')+'\nPackage type: '+v('q-type')+'\nGoverning codes: '+(v('q-codes')||'-')+'\n\nScope & schedule:\n'+v('q-msg')+'\n';
+    window.location.href='mailto:info@damodarengineering.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+    st.textContent='Your email app should open with the enquiry filled in. Press send there. If nothing opens, email info@damodarengineering.com directly.';
+  });
+})();
+</script>
+
+</body>
+</html>
