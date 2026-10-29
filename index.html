@@ -700,6 +700,10 @@ form.card{padding:var(--s5);gap:var(--s4)}
   .rv-on .rv{opacity:0;transform:translateY(18px);transition:opacity .6s var(--ease),transform .6s var(--ease);transition-delay:var(--rv-d,0s)}
   .rv-on .rv.in{opacity:1;transform:none}
 }
+
+/* contact: Call + WhatsApp actions side by side */
+.acts{display:flex;gap:var(--s2);flex:none}
+.menu-foot a{color:var(--ink);text-underline-offset:3px}
 </style>
 </head>
 <body>
@@ -984,7 +988,7 @@ form.card{padding:var(--s5);gap:var(--s4)}
         <span class="code eyebrow">Direct channels</span>
         <div class="ch"><div><span class="code muted">Enquiries</span><span class="v" id="e-info">info@damodarengineering.com</span></div><button class="act" type="button" data-copy="e-info">Copy</button></div>
         <div class="ch"><div><span class="code muted">Direct</span><span class="v" id="e-dd">dd@damodarengineering.com</span></div><button class="act" type="button" data-copy="e-dd">Copy</button></div>
-        <div class="ch"><div><span class="code muted">Phone / WhatsApp</span><span class="v" id="e-ph">+971 50 963 3421</span></div><a class="act solid" href="https://wa.me/971509633421" target="_blank" rel="noopener">WhatsApp</a></div>
+        <div class="ch"><div><span class="code muted">Phone / WhatsApp</span><span class="v" id="e-ph">+971 50 963 3421</span></div><div class="acts"><a class="act" href="tel:+971509633421">Call</a><a class="act solid" href="https://wa.me/971509633421" target="_blank" rel="noopener">WhatsApp</a></div></div>
         <div class="ch"><div><span class="code muted">LinkedIn</span><span class="v">Damodar Dasi</span></div><a class="act" href="https://www.linkedin.com/in/damodar-dasi-3188b331a" target="_blank" rel="noopener">Connect</a></div>
         <div class="ch"><div><span class="code muted">Based in</span><span class="v">Sharjah, UAE · serving UAE, GCC &amp; India</span></div></div>
       </div>
@@ -1007,7 +1011,7 @@ form.card{padding:var(--s5);gap:var(--s4)}
   <a class="b3 primary menu-cta" href="#contact">Request a quote</a>
   <div class="menu-foot">
     <span class="code muted">Enquiries</span><span>info@damodarengineering.com</span>
-    <span class="code muted">Phone / WhatsApp</span><span>+971 50 963 3421</span>
+    <span class="code muted">Phone / WhatsApp</span><a href="tel:+971509633421">+971 50 963 3421</a>
     <span class="code muted">Based in</span><span>Sharjah, UAE · UAE, GCC &amp; India</span>
   </div>
 </aside>
