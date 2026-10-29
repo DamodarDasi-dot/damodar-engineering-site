@@ -363,6 +363,15 @@ html{scroll-padding-top:124px}
 .to-top{position:fixed;right:calc(max(20px,env(safe-area-inset-right,0px)) + 7px);bottom:calc(max(20px,env(safe-area-inset-bottom,0px)) + 72px);z-index:70;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--navy);display:grid;place-items:center;cursor:pointer;box-shadow:0 6px 18px -8px rgba(6,12,21,.35)}
 .to-top[hidden]{display:none!important}
 html{scroll-padding-top:120px}
+
+/* header v4: frosted glass floating over the page */
+:root{--hdr-h:76px}
+@media (min-width:881px){:root{--hdr-h:104px}}
+.top{position:fixed;top:0;left:0;right:0;padding-top:env(safe-area-inset-top,0px);background:color-mix(in srgb,var(--surface) 55%,transparent);-webkit-backdrop-filter:blur(18px) saturate(1.5);backdrop-filter:blur(18px) saturate(1.5);border-bottom:1px solid color-mix(in srgb,var(--line) 60%,transparent);transition:transform .32s ease,background .25s,box-shadow .25s}
+.top.scrolled{background:color-mix(in srgb,var(--surface) 72%,transparent);box-shadow:0 8px 30px -14px color-mix(in srgb,var(--navy) 40%,transparent)}
+body::before{display:none}
+.hero3{padding-top:calc(var(--hdr-h) + env(safe-area-inset-top,0px))}
+html{scroll-padding-top:calc(var(--hdr-h) + 16px)}
 </style>
 </head>
 <body>
