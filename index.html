@@ -380,6 +380,9 @@ html{scroll-padding-top:calc(var(--hdr-h) + 16px)}
   .top .btn{display:inline-flex!important}
   .menu-btn{display:none}
 }
+
+/* desktop-first: side menu only exists on mobile */
+@media (min-width:881px){.menu,.menu-backdrop,.menu-btn{display:none!important}}
 </style>
 </head>
 <body>
@@ -731,7 +734,8 @@ html{scroll-padding-top:calc(var(--hdr-h) + 16px)}
   var menu=document.getElementById('menu'), bd=document.getElementById('menu-backdrop'), openB=document.getElementById('menu-open'), closeB=document.getElementById('menu-close');
   function open(){menu.hidden=false;bd.hidden=false;document.body.classList.add('menu-open');document.body.style.overflow='hidden';openB.setAttribute('aria-expanded','true');closeB.focus()}
   function close(){menu.hidden=true;bd.hidden=true;document.body.classList.remove('menu-open');document.body.style.overflow='';openB.setAttribute('aria-expanded','false');openB.focus()}
-  openB.addEventListener('click',open); closeB.addEventListener('click',close); bd.addEventListener('click',close);
+  openB.addEventListener('click',open);
+  window.matchMedia('(min-width: 881px)').addEventListener('change',function(m){if(m.matches&&!menu.hidden){menu.hidden=true;bd.hidden=true;document.body.classList.remove('menu-open');document.body.style.overflow='';openB.setAttribute('aria-expanded','false')}}); closeB.addEventListener('click',close); bd.addEventListener('click',close);
   menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.hidden=true;bd.hidden=true;document.body.classList.remove('menu-open');document.body.style.overflow='';openB.setAttribute('aria-expanded','false')})});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!menu.hidden)close()});
 })();
