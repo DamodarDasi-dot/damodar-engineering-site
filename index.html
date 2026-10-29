@@ -14,7 +14,7 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@300;400;500;700;800&family=JetBrains+Mono:wght@500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@300;500;700;800&family=JetBrains+Mono:wght@500;600&display=swap">
 <style>
 /* Layout: Stitch "Industrial Precision" system — navy masthead, tonal blueprint compartments, 12-col grid collapsing to one column. */
 :root{
@@ -54,9 +54,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
 .logo{height:44px;width:auto;display:block;flex:none;max-width:62vw}
-.brand-name{display:flex;flex-direction:column;line-height:1.1;min-width:0}
-.brand-name strong{font-size:16px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
-.brand-name span{color:var(--navy-muted);font-size:10px}
+
 .nav{display:flex;gap:4px;align-items:center}
 .nav a{text-decoration:none;font-size:13px;font-weight:500;padding:8px 12px;border-radius:4px;color:var(--navy-muted)}
 .nav a:hover{color:var(--on-navy);background:var(--navy-2)}
@@ -65,60 +63,17 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .btn-blue:hover{background:var(--gold-hover)}
 .btn-navy{background:var(--gold);color:var(--on-gold);border-color:var(--gold)}
 .btn-navy:hover{background:var(--gold-hover)}
-.btn-line{background:var(--surface);color:var(--ink);border-color:var(--line)}
-.btn-line:hover{border-color:var(--blue);color:var(--blue-ink)}
+
 .top .btn{height:38px;padding:0 14px;font-size:12px}
 
 /* hero */
-.hero{padding-block:56px 48px}
-.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
-.hero .wrap>*{min-width:0}
-.meta{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;background:var(--recess);border:1px solid var(--line);border-radius:4px;padding:6px 12px;margin-bottom:22px}
-.meta .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--blue);margin-right:6px;vertical-align:middle}
-.hero h1{font-size:clamp(2.2rem,4.6vw,3.5rem);font-weight:800;letter-spacing:-.03em;margin-bottom:18px}
-.hero h1 em{font-style:normal;color:var(--blue-ink)}
+
 .lead{font-size:17px;color:var(--muted);max-width:56ch;margin-bottom:20px}
-.badge{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--line);border-radius:4px;padding:6px 12px;font-size:13px;font-weight:500;margin-bottom:24px}
-.badge svg{color:var(--blue)}
-.ctas{display:flex;gap:10px;flex-wrap:wrap}
-.fig{background:var(--surface);border:1px solid var(--line);border-radius:8px;overflow:hidden}
-.fig-head,.fig-foot{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:10px 14px;background:var(--recess)}
-.fig-head{border-bottom:1px solid var(--line)}
-.fig-foot{border-top:1px solid var(--line)}
-.fig svg{display:block;width:100%;height:auto;padding:14px;color:var(--ink)}
-.fig .fill-a{fill:color-mix(in srgb,var(--blue) 14%,transparent)}
-.fig .fill-b{fill:var(--recess)}
-.fig .acc{fill:var(--blue)}
-.fig .dim{stroke:var(--muted)}
-.fig text{fill:currentColor;font-family:var(--f-mono);font-weight:600}
-.fig text.dimt{fill:var(--muted)}
-.fig .flow{stroke:var(--blue);stroke-width:1.6;stroke-dasharray:4 3}
-@media (prefers-reduced-motion:no-preference){.fig .flow{animation:flow 1.4s linear infinite}@keyframes flow{to{stroke-dashoffset:-14}}}
+
+@media (prefers-reduced-motion:no-preference){@keyframes flow{to{stroke-dashoffset:-14}}}
 
 /* hero (adapted from 21st.dev hero-1) */
-.hero2{position:relative;overflow:hidden;background:var(--surface);border-bottom:1px solid var(--line)}
-.hero2::before{content:"";position:absolute;inset:-56px 0 0;background:radial-gradient(38% 80% at 50% 0%,color-mix(in srgb,var(--blue) 16%,transparent),transparent);pointer-events:none}
-.hero2-grid{position:absolute;inset:0;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:40px 40px;opacity:.35;-webkit-mask-image:radial-gradient(60% 70% at 50% 30%,#000,transparent);mask-image:radial-gradient(60% 70% at 50% 30%,#000,transparent);pointer-events:none}
-.hero2-in{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:22px;padding-block:clamp(72px,11vw,128px) clamp(64px,9vw,112px);max-width:1024px}
-.rails{position:absolute;inset:0;pointer-events:none}
-.rails i{position:absolute;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,var(--line) 40%,var(--line))}
-.rails .r1{left:16px}.rails .r2{right:16px}.rails .r3{left:32px;opacity:.5}.rails .r4{right:32px;opacity:.5}
-@media (min-width:768px){.rails .r1{left:32px}.rails .r2{right:32px}.rails .r3{left:48px}.rails .r4{right:48px}}
-.pill{display:inline-flex;align-items:center;gap:10px;padding:6px 14px;border:1px solid var(--line);border-radius:999px;background:var(--surface);box-shadow:0 1px 2px rgba(15,23,42,.06);font-size:13px;color:var(--ink);text-decoration:none}
-.pill svg{color:var(--blue)}
-.pill-div{width:1px;height:18px;background:var(--line)}
-.pill-arrow{transition:transform .15s ease-out}
-.pill:hover .pill-arrow{transform:translateX(4px)}
-.hero2 h1{font-size:clamp(2.4rem,6vw,4.1rem);font-weight:800;letter-spacing:-.035em;line-height:1.05;max-width:16ch;text-shadow:0 0 50px color-mix(in srgb,var(--ink) 12%,transparent)}
-.hero2 h1 em{font-style:normal;color:var(--blue-ink)}
-.hero2-lead{font-size:clamp(16px,1.6vw,19px);color:var(--muted);max-width:52ch;letter-spacing:.005em}
-.hero2-ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;padding-top:4px}
-.btn-pill{display:inline-flex;align-items:center;gap:8px;height:50px;padding:0 24px;border-radius:999px;font:600 15px var(--f-sans);text-decoration:none;transition:background .15s,transform .15s}
-.btn-pill:hover{transform:translateY(-1px)}
-.btn-pill.soft{background:var(--recess);color:var(--ink);border:1px solid var(--line)}
-.btn-pill.solid{background:var(--navy);color:var(--on-navy)}
-.btn-pill.solid:hover{background:var(--gold);color:var(--on-gold)}
-.hero2-by{color:var(--muted)}
+
 @media (prefers-reduced-motion:no-preference){
   .rise{animation:rise .55s ease-out both}
   .d1{animation-delay:.1s}.d2{animation-delay:.2s}.d3{animation-delay:.3s}.d4{animation-delay:.4s}.d5{animation-delay:.05s}
@@ -173,13 +128,10 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 @media (min-width:1224px){.top .wrap{margin-inline:auto}}
 .nav a{color:var(--muted)}
 .nav a:hover{color:var(--blue-ink);background:var(--recess)}
-.logo-dark{display:none}
+
 .brand .logo-tag{height:56px}
 @media (min-width:881px){.top .wrap{height:78px}.brand .logo:not(.logo-tag){display:none!important}}
 @media (max-width:880px){.brand .logo-tag{display:none!important}}
-
-:root[data-theme="dark"] .logo-light{display:none}:root[data-theme="dark"] .logo-dark{display:block}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .logo-light{display:none}:root:not([data-theme="light"]) .logo-dark{display:block}}
 
 /* about */
 .about{background:var(--navy);color:var(--on-navy);padding-block:clamp(56px,8vw,96px);position:relative;overflow:hidden}
@@ -228,7 +180,7 @@ section.alt{background:var(--recess);border-block:1px solid var(--line)}
 .grid{display:grid;gap:16px}
 .g4{grid-template-columns:repeat(4,1fr)}
 .g3{grid-template-columns:repeat(3,1fr)}
-.g2{grid-template-columns:repeat(2,1fr)}
+
 .card{background:var(--surface);border:1px solid var(--line);border-radius:8px;display:flex;flex-direction:column;min-width:0}
 .card-head{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;padding:12px 16px;border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--recess) 60%,var(--surface))}
 .card-body{padding:16px;display:flex;flex-direction:column;gap:10px;flex:1}
@@ -322,9 +274,7 @@ footer{background:var(--navy);color:var(--on-navy);padding-block:28px}
   .steps li{border-right:0;border-bottom:1px solid var(--line);flex-direction:row;align-items:flex-start;gap:12px}
   .steps li::before{flex:none}
   .steps li:last-child{border-bottom:0}
-  .brand-name span{display:none}
-  .hero{padding-block:32px 36px}
-  .ctas .btn{flex:1 1 100%}
+
 }
 
 /* header v2: full-width bar, 25% taller */
@@ -394,22 +344,9 @@ html{scroll-padding-top:calc(var(--hdr-h) + 16px)}
 .hero3-in{padding-top:clamp(28px,3vw,52px)}
 
 /* hero split + CAD wireframe-to-solid animation */
-.cad-art{margin:0;display:flex;flex-direction:column;gap:12px;align-items:center;min-width:0}
-.cad{width:100%;height:auto;display:block;max-width:640px;filter:drop-shadow(0 30px 40px color-mix(in srgb,var(--navy) 18%,transparent))}
-.cad polygon{stroke:#191A35;stroke-width:1.1;stroke-linejoin:round}.cad .ns{stroke:none}.cad .sl{stroke:#191A35;stroke-width:1.1;fill:none}
-.cad .b1{fill:#E8EEF6}.cad .b2{fill:#191A35}.cad .b3{fill:#1F5FAE}.cad .a1{fill:#F1F5FA}.cad .a2{fill:#DCE6F1}.cad .a3{fill:#C6D5E6}
-.cad .w1{fill:#F4F7FB}.cad .w2{fill:#DDE6F0}.cad .o1{fill:#F6C99A}.cad .o2{fill:#E99A55}.cad .m1{fill:#5AA6E6}.cad .m2{fill:#1F5FAE}.cad .m3{fill:#184C8C}
-.cad .pp{fill:none;stroke:#2AB5C9;stroke-width:3;stroke-linejoin:round;stroke-linecap:round}.cad .pp2{fill:none;stroke:#1F5FAE;stroke-width:3.4;stroke-linejoin:round;stroke-linecap:round}
-.cad .wire path{fill:none;stroke:var(--blueprint);stroke-width:1;vector-effect:non-scaling-stroke}
-.cad .wire{opacity:.28}
-.cad-art figcaption{display:flex;gap:10px;align-items:center;color:var(--muted)}
-.cad-art .cap-b{color:var(--blue-ink)}
+
 @media (prefers-reduced-motion:no-preference){
-  .cad .wire{opacity:1;animation:wireOut 1s ease 3.1s forwards}
-  .cad .wire path{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.1s cubic-bezier(.6,0,.3,1) forwards;animation-delay:calc(.25s + var(--i) * .1s)}
-  .cad .solid{opacity:0;animation:solidIn 1.1s ease 2.4s forwards}
-  .cad-art .cap-a{animation:capOn 3s steps(1) forwards}
-  .cad-art .cap-b{opacity:.35;animation:capB .6s ease 2.4s forwards}
+
   @keyframes draw{to{stroke-dashoffset:0}}
   @keyframes solidIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
   @keyframes wireOut{to{opacity:.28}}
@@ -423,35 +360,12 @@ html{scroll-padding-top:calc(var(--hdr-h) + 16px)}
   .hero3-text .hero3-lead{max-width:54ch;font-size:clamp(17px,1.35vw,20px)}
   .hero3-text .hero3-ctas{justify-content:flex-start}
 }
-@media (max-width:1099px){.hero3-text{display:flex;flex-direction:column;align-items:center;gap:22px}.cad-art{width:min(640px,100%);margin-inline:auto}}
+@media (max-width:1099px){.hero3-text{display:flex;flex-direction:column;align-items:center;gap:22px}}
 
 /* real-time 3D render (falls back to the SVG drawing) */
-.cad3d{width:100%;max-width:680px;aspect-ratio:1.24/1}
-.cad3d canvas{display:block;width:100%;height:auto}
-.cad-art:not(.is-3d) .cad3d{position:absolute;width:1px;height:1px;overflow:hidden;opacity:0}
-.cad-art.is-3d .cad{display:none}
-.cad-art.is-3d .cap-b{animation:none;opacity:.35;transition:opacity .4s}
-.cad-art.is-3d .cap-a{animation:none;color:var(--blue-ink);transition:color .4s}
-.cad-art.is-3d.phase-solid .cap-b{opacity:1}
-.cad-art.is-3d.phase-solid .cap-a{color:var(--muted)}
 
 /* hero v6: callouts, dimension labels, feature strip */
-.cad-art{position:relative;width:100%}
-.cad3d{position:relative;max-width:none;aspect-ratio:1.3/1}
-.cad-art.is-3d figcaption{display:none}
-.cad-over{position:absolute;inset:0;pointer-events:none}
-.cad-leads{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
-.cad-leads line{stroke:var(--blue);stroke-width:1.2;opacity:0;transition:opacity .5s}
-.cad-leads circle{fill:var(--surface);stroke:var(--blue);stroke-width:2;opacity:0;transition:opacity .5s}
-.cad-call{position:absolute;left:0;top:0;display:flex;align-items:center;gap:10px;opacity:0;transition:opacity .5s ease calc(var(--n) * .12s)}
-.cc-ic{width:44px;height:44px;flex:none;border-radius:50%;display:grid;place-items:center;background:var(--surface);border:1.5px solid color-mix(in srgb,var(--blue) 45%,var(--line));box-shadow:0 6px 16px -8px color-mix(in srgb,var(--navy) 45%,transparent)}
-.cc-ic svg{width:22px;height:22px;fill:none;stroke:var(--navy);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
-.cc-t{font:700 12px/1.25 var(--f-sans);letter-spacing:.06em;text-transform:uppercase;color:var(--navy);white-space:nowrap}
-:root[data-theme="dark"] .cc-t,:root[data-theme="dark"] .cc-ic svg{color:var(--ink);stroke:var(--ink)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .cc-t{color:var(--ink)}:root:not([data-theme="light"]) .cc-ic svg{stroke:var(--ink)}}
-.cad-dim{position:absolute;left:0;top:0;font:600 12px var(--f-mono);color:var(--muted);background:color-mix(in srgb,var(--canvas) 80%,transparent);padding:1px 6px;border-radius:3px;opacity:0;transition:opacity .6s}
-.cad-art.phase-labels .cad-call,.cad-art.phase-labels .cad-leads line,.cad-art.phase-labels .cad-leads circle{opacity:1}
-.cad-dim{transition:opacity .6s}
+
 @media (min-width:1100px){
   .hero3-in{grid-template-columns:minmax(0,.86fr) minmax(0,1.14fr);max-width:1480px}
 }
@@ -649,9 +563,152 @@ h1,h2{font-family:var(--f-display)}
 .nav a{color:var(--navy-muted)}.nav a:hover{color:var(--on-navy);background:var(--navy-2)}
 /* alternate bands on white so gold text (#9A6516) keeps 4.5:1 */
 section.alt{background:var(--surface)}
+
+/* ===== v10 design system: one radius, spacing, shadow, type and button scale ===== */
+:root{
+  --r:10px; --r-sm:6px;
+  --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px; --s6:32px; --s7:48px; --s8:72px;
+  --sh-1:0 1px 2px rgba(25,26,53,.05),0 4px 12px -4px rgba(25,26,53,.08);
+  --sh-2:0 2px 4px rgba(25,26,53,.05),0 18px 36px -14px rgba(25,26,53,.22);
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+:root[data-theme="dark"]{--sh-1:0 1px 2px rgba(0,0,0,.3),0 4px 12px -4px rgba(0,0,0,.4);--sh-2:0 2px 4px rgba(0,0,0,.3),0 18px 36px -14px rgba(0,0,0,.6)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--sh-1:0 1px 2px rgba(0,0,0,.3),0 4px 12px -4px rgba(0,0,0,.4);--sh-2:0 2px 4px rgba(0,0,0,.3),0 18px 36px -14px rgba(0,0,0,.6)}}
+
+/* focus: gold-text ring on light, gold on navy */
+:focus-visible{outline:2px solid var(--blue-ink);outline-offset:3px}
+.top :focus-visible,.about :focus-visible,footer :focus-visible,.tag.ink:focus-visible{outline-color:var(--gold)}
+.skip{position:fixed;left:16px;top:-80px;z-index:200;background:var(--gold);color:var(--on-gold);padding:12px 18px;border-radius:var(--r);font-weight:600;text-decoration:none;box-shadow:var(--sh-2);transition:top .15s}
+.skip:focus{top:12px}
+#main{display:block;height:0;outline:0}
+
+/* header: solid navy at the top, translucent navy with blur once scrolled */
+.top{background:var(--navy);transition:background .25s,box-shadow .25s}
+.top.scrolled{background:color-mix(in srgb,var(--navy) 84%,transparent);-webkit-backdrop-filter:blur(16px) saturate(1.4);backdrop-filter:blur(16px) saturate(1.4);box-shadow:0 10px 30px -18px rgba(10,11,28,.6)}
+.nav a{min-height:44px;display:inline-flex;align-items:center;border-radius:var(--r-sm);transition:color .15s,background .15s}
+
+/* buttons: primary gold / navy text, secondary navy outline; same height, radius and type everywhere */
+.btn,.b3{min-height:48px;height:auto;padding:0 22px;border-radius:var(--r);font:600 15px/1.2 var(--f-sans);letter-spacing:.01em;text-transform:none;gap:8px;justify-content:center;transition:background .18s var(--ease),border-color .18s var(--ease),box-shadow .18s var(--ease),transform .18s var(--ease),color .18s}
+.top .btn{min-height:44px;height:44px;padding:0 20px;font-size:14px;border-radius:var(--r)}
+.btn-blue,.btn-navy,.b3.primary{background:var(--gold);color:var(--on-gold);border:1px solid var(--gold);box-shadow:0 1px 0 rgba(255,255,255,.35) inset,0 8px 20px -10px color-mix(in srgb,var(--gold) 80%,transparent)}
+.btn-blue:hover,.btn-navy:hover,.b3.primary:hover{background:var(--gold-hover);border-color:var(--gold-hover);transform:translateY(-1px);box-shadow:0 1px 0 rgba(255,255,255,.35) inset,0 12px 24px -10px color-mix(in srgb,var(--gold) 90%,transparent);filter:none}
+.b3.secondary{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.b3.secondary:hover{background:color-mix(in srgb,var(--ink) 6%,transparent);transform:translateY(-1px);filter:none}
+.btn:active,.b3:active{transform:none}
+.btn-navy{width:100%}
+
+/* surfaces */
+.card{border-radius:var(--r);box-shadow:var(--sh-1);overflow:hidden}
+.card-head{padding:12px var(--s4);background:linear-gradient(180deg,var(--surface),color-mix(in srgb,var(--recess) 55%,var(--surface)))}
+.card-body{padding:var(--s4) var(--s4) var(--s5);gap:var(--s3)}
+.card h3{font-size:17px;line-height:1.3;letter-spacing:-.01em}
+.card ul{gap:6px;line-height:1.5}
+.card-foot{padding:4px var(--s4);min-height:48px}
+.card-foot a{display:inline-flex;align-items:center;min-height:44px;padding-inline:4px;margin-right:-4px}
+.tag{border-radius:var(--r-sm)}
+.sec-head{margin-bottom:var(--s6)}
+.sec-head h2{font-size:clamp(1.7rem,3vw,2.3rem);line-height:1.12}
+.sec-head .muted{font-size:16px;line-height:1.6;max-width:62ch}
+section.band{padding-block:clamp(56px,7vw,96px)}
+.journey li{border-radius:var(--r);box-shadow:var(--sh-1);padding:var(--s5) var(--s4)}
+.steps{border-radius:var(--r);box-shadow:var(--sh-1)}
+.steps li::before{border-radius:var(--r-sm)}
+.stats{background:linear-gradient(180deg,var(--surface),color-mix(in srgb,var(--recess) 40%,var(--surface)))}
+.track li{border-radius:var(--r-sm)}
+
+/* projects: filters as 44px chips */
+.filters{gap:var(--s2);padding:2px 2px var(--s2)}
+.filters button{min-height:44px;padding:0 16px;border-radius:var(--r);transition:background .15s,border-color .15s,color .15s}
+.filters button:hover{border-color:color-mix(in srgb,var(--ink) 35%,var(--line))}
+.spec{border-radius:var(--r-sm)}
+
+/* contact */
+form.card{padding:var(--s5);gap:var(--s4)}
+.field input,.field select,.field textarea{border-radius:var(--r-sm);min-height:48px;transition:border-color .15s,box-shadow .15s}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--blue-ink);box-shadow:0 0 0 3px color-mix(in srgb,var(--gold) 28%,transparent)}
+.field input[aria-invalid="true"],.field textarea[aria-invalid="true"]{border-color:#B42318}
+.note{border-radius:var(--r-sm)}
+.ch{border-radius:var(--r);box-shadow:var(--sh-1)}
+.ch .act{min-height:44px;min-width:44px;display:inline-flex;align-items:center;justify-content:center;padding:0 16px;border-radius:var(--r-sm);transition:background .15s,border-color .15s}
+.ch .act:not(.solid):hover{border-color:var(--blue-ink)}
+.pill3{min-height:44px}
+
+/* about (navy): translucent panels, fine borders */
+.about-card{border-radius:calc(var(--r) + 4px);box-shadow:0 30px 60px -30px rgba(0,0,0,.5)}
+.ac-facts{border-radius:var(--r-sm)}
+.ac-link{display:inline-flex;align-items:center;min-height:44px}
+.tb{border-radius:var(--r-sm)}
+.menu-close,.menu-btn{border-radius:var(--r)}
+.menu-links a{min-height:52px;align-items:center}
+
+/* services: line-art icons in one style, aligned heads, subtle hover/focus */
+.sprite{position:absolute;width:0;height:0;overflow:hidden}
+.ico{fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.svc-ic{width:48px;height:48px;padding:8px;flex:none;color:var(--ink);border-radius:var(--r);background:color-mix(in srgb,var(--gold) 12%,var(--surface));border:1px solid color-mix(in srgb,var(--gold) 30%,var(--line))}
+#services .card-head{flex-wrap:nowrap;align-items:flex-start;min-height:58px}
+#services .card-head .muted{text-align:right;min-width:0;line-height:1.5}
+.card-head .tag{white-space:nowrap;flex:none}
+#services .card{position:relative;transition:transform .2s var(--ease),box-shadow .2s var(--ease),border-color .2s}
+#services .card::after{content:"";position:absolute;left:0;right:0;top:0;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
+#services .card:hover,#services .card:focus-within{box-shadow:var(--sh-2);border-color:color-mix(in srgb,var(--gold) 45%,var(--line))}
+#services .card:hover::after,#services .card:focus-within::after{transform:scaleX(1)}
+@media (prefers-reduced-motion:no-preference){#services .card:hover,#services .card:focus-within{transform:translateY(-3px)}}
+
+/* projects: drawing-style category band, labelled scope, ruled spec table */
+#plist .card{transition:box-shadow .2s var(--ease),border-color .2s}
+#plist .card:hover{box-shadow:var(--sh-2);border-color:color-mix(in srgb,var(--ink) 22%,var(--line))}
+.p-vis{position:relative;height:112px;display:grid;place-items:center;border-bottom:1px solid var(--line);color:var(--blueprint);
+  background-color:color-mix(in srgb,var(--blueprint) 4%,var(--surface));
+  background-image:linear-gradient(color-mix(in srgb,var(--blueprint) 10%,transparent) 1px,transparent 1px),linear-gradient(90deg,color-mix(in srgb,var(--blueprint) 10%,transparent) 1px,transparent 1px);
+  background-size:16px 16px;background-position:-1px -1px}
+.p-vis .ico{width:76px;height:76px;stroke-width:1.1}
+.p-vis .ico{--blue-ink:var(--blueprint)}
+.p-dim{position:absolute;left:24px;right:24px;bottom:14px;height:7px;border-inline:1px solid color-mix(in srgb,var(--blueprint) 45%,transparent);background:linear-gradient(color-mix(in srgb,var(--blueprint) 45%,transparent),color-mix(in srgb,var(--blueprint) 45%,transparent)) center/100% 1px no-repeat}
+.p-lbl{color:var(--muted);margin-bottom:-6px}
+.p-scope{font-size:14px;line-height:1.55}
+.spec{grid-template-columns:116px minmax(0,1fr);gap:0;padding:0;overflow:hidden;background:var(--surface)}
+.spec dt,.spec dd{padding:9px 12px;border-top:1px solid var(--line)}
+.spec dt{background:color-mix(in srgb,var(--recess) 55%,var(--surface))}
+.spec dt:first-of-type,.spec dt:first-of-type+dd{border-top:0}
+#plist .card-head .tag{max-width:100%;overflow-wrap:anywhere}
+
+/* hero polish (animation untouched): lead hierarchy, credential line, caption panel, blueprint crop marks */
+.hero3-text .hero3-lead,.hero3-lead{font-size:clamp(17px,1.25vw,19.5px);line-height:1.6;color:var(--ink);font-weight:400;max-width:50ch}
+.hero3-sub{font-size:15px;line-height:1.65;color:var(--muted);max-width:52ch;margin-top:-10px}
+.hero3-by{display:inline-flex;align-items:center;gap:12px}
+.hero3-by::before{content:"";width:28px;height:1px;background:var(--gold);flex:none}
+.hero3-ctas{gap:var(--s3)}
+.hs-on .hs-ui{padding:12px 16px 10px;border-radius:var(--r);background:color-mix(in srgb,var(--surface) 72%,transparent);border:1px solid color-mix(in srgb,var(--line) 85%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:var(--sh-1)}
+.hs-on .hs-foot{margin-top:6px}
+.hart::before,.hart::after{content:"";position:absolute;width:18px;height:18px;pointer-events:none;border:0 solid color-mix(in srgb,var(--blueprint) 45%,transparent)}
+.hart::before{left:2%;top:2%;border-left-width:1px;border-top-width:1px}
+.hart::after{right:0;bottom:0;border-right-width:1px;border-bottom-width:1px}
+@media (max-width:767px){.hero3-sub{font-size:14.5px}}
+
+/* sections: navy About with translucent value panels; consistent card rhythm */
+.values{gap:var(--s4)}
+.value{border-top:0;padding:var(--s5) var(--s4) var(--s4);background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);position:relative;overflow:hidden}
+.value::before{content:"";position:absolute;left:0;top:0;width:40px;height:2px;background:var(--gold)}
+.about::after{content:"";position:absolute;right:-10%;top:-20%;width:60%;height:80%;background:radial-gradient(closest-side,color-mix(in srgb,var(--gold) 9%,transparent),transparent);pointer-events:none}
+.about-in{position:relative;z-index:1}
+.journey li .eyebrow{display:inline-flex;align-items:center;gap:8px}
+#codes .card-body .eyebrow{display:inline-block;margin-bottom:-2px}
+.chips .tag{padding:4px 10px}
+
+/* scroll reveals: only when JS adds .rv-on and the user allows motion */
+@media (prefers-reduced-motion:no-preference){
+  .rv-on .rv{opacity:0;transform:translateY(18px);transition:opacity .6s var(--ease),transform .6s var(--ease);transition-delay:var(--rv-d,0s)}
+  .rv-on .rv.in{opacity:1;transform:none}
+}
+
+/* contact: Call + WhatsApp actions side by side */
+.acts{display:flex;gap:var(--s2);flex:none}
+.menu-foot a{color:var(--ink);text-underline-offset:3px}
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
+<svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false"><defs><symbol id="i-skid" viewBox="0 0 48 48"><path d="M5 38h38M5 42h38M9 38v4M39 38v4M24 38v4"/><rect x="11" y="12" width="11" height="26" rx="5.5"/><circle cx="33" cy="31" r="5"/><path d="M33 26v-6H22" style="stroke:var(--blue-ink)"/></symbol><symbol id="i-comp" viewBox="0 0 48 48"><path d="M6 40h36M10 40v-4h28v4"/><circle cx="19" cy="22" r="10"/><circle cx="19" cy="22" r="3.5"/><path d="M19 12h11v5"/><rect x="31" y="17" width="11" height="15" rx="2"/><path d="M29 24h2"/><path d="M3 22h6M9 19v6" style="stroke:var(--blue-ink)"/></symbol><symbol id="i-psa" viewBox="0 0 48 48"><rect x="11" y="9" width="10" height="26" rx="5"/><rect x="27" y="9" width="10" height="26" rx="5"/><path d="M8 40h32M13 35v5M19 35v5M29 35v5M35 35v5"/><path d="M16 9V5h16v4M24 5V2M21 29h6" style="stroke:var(--blue-ink)"/></symbol><symbol id="i-tank" viewBox="0 0 48 48"><rect x="5" y="13" width="38" height="18" rx="9"/><path d="M11 31l-1 7h8l-1-7M31 31l-1 7h8l-1-7M5 40h38"/><path d="M21 13V9h6v4" style="stroke:var(--blue-ink)"/></symbol><symbol id="i-fuel" viewBox="0 0 48 48"><rect x="4" y="13" width="28" height="20" rx="1.5"/><path d="M10 17v12M16 17v12M22 17v12M2 36h38"/><circle cx="11" cy="39" r="3"/><circle cx="27" cy="39" r="3"/><rect x="35" y="18" width="7" height="15" rx="1"/><path d="M38.5 18v-3a3 3 0 0 1 6 0v8" style="stroke:var(--blue-ink)"/></symbol><symbol id="i-pipe" viewBox="0 0 48 48"><path d="M6 36h36v6H6zM30 14v22"/><path d="M11 36V22a8 8 0 0 1 8-8h20"/><path d="M39 10v8M8 27h6" style="stroke:var(--blue-ink)"/></symbol><symbol id="i-bid" viewBox="0 0 48 48"><path d="M12 5h17l8 8v30H12z"/><path d="M29 5v8h8M27 22h5M27 32h5"/><path d="M17 21l2.5 2.5L24 19M17 31l2.5 2.5L24 29" style="stroke:var(--blue-ink)"/></symbol><symbol id="i-check" viewBox="0 0 48 48"><rect x="5" y="7" width="30" height="24" rx="1.5"/><path d="M19 25h16M27 25v6M9 13h12M9 18h8"/><circle cx="32" cy="33" r="7" style="stroke:var(--blue-ink);fill:var(--surface)"/><path d="M37 38l6 6" style="stroke:var(--blue-ink)"/></symbol></defs></svg>
 
 
 <header class="top">
@@ -665,6 +722,7 @@ section.alt{background:var(--surface)}
 </header>
 
 <main id="top">
+<span id="main" tabindex="-1"></span>
 <section class="hero3" aria-labelledby="hero-title">
   <div class="hs-track"><div class="hs-pin">
   <div class="hero3-wash" aria-hidden="true"></div>
@@ -673,13 +731,14 @@ section.alt{background:var(--surface)}
   <div class="wrap hero3-in"><div class="hero3-text">
     <a class="pill3 rise d5" href="#deliver"><span class="badge3">Design partner</span><span>Concept → 3D model → Shop drawings</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
     <h1 id="hero-title" class="rise d1">Concept to <span class="hl">fabrication&#8209;ready</span> design.</h1>
-    <p class="hero3-lead rise d2">Damodar Engineering Design turns concepts into fabrication-ready designs: 3D models, GA and shop drawings for compressor packages, nitrogen generation packages, metering and process skids, storage tanks and fuel systems. We work alongside your workshop as your design partner, answering fabrication queries and supporting you through FAT and SAT.</p>
+    <p class="hero3-lead rise d2">Damodar Engineering Design turns concepts into fabrication-ready designs: 3D models, GA and shop drawings for compressor packages, nitrogen generation packages, metering and process skids, storage tanks and fuel systems.</p>
+    <p class="hero3-sub rise d2">We work alongside your workshop as your design partner, answering fabrication queries and supporting you through FAT and SAT.</p>
     <div class="hero3-ctas rise d3">
       <a class="b3 primary" href="#contact">Send your spec<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <a class="b3 secondary" href="https://wa.me/971509633421" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Book a call</a>
     </div>
     <p class="hero3-by code rise d4">Led by Damodar Dasi · Principal Design Engineer · 6+ yrs UAE/GCC</p>
-  </div><div class="hs-stage"><div class="hs-sticky"><div class="hero-drift hd-fig" aria-hidden="true"></div><figure class="hart" aria-label="Centrifugal compressor package: from concept wireframe and CAD model to the assembled, fabrication-ready package"><span class="hs-sheet" aria-hidden="true"></span><div class="hghost"><img src="images/hero-wire.webp" alt="" width="1774" height="887" decoding="async"><svg class="ghost-dims" viewBox="0 0 1774 887" aria-hidden="true"><path d="M420 -70H1480M420 -95V-45M1480 -95V-45M420 -60V40M1480 -60V40"/><path d="M-40 20V610M-65 20H-15M-65 610H-15M-55 20H420M-55 610H80"/><path d="M40 680L700 960M22 718L58 642M682 998L718 922"/><text x="950" y="-92" text-anchor="middle">3200</text><text x="-90" y="330" text-anchor="end">2500</text><text x="330" y="900" text-anchor="middle" transform="rotate(23 330 900)">1800</text></svg></div><div class="hstack"><img class="hwire" src="images/hero-wire.webp" alt="" width="1774" height="887" decoding="async"><img class="hsolid" src="images/hero-render.webp" alt="3D render of a skid-mounted centrifugal compressor package with drive motor, lube oil system and overhead suction piping" width="1774" height="887" decoding="async"><span class="hscan" aria-hidden="true"></span><span class="hs-sweep" aria-hidden="true"><i></i></span></div><canvas class="hs-cv" aria-hidden="true"></canvas><svg class="hleads" aria-hidden="true"></svg><div class="hcall call-suction" data-ax="0.33" data-ay="0.085"><span class="hc-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h10a4 4 0 1 0-4-4M3 16h13a3 3 0 1 1-3 3M3 8h3"/></svg></span><span class="hc-t">Suction<br>system</span></div><div class="hcall call-comp" data-ax="0.47" data-ay="0.37"><span class="hc-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5c3 2.4 3 6 0 8.5s-3 6.1 0 8.5M3.6 10c3.4-1 6.4.2 8.4 2s5 3 8.4 2"/><circle cx="12" cy="12" r="1.6"/></svg></span><span class="hc-t">Centrifugal<br>compressor</span></div><div class="hcall call-motor" data-ax="0.8" data-ay="0.47"><span class="hc-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="7" width="13" height="10" rx="2"/><path d="M16.5 12h4M7 7V5h6v2M7.5 10v4M10 10v4M12.5 10v4"/></svg></span><span class="hc-t">Drive<br>motor</span></div><div class="hcall call-oil" data-ax="0.175" data-ay="0.5"><span class="hc-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.4 6 11a6 6 0 0 1-12 0c0-4.6 6-11 6-11z"/><path d="M9.5 15a2.5 2.5 0 0 0 2.5 2.5"/></svg></span><span class="hc-t">Lube oil<br>system</span></div><div class="hcall call-frame" data-ax="0.83" data-ay="0.885"><span class="hc-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8l9-4 9 4-9 4z"/><path d="M3 8v6l9 4 9-4V8M12 12v6"/></svg></span><span class="hc-t">Fabricated<br>base frame</span></div></figure><div class="hs-ui"><ol class="hs-cap"><li><span class="code">01</span><span class="hs-t">RFQ received</span><span class="hs-d">requirements and design basis reviewed</span></li><li><span class="code">02</span><span class="hs-t">CAD model</span><span class="hs-d">package layout and 3D model developed</span></li><li><span class="code">03</span><span class="hs-t">Designed for assembly</span><span class="hs-d">equipment, piping, valves and instruments come together</span></li><li><span class="code">04</span><span class="hs-t">Complete package</span><span class="hs-d">ready for fabrication, FAT and delivery</span></li></ol><span class="hs-bar" aria-hidden="true"><i><b></b><span class="code">01</span></i><i><b></b><span class="code">02</span></i><i><b></b><span class="code">03</span></i><i><b></b><span class="code">04</span></i></span><div class="hs-foot"><p class="hs-note code">Illustrative example</p><span class="hs-hint code" aria-hidden="true">Scroll<svg viewBox="0 0 24 24" width="12" height="12"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span></div></div></div><div class="hs-run" aria-hidden="true"></div></div></div>
+  </div><div class="hs-stage"><div class="hs-sticky"><div class="hero-drift hd-fig" aria-hidden="true"></div><figure class="hart" aria-label="Centrifugal compressor package: from concept wireframe and CAD model to the assembled, fabrication-ready package"><span class="hs-sheet" aria-hidden="true"></span><div class="hghost"><img src="images/hero-wire.webp" alt="" width="1774" height="887" decoding="async"><svg class="ghost-dims" viewBox="0 0 1774 887" aria-hidden="true"><path d="M420 -70H1480M420 -95V-45M1480 -95V-45M420 -60V40M1480 -60V40"/><path d="M-40 20V610M-65 20H-15M-65 610H-15M-55 20H420M-55 610H80"/><path d="M40 680L700 960M22 718L58 642M682 998L718 922"/><text x="950" y="-92" text-anchor="middle">3200</text><text x="-90" y="330" text-anchor="end">2500</text><text x="330" y="900" text-anchor="middle" transform="rotate(23 330 900)">1800</text></svg></div><div class="hstack"><img class="hwire" src="images/hero-wire.webp" alt="" width="1774" height="887" decoding="async"><img class="hsolid" src="images/hero-render.webp" srcset="images/hero-render-1100.webp 1100w, images/hero-render.webp 1774w" sizes="(min-width:1100px) 52vw, 100vw" alt="3D render of a skid-mounted centrifugal compressor package with drive motor, lube oil system and overhead suction piping" width="1774" height="887" decoding="async"><span class="hscan" aria-hidden="true"></span><span class="hs-sweep" aria-hidden="true"><i></i></span></div><canvas class="hs-cv" aria-hidden="true"></canvas><svg class="hleads" aria-hidden="true"></svg><div class="hcall call-suction" data-ax="0.33" data-ay="0.085"><span class="hc-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h10a4 4 0 1 0-4-4M3 16h13a3 3 0 1 1-3 3M3 8h3"/></svg></span><span class="hc-t">Suction<br>system</span></div><div class="hcall call-comp" data-ax="0.47" data-ay="0.37"><span class="hc-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5c3 2.4 3 6 0 8.5s-3 6.1 0 8.5M3.6 10c3.4-1 6.4.2 8.4 2s5 3 8.4 2"/><circle cx="12" cy="12" r="1.6"/></svg></span><span class="hc-t">Centrifugal<br>compressor</span></div><div class="hcall call-motor" data-ax="0.8" data-ay="0.47"><span class="hc-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="7" width="13" height="10" rx="2"/><path d="M16.5 12h4M7 7V5h6v2M7.5 10v4M10 10v4M12.5 10v4"/></svg></span><span class="hc-t">Drive<br>motor</span></div><div class="hcall call-oil" data-ax="0.175" data-ay="0.5"><span class="hc-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.4 6 11a6 6 0 0 1-12 0c0-4.6 6-11 6-11z"/><path d="M9.5 15a2.5 2.5 0 0 0 2.5 2.5"/></svg></span><span class="hc-t">Lube oil<br>system</span></div><div class="hcall call-frame" data-ax="0.83" data-ay="0.885"><span class="hc-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8l9-4 9 4-9 4z"/><path d="M3 8v6l9 4 9-4V8M12 12v6"/></svg></span><span class="hc-t">Fabricated<br>base frame</span></div></figure><div class="hs-ui"><ol class="hs-cap"><li><span class="code">01</span><span class="hs-t">RFQ received</span><span class="hs-d">requirements and design basis reviewed</span></li><li><span class="code">02</span><span class="hs-t">CAD model</span><span class="hs-d">package layout and 3D model developed</span></li><li><span class="code">03</span><span class="hs-t">Designed for assembly</span><span class="hs-d">equipment, piping, valves and instruments come together</span></li><li><span class="code">04</span><span class="hs-t">Complete package</span><span class="hs-d">ready for fabrication, FAT and delivery</span></li></ol><span class="hs-bar" aria-hidden="true"><i><b></b><span class="code">01</span></i><i><b></b><span class="code">02</span></i><i><b></b><span class="code">03</span></i><i><b></b><span class="code">04</span></i></span><div class="hs-foot"><p class="hs-note code">Illustrative example</p><span class="hs-hint code" aria-hidden="true">Scroll<svg viewBox="0 0 24 24" width="12" height="12"><path d="M12 5v14M6 13l6 6 6-6"/></svg></span></div></div></div><div class="hs-run" aria-hidden="true"></div></div></div>
   </div><div class="hs-run-d" aria-hidden="true"></div></div>
   <div class="wrap feat"><ul>
     <li><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 5l16 9v20l-16 9-16-9V14z"/><path d="M8 14l16 9 16-9M24 23v20"/></svg><div><b>3D modelling</b><span>Detailed and accurate models</span></div></li>
@@ -787,14 +846,14 @@ section.alt{background:var(--surface)}
   <div class="wrap">
     <div class="sec-head"><span class="code eyebrow">Design services</span><h2>What we can take off your desk</h2><p class="muted">Each service runs as a complete design package or as a single deliverable that plugs into your team's workflow.</p></div>
     <div class="grid g4">
-      <article class="card"><div class="card-head code"><span class="tag ink">SVC-01</span><span class="muted">B31.3 · ISO 8573-1</span></div><div class="card-body"><h3>Skid &amp; package design</h3><ul><li>3D SolidWorks modelling &amp; GA</li><li>Fabrication, welding &amp; assembly drawings</li><li>Piping isometrics &amp; BOM schedules</li><li>Base frames, drip trays &amp; lifting lugs</li></ul></div><div class="card-foot code"><span class="eyebrow">3D CAD + DWG + BOM</span><a href="#contact">Enquire →</a></div></article>
-      <article class="card"><div class="card-head code"><span class="tag ink">SVC-02</span><span class="muted">API 614 · 617 · 692</span></div><div class="card-body"><h3>Compressor &amp; compander package design</h3><ul><li>Process piping integration &amp; nozzle orientation</li><li>Lube-oil consoles &amp; seal-gas rack layouts</li><li>Heavy base frames &amp; acoustic enclosures</li><li>Nozzle loads, vibration isolation &amp; FAT support</li></ul></div><div class="card-foot code"><span class="eyebrow">Skid GA + oil console</span><a href="#contact">Enquire →</a></div></article>
-      <article class="card"><div class="card-head code"><span class="tag ink">SVC-03</span><span class="muted">ISO 8573-1 · ASME VIII</span></div><div class="card-body"><h3>PSA nitrogen &amp; compressed air design</h3><ul><li>Twin-tower CMS generator integration</li><li>Air receivers &amp; N₂ buffer vessels</li><li>Valve manifolds &amp; filtration skids</li><li>Utility tie-ins &amp; vent silencing</li></ul></div><div class="card-foot code"><span class="eyebrow">Skid ISO + P&amp;ID</span><a href="#contact">Enquire →</a></div></article>
-      <article class="card"><div class="card-head code"><span class="tag ink">SVC-04</span><span class="muted">API 650 · UL 142 · IS 2825</span></div><div class="card-body"><h3>Storage tank &amp; pressure vessel design</h3><ul><li>Single &amp; double-wall fuel tanks</li><li>Shell/head sizing, nozzles &amp; manways</li><li>Baffles, vortex breakers &amp; hydrotest fixtures</li><li>Weight, BOM &amp; centre of gravity</li></ul></div><div class="card-foot code"><span class="eyebrow">Fab DWG + hydro spec</span><a href="#contact">Enquire →</a></div></article>
-      <article class="card"><div class="card-head code"><span class="tag ink">SVC-05</span><span class="muted">UL 2085 · ADR · ATEX</span></div><div class="card-body"><h3>Mobile fuelling station &amp; fuel skid design</h3><ul><li>20 ft &amp; 40 ft containerised stations</li><li>Dual-compartment tanks with spill containment</li><li>Stage 1 vapour recovery &amp; ATG</li><li>Hazardous-area zoning to IEC 60079</li></ul></div><div class="card-foot code"><span class="eyebrow">Fit-out + ATEX GA</span><a href="#contact">Enquire →</a></div></article>
-      <article class="card"><div class="card-head code"><span class="tag ink">SVC-06</span><span class="muted">ASME B31.3 · B16.5</span></div><div class="card-body"><h3>Piping &amp; structural base frame design</h3><ul><li>Beam selection, gussets &amp; anchor layouts</li><li>Suction/discharge piping &amp; tie-ins</li><li>Pump baseplates &amp; vibration pads</li><li>Spreader-beam input &amp; CoG reports</li></ul></div><div class="card-foot code"><span class="eyebrow">Spools + MTO</span><a href="#contact">Enquire →</a></div></article>
-      <article class="card"><div class="card-head code"><span class="tag ink">SVC-07</span><span class="muted">Client specs · TRAKHEES</span></div><div class="card-body"><h3>Technical bid &amp; tender support</h3><ul><li>Compliance matrices against client specs</li><li>Datasheets &amp; technical queries</li><li>Preliminary bid GA &amp; footprint checks</li><li>Submittal packages for EPC pre-award</li></ul></div><div class="card-foot code"><span class="eyebrow">Compliance grid + GA</span><a href="#contact">Enquire →</a></div></article>
-      <article class="card"><div class="card-head code"><span class="tag ink">SVC-08</span><span class="muted">Your formats · your title blocks</span></div><div class="card-body"><h3>Drawing checking &amp; design review</h3><ul><li>Independent P&amp;ID &amp; mechanical review</li><li>Pre-fabrication checks for clashes &amp; welds</li><li>Vendor 3D model audits</li><li>Mentoring for junior designers</li></ul></div><div class="card-foot code"><span class="eyebrow">Redlines + QC log</span><a href="#contact">Enquire →</a></div></article>
+      <article class="card"><div class="card-head code"><span class="tag ink">SVC-01</span><span class="muted">B31.3 · ISO 8573-1</span></div><div class="card-body"><svg class="ico svc-ic" viewBox="0 0 48 48" aria-hidden="true"><use href="#i-skid"/></svg><h3>Skid &amp; package design</h3><ul><li>3D SolidWorks modelling &amp; GA</li><li>Fabrication, welding &amp; assembly drawings</li><li>Piping isometrics &amp; BOM schedules</li><li>Base frames, drip trays &amp; lifting lugs</li></ul></div><div class="card-foot code"><span class="eyebrow">3D CAD + DWG + BOM</span><a href="#contact">Enquire →</a></div></article>
+      <article class="card"><div class="card-head code"><span class="tag ink">SVC-02</span><span class="muted">API 614 · 617 · 692</span></div><div class="card-body"><svg class="ico svc-ic" viewBox="0 0 48 48" aria-hidden="true"><use href="#i-comp"/></svg><h3>Compressor &amp; compander package design</h3><ul><li>Process piping integration &amp; nozzle orientation</li><li>Lube-oil consoles &amp; seal-gas rack layouts</li><li>Heavy base frames &amp; acoustic enclosures</li><li>Nozzle loads, vibration isolation &amp; FAT support</li></ul></div><div class="card-foot code"><span class="eyebrow">Skid GA + oil console</span><a href="#contact">Enquire →</a></div></article>
+      <article class="card"><div class="card-head code"><span class="tag ink">SVC-03</span><span class="muted">ISO 8573-1 · ASME VIII</span></div><div class="card-body"><svg class="ico svc-ic" viewBox="0 0 48 48" aria-hidden="true"><use href="#i-psa"/></svg><h3>PSA nitrogen &amp; compressed air design</h3><ul><li>Twin-tower CMS generator integration</li><li>Air receivers &amp; N₂ buffer vessels</li><li>Valve manifolds &amp; filtration skids</li><li>Utility tie-ins &amp; vent silencing</li></ul></div><div class="card-foot code"><span class="eyebrow">Skid ISO + P&amp;ID</span><a href="#contact">Enquire →</a></div></article>
+      <article class="card"><div class="card-head code"><span class="tag ink">SVC-04</span><span class="muted">API 650 · UL 142 · IS 2825</span></div><div class="card-body"><svg class="ico svc-ic" viewBox="0 0 48 48" aria-hidden="true"><use href="#i-tank"/></svg><h3>Storage tank &amp; pressure vessel design</h3><ul><li>Single &amp; double-wall fuel tanks</li><li>Shell/head sizing, nozzles &amp; manways</li><li>Baffles, vortex breakers &amp; hydrotest fixtures</li><li>Weight, BOM &amp; centre of gravity</li></ul></div><div class="card-foot code"><span class="eyebrow">Fab DWG + hydro spec</span><a href="#contact">Enquire →</a></div></article>
+      <article class="card"><div class="card-head code"><span class="tag ink">SVC-05</span><span class="muted">UL 2085 · ADR · ATEX</span></div><div class="card-body"><svg class="ico svc-ic" viewBox="0 0 48 48" aria-hidden="true"><use href="#i-fuel"/></svg><h3>Mobile fuelling station &amp; fuel skid design</h3><ul><li>20 ft &amp; 40 ft containerised stations</li><li>Dual-compartment tanks with spill containment</li><li>Stage 1 vapour recovery &amp; ATG</li><li>Hazardous-area zoning to IEC 60079</li></ul></div><div class="card-foot code"><span class="eyebrow">Fit-out + ATEX GA</span><a href="#contact">Enquire →</a></div></article>
+      <article class="card"><div class="card-head code"><span class="tag ink">SVC-06</span><span class="muted">ASME B31.3 · B16.5</span></div><div class="card-body"><svg class="ico svc-ic" viewBox="0 0 48 48" aria-hidden="true"><use href="#i-pipe"/></svg><h3>Piping &amp; structural base frame design</h3><ul><li>Beam selection, gussets &amp; anchor layouts</li><li>Suction/discharge piping &amp; tie-ins</li><li>Pump baseplates &amp; vibration pads</li><li>Spreader-beam input &amp; CoG reports</li></ul></div><div class="card-foot code"><span class="eyebrow">Spools + MTO</span><a href="#contact">Enquire →</a></div></article>
+      <article class="card"><div class="card-head code"><span class="tag ink">SVC-07</span><span class="muted">Client specs · TRAKHEES</span></div><div class="card-body"><svg class="ico svc-ic" viewBox="0 0 48 48" aria-hidden="true"><use href="#i-bid"/></svg><h3>Technical bid &amp; tender support</h3><ul><li>Compliance matrices against client specs</li><li>Datasheets &amp; technical queries</li><li>Preliminary bid GA &amp; footprint checks</li><li>Submittal packages for EPC pre-award</li></ul></div><div class="card-foot code"><span class="eyebrow">Compliance grid + GA</span><a href="#contact">Enquire →</a></div></article>
+      <article class="card"><div class="card-head code"><span class="tag ink">SVC-08</span><span class="muted">Your formats · your title blocks</span></div><div class="card-body"><svg class="ico svc-ic" viewBox="0 0 48 48" aria-hidden="true"><use href="#i-check"/></svg><h3>Drawing checking &amp; design review</h3><ul><li>Independent P&amp;ID &amp; mechanical review</li><li>Pre-fabrication checks for clashes &amp; welds</li><li>Vendor 3D model audits</li><li>Mentoring for junior designers</li></ul></div><div class="card-foot code"><span class="eyebrow">Redlines + QC log</span><a href="#contact">Enquire →</a></div></article>
     </div>
   </div>
 </section>
@@ -810,12 +869,18 @@ section.alt{background:var(--surface)}
       <button type="button" id="f-tank" data-f="tank" aria-pressed="false">Tanks &amp; vessels</button>
     </div>
     <div class="grid g3" id="plist">
-      <article class="card" data-c="fuel"><div class="card-head code"><span class="eyebrow">Ref F-01</span><span class="tag">Dubai, UAE</span></div><div class="card-body"><h3>Emarat 40 ft mobile fuelling unit</h3><p class="muted" style="font-size:14px">Lead mechanical designer, from tender stage through site acceptance testing and commissioning.</p><dl class="spec"><dt>Capacity</dt><dd>42,600 L gross</dd><dt>Codes</dt><dd class="c">UL 142 · UL 2085 · ADR</dd><dt>Systems</dt><dd>Dispenser, ATG, vapour recovery</dd></dl></div><div class="card-foot code"><span class="status">Commissioned in UAE</span></div></article>
-      <article class="card" data-c="comp"><div class="card-head code"><span class="eyebrow">Ref C-01</span><span class="tag">Shipyard newbuild</span></div><div class="card-body"><h3>N₂ compander package, marine</h3><p class="muted" style="font-size:14px">Package layout with lube-oil console, process gas piping and ABS marine rules coordination.</p><dl class="spec"><dt>Stages / flow</dt><dd>4-stage · 29,605 kg/h</dd><dt>Pressure</dt><dd>7.4 to 35.3 bar(a)</dd><dt>Codes</dt><dd class="c">API 617 · API 614 · ABS</dd></dl></div><div class="card-foot code"><span class="status">FAT tested</span></div></article>
-      <article class="card" data-c="comp"><div class="card-head code"><span class="eyebrow">Ref C-03</span><span class="tag">Singapore FAT</span></div><div class="card-body"><h3>4-stage natural gas compressor redesign</h3><p class="muted" style="font-size:14px">Full 3D redesign of process piping, lube-oil console, dry gas seal racks and acoustic hood.</p><dl class="spec"><dt>Flow</dt><dd>36,980 kg/h</dd><dt>Pressure</dt><dd>13.21 to 50.8 bar(a)</dd><dt>Codes</dt><dd class="c">API 617 · API 692 · B31.3</dd></dl></div><div class="card-foot code"><span class="status">FAT witnessed in Singapore</span></div></article>
-      <article class="card" data-c="n2"><div class="card-head code"><span class="eyebrow">Ref P-01</span><span class="tag">National operator, India</span></div><div class="card-body"><h3>PSA nitrogen generation package</h3><p class="muted" style="font-size:14px">High-purity nitrogen unit with carbon molecular sieve towers, buffer vessels and valve skids.</p><dl class="spec"><dt>Vessels</dt><dd>12 m³ receiver + 25 m³ buffer</dd><dt>Output</dt><dd>99.9% purity @ 6 barg</dd><dt>Codes</dt><dd class="c">ASME VIII Div 1 · IS 2825</dd></dl></div><div class="card-foot code"><span class="status">Delivered to site</span></div></article>
-      <article class="card" data-c="fuel"><div class="card-head code"><span class="eyebrow">Ref F-07</span><span class="tag">Commercial fleet, UAE</span></div><div class="card-body"><h3>Maser portable fuelling unit</h3><p class="muted" style="font-size:14px">Integration of Maser Italia fleet telemetry, explosion-proof dispensing and skid drip containment.</p><dl class="spec"><dt>Integration</dt><dd>Maser Italia fleet console</dd><dt>Protection</dt><dd class="c">ATEX Zone 1 · Ex-proof</dd></dl></div><div class="card-foot code"><span class="status">Built &amp; commissioned in UAE</span></div></article>
-      <article class="card" data-c="tank"><div class="card-head code"><span class="eyebrow">Ref S-01</span><span class="tag">Storage &amp; filtration</span></div><div class="card-body"><h3>6,000 L filter vessel &amp; heavy tanks</h3><p class="muted" style="font-size:14px">Shell and dished-head calculations, nozzle orientations, hydrotest fixtures and transport tie-downs.</p><dl class="spec"><dt>Code</dt><dd class="c">ASME VIII Div 1</dd><dt>Rating</dt><dd>8.0 bar design pressure</dd></dl></div><div class="card-foot code"><span class="status">Deliverables approved</span></div></article>
+      <article class="card" data-c="fuel">
+        <!-- TODO image: images/projects/f-01-emarat-40ft-mobile-fuelling-unit.webp (real project photo or drawing extract, 1200x675, webp q75). When available, replace the line-art below with <img src="images/projects/f-01-emarat-40ft-mobile-fuelling-unit.webp" alt="..." width="1200" height="675" loading="lazy">. --><div class="p-vis" aria-hidden="true"><svg class="ico" viewBox="0 0 48 48"><use href="#i-fuel"/></svg><span class="p-dim"></span></div><div class="card-head code"><span class="eyebrow">Ref F-01</span><span class="tag">Dubai, UAE</span></div><div class="card-body"><h3>Emarat 40 ft mobile fuelling unit</h3><p class="p-lbl code">Scope</p><p class="muted p-scope">Lead mechanical designer, from tender stage through site acceptance testing and commissioning.</p><dl class="spec"><dt>Capacity</dt><dd>42,600 L gross</dd><dt>Codes</dt><dd class="c">UL 142 · UL 2085 · ADR</dd><dt>Systems</dt><dd>Dispenser, ATG, vapour recovery</dd></dl></div><div class="card-foot code"><span class="status">Commissioned in UAE</span></div></article>
+      <article class="card" data-c="comp">
+        <!-- TODO image: images/projects/c-01-n2-compander-package-marine.webp (real project photo or drawing extract, 1200x675, webp q75). When available, replace the line-art below with <img src="images/projects/c-01-n2-compander-package-marine.webp" alt="..." width="1200" height="675" loading="lazy">. --><div class="p-vis" aria-hidden="true"><svg class="ico" viewBox="0 0 48 48"><use href="#i-comp"/></svg><span class="p-dim"></span></div><div class="card-head code"><span class="eyebrow">Ref C-01</span><span class="tag">Shipyard newbuild</span></div><div class="card-body"><h3>N₂ compander package, marine</h3><p class="p-lbl code">Scope</p><p class="muted p-scope">Package layout with lube-oil console, process gas piping and ABS marine rules coordination.</p><dl class="spec"><dt>Stages / flow</dt><dd>4-stage · 29,605 kg/h</dd><dt>Pressure</dt><dd>7.4 to 35.3 bar(a)</dd><dt>Codes</dt><dd class="c">API 617 · API 614 · ABS</dd></dl></div><div class="card-foot code"><span class="status">FAT tested</span></div></article>
+      <article class="card" data-c="comp">
+        <!-- TODO image: images/projects/c-03-natural-gas-compressor-redesign.webp (real project photo or drawing extract, 1200x675, webp q75). When available, replace the line-art below with <img src="images/projects/c-03-natural-gas-compressor-redesign.webp" alt="..." width="1200" height="675" loading="lazy">. --><div class="p-vis" aria-hidden="true"><svg class="ico" viewBox="0 0 48 48"><use href="#i-comp"/></svg><span class="p-dim"></span></div><div class="card-head code"><span class="eyebrow">Ref C-03</span><span class="tag">Singapore FAT</span></div><div class="card-body"><h3>4-stage natural gas compressor redesign</h3><p class="p-lbl code">Scope</p><p class="muted p-scope">Full 3D redesign of process piping, lube-oil console, dry gas seal racks and acoustic hood.</p><dl class="spec"><dt>Flow</dt><dd>36,980 kg/h</dd><dt>Pressure</dt><dd>13.21 to 50.8 bar(a)</dd><dt>Codes</dt><dd class="c">API 617 · API 692 · B31.3</dd></dl></div><div class="card-foot code"><span class="status">FAT witnessed in Singapore</span></div></article>
+      <article class="card" data-c="n2">
+        <!-- TODO image: images/projects/p-01-psa-nitrogen-package.webp (real project photo or drawing extract, 1200x675, webp q75). When available, replace the line-art below with <img src="images/projects/p-01-psa-nitrogen-package.webp" alt="..." width="1200" height="675" loading="lazy">. --><div class="p-vis" aria-hidden="true"><svg class="ico" viewBox="0 0 48 48"><use href="#i-psa"/></svg><span class="p-dim"></span></div><div class="card-head code"><span class="eyebrow">Ref P-01</span><span class="tag">National operator, India</span></div><div class="card-body"><h3>PSA nitrogen generation package</h3><p class="p-lbl code">Scope</p><p class="muted p-scope">High-purity nitrogen unit with carbon molecular sieve towers, buffer vessels and valve skids.</p><dl class="spec"><dt>Vessels</dt><dd>12 m³ receiver + 25 m³ buffer</dd><dt>Output</dt><dd>99.9% purity @ 6 barg</dd><dt>Codes</dt><dd class="c">ASME VIII Div 1 · IS 2825</dd></dl></div><div class="card-foot code"><span class="status">Delivered to site</span></div></article>
+      <article class="card" data-c="fuel">
+        <!-- TODO image: images/projects/f-07-maser-portable-fuelling-unit.webp (real project photo or drawing extract, 1200x675, webp q75). When available, replace the line-art below with <img src="images/projects/f-07-maser-portable-fuelling-unit.webp" alt="..." width="1200" height="675" loading="lazy">. --><div class="p-vis" aria-hidden="true"><svg class="ico" viewBox="0 0 48 48"><use href="#i-fuel"/></svg><span class="p-dim"></span></div><div class="card-head code"><span class="eyebrow">Ref F-07</span><span class="tag">Commercial fleet, UAE</span></div><div class="card-body"><h3>Maser portable fuelling unit</h3><p class="p-lbl code">Scope</p><p class="muted p-scope">Integration of Maser Italia fleet telemetry, explosion-proof dispensing and skid drip containment.</p><dl class="spec"><dt>Integration</dt><dd>Maser Italia fleet console</dd><dt>Protection</dt><dd class="c">ATEX Zone 1 · Ex-proof</dd></dl></div><div class="card-foot code"><span class="status">Built &amp; commissioned in UAE</span></div></article>
+      <article class="card" data-c="tank">
+        <!-- TODO image: images/projects/s-01-filter-vessel-and-heavy-tanks.webp (real project photo or drawing extract, 1200x675, webp q75). When available, replace the line-art below with <img src="images/projects/s-01-filter-vessel-and-heavy-tanks.webp" alt="..." width="1200" height="675" loading="lazy">. --><div class="p-vis" aria-hidden="true"><svg class="ico" viewBox="0 0 48 48"><use href="#i-tank"/></svg><span class="p-dim"></span></div><div class="card-head code"><span class="eyebrow">Ref S-01</span><span class="tag">Storage &amp; filtration</span></div><div class="card-body"><h3>6,000 L filter vessel &amp; heavy tanks</h3><p class="p-lbl code">Scope</p><p class="muted p-scope">Shell and dished-head calculations, nozzle orientations, hydrotest fixtures and transport tie-downs.</p><dl class="spec"><dt>Code</dt><dd class="c">ASME VIII Div 1</dd><dt>Rating</dt><dd>8.0 bar design pressure</dd></dl></div><div class="card-foot code"><span class="status">Deliverables approved</span></div></article>
     </div>
   </div>
 </section>
@@ -923,7 +988,7 @@ section.alt{background:var(--surface)}
         <span class="code eyebrow">Direct channels</span>
         <div class="ch"><div><span class="code muted">Enquiries</span><span class="v" id="e-info">info@damodarengineering.com</span></div><button class="act" type="button" data-copy="e-info">Copy</button></div>
         <div class="ch"><div><span class="code muted">Direct</span><span class="v" id="e-dd">dd@damodarengineering.com</span></div><button class="act" type="button" data-copy="e-dd">Copy</button></div>
-        <div class="ch"><div><span class="code muted">Phone / WhatsApp</span><span class="v" id="e-ph">+971 50 963 3421</span></div><a class="act solid" href="https://wa.me/971509633421" target="_blank" rel="noopener">WhatsApp</a></div>
+        <div class="ch"><div><span class="code muted">Phone / WhatsApp</span><span class="v" id="e-ph">+971 50 963 3421</span></div><div class="acts"><a class="act" href="tel:+971509633421">Call</a><a class="act solid" href="https://wa.me/971509633421" target="_blank" rel="noopener">WhatsApp</a></div></div>
         <div class="ch"><div><span class="code muted">LinkedIn</span><span class="v">Damodar Dasi</span></div><a class="act" href="https://www.linkedin.com/in/damodar-dasi-3188b331a" target="_blank" rel="noopener">Connect</a></div>
         <div class="ch"><div><span class="code muted">Based in</span><span class="v">Sharjah, UAE · serving UAE, GCC &amp; India</span></div></div>
       </div>
@@ -946,7 +1011,7 @@ section.alt{background:var(--surface)}
   <a class="b3 primary menu-cta" href="#contact">Request a quote</a>
   <div class="menu-foot">
     <span class="code muted">Enquiries</span><span>info@damodarengineering.com</span>
-    <span class="code muted">Phone / WhatsApp</span><span>+971 50 963 3421</span>
+    <span class="code muted">Phone / WhatsApp</span><a href="tel:+971509633421">+971 50 963 3421</a>
     <span class="code muted">Based in</span><span>Sharjah, UAE · UAE, GCC &amp; India</span>
   </div>
 </aside>
@@ -988,6 +1053,7 @@ section.alt{background:var(--surface)}
     e.preventDefault();
     var bad=[].slice.call(form.querySelectorAll('[required]')).filter(function(i){return !i.value.trim()||(i.type==='email'&&!/^\S+@\S+\.\S+$/.test(i.value))});
     st.hidden=false;
+    [].forEach.call(form.querySelectorAll('[required]'),function(i){if(bad.indexOf(i)>-1)i.setAttribute('aria-invalid','true');else i.removeAttribute('aria-invalid')});
     if(bad.length){st.textContent='Please fill in your name, a valid email, company and scope.';bad[0].focus();return}
     var v=function(id){return document.getElementById(id).value.trim()};
     var subject='Design RFQ: '+v('q-type')+' – '+v('q-company');
@@ -1147,6 +1213,23 @@ section.alt{background:var(--surface)}
   if('ResizeObserver' in window) new ResizeObserver(function(){if(mode){measure();schedule()}}).observe(sec);
   addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(load)});
   setup();
+})();
+
+(function(){
+  // gentle reveal for content below the hero; skipped without IntersectionObserver or with reduced motion
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var groups=['.sec-head','.grid','.journey','.steps','.about-grid','.values','.contact','.stats .wrap','.codes-strip h2'];
+  var els=[];
+  groups.forEach(function(g){[].forEach.call(document.querySelectorAll(g),function(el){
+    var kids=/grid|journey|values|stats|contact|about-grid/.test(g)?[].slice.call(el.children):[el];
+    kids.forEach(function(k,i){k.classList.add('rv');k.style.setProperty('--rv-d',Math.min(i,4)*.07+'s');els.push(k)});
+  })});
+  document.documentElement.classList.add('rv-on');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  els.forEach(function(el){io.observe(el)});
+  // filtered-in project cards and hash jumps must never stay hidden
+  addEventListener('hashchange',function(){els.forEach(function(el){var r=el.getBoundingClientRect();if(r.top<innerHeight&&r.bottom>0)el.classList.add('in')})});
+  [].forEach.call(document.querySelectorAll('.filters button'),function(b){b.addEventListener('click',function(){els.forEach(function(el){if(el.closest('#plist'))el.classList.add('in')})})});
 })();
 </script>
 
