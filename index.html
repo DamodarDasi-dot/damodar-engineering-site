@@ -372,6 +372,14 @@ html{scroll-padding-top:120px}
 body::before{display:none}
 .hero3{padding-top:calc(var(--hdr-h) + env(safe-area-inset-top,0px))}
 html{scroll-padding-top:calc(var(--hdr-h) + 16px)}
+
+/* header v5: one-line glass bar, always visible */
+.top.hide{transform:none!important}
+@media (min-width:881px){
+  .top .nav{display:flex!important;flex:1;justify-content:center;gap:clamp(4px,1.2vw,18px)}
+  .top .btn{display:inline-flex!important}
+  .menu-btn{display:none}
+}
 </style>
 </head>
 <body>
@@ -716,7 +724,7 @@ html{scroll-padding-top:calc(var(--hdr-h) + 16px)}
   window.addEventListener('scroll',function(){
     var y=window.scrollY;
     hdr.classList.toggle('scrolled',y>8);
-    if(!document.body.classList.contains('menu-open')) hdr.classList.toggle('hide',y>last&&y>160);
+    
     last=y; toTop.hidden=y<600;
   },{passive:true});
   toTop.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
