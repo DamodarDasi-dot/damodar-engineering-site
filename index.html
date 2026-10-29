@@ -348,6 +348,7 @@ html{scroll-padding-top:124px}
 @media (prefers-reduced-motion:no-preference){.top{animation:hdrIn .5s ease-out backwards}@keyframes hdrIn{from{transform:translateY(-100%)}to{transform:none}}}
 .menu-backdrop{position:fixed;inset:0;z-index:80;background:rgba(6,12,21,.45);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
 .menu{position:fixed;top:0;right:0;bottom:0;z-index:90;width:min(420px,100%);background:var(--surface);border-left:1px solid var(--line);display:flex;flex-direction:column;gap:24px;overflow-y:auto;padding:calc(20px + env(safe-area-inset-top,0px)) max(24px,env(safe-area-inset-right,0px)) calc(24px + env(safe-area-inset-bottom,0px)) 24px;box-shadow:-20px 0 60px -20px rgba(6,12,21,.35)}
+.menu[hidden],.menu-backdrop[hidden]{display:none}
 @media (prefers-reduced-motion:no-preference){.menu:not([hidden]){animation:menuIn .28s ease-out}@keyframes menuIn{from{transform:translateX(40px);opacity:.4}to{transform:none;opacity:1}}}
 .menu-head{display:flex;justify-content:space-between;align-items:center}
 .menu-close{width:44px;height:44px;display:grid;place-items:center;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
@@ -569,7 +570,10 @@ h1,h2{font-family:var(--f-display)}
 .hs-on .hwire{clip-path:none}
 .hs-on .hsolid{clip-path:inset(0 100% 0 0)}
 .hs-on .hcall{transform:none}
-.hs-on .hs-cv{display:block;position:absolute;left:7.39%;bottom:.09%;width:96.33%;height:auto;aspect-ratio:16/9;mix-blend-mode:multiply;opacity:0;pointer-events:none}
+.hs-on .hs-cv{display:block;position:absolute;left:7.39%;bottom:.09%;width:96.33%;height:auto;aspect-ratio:16/9;mix-blend-mode:multiply;opacity:0;pointer-events:none;transition:opacity .18s ease-out}
+.hs-on .hstack{transition:opacity .12s ease-out}
+.hs-x .hs-cv{opacity:1}
+.hs-x .hstack{opacity:0}
 :root[data-theme="dark"] .hs-on .hs-cv{mix-blend-mode:normal;border-radius:12px}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hs-on .hs-cv{mix-blend-mode:normal;border-radius:12px}}
 .hs-on .hs-cap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;list-style:none;margin:14px 0 0;padding:0;text-align:left}
@@ -981,8 +985,8 @@ h1,h2{font-family:var(--f-display)}
   var calls=[].slice.call(fig.querySelectorAll('.hcall')), caps=[].slice.call(sec.querySelectorAll('.hs-cap li'));
   var leads=calls.map(function(c,i){return [].slice.call(fig.querySelectorAll('.hleads .lk'+i))});
   var rm=matchMedia('(prefers-reduced-motion: reduce)'), small=matchMedia('(max-width: 767px)');
-  var SETS={d:{dir:'frames/hero/desktop/',n:96,w:1400,h:788},m:{dir:'frames/hero/mobile/',n:48,w:960,h:540}};
-  var mode='', el=null, set=null, frames=[], cur=-1, started=false, ticking=false;
+  var SETS={d:{dir:'frames/hero/desktop/',n:58,w:1400,h:788},m:{dir:'frames/hero/mobile/',n:29,w:960,h:540}};
+  var mode='', el=null, set=null, frames=[], cur=-1, started=false, ticking=false, swapped=false;
 
   function clamp(v){return v<0?0:v>1?1:v}
   function seg(p,a,b){return clamp((p-a)/(b-a))}
@@ -990,7 +994,7 @@ h1,h2{font-family:var(--f-display)}
   function all(){return [stack,wire,solid,scan,ghost,dims,cv,pin,stick,bar].concat(calls,caps,[].concat.apply([],leads))}
 
   function reset(){
-    sec.classList.remove('hs-on','hs-d','hs-m');
+    sec.classList.remove('hs-on','hs-d','hs-m','hs-x');swapped=false;
     all().forEach(function(e){if(e){e.removeAttribute('style');e.classList.remove('on')}});
   }
   function pickMode(){
@@ -1034,10 +1038,10 @@ h1,h2{font-family:var(--f-display)}
       var o=seg(p,.38+.025*i,.42+.025*i)*out;
       c.style.opacity=o;leads[i].forEach(function(l){l.style.opacity=o});
     });
-    // part 2: crossfade to the frame sequence, then scrub assembled → exploded
-    var x=frames[0]?ease(seg(p,.55,.6)):0;
-    cv.style.opacity=x;stack.style.opacity=1-x;
-    if(x>0) draw(Math.round(seg(p,.58,1)*(set.n-1)));
+    // part 2: quick timed crossfade (CSS) to the frame sequence, then scrub assembled → exploded
+    if(frames[0]&&p>=.5) draw(Math.round(seg(p,.56,1)*(set.n-1)));
+    var x=!!frames[0]&&p>=.56;
+    if(x!==swapped){swapped=x;sec.classList.toggle('hs-x',x)}
     var k=p<.2?0:p<.56?1:2;
     caps.forEach(function(c,i){c.classList.toggle('on',i===k)});
     bar.style.transform='scaleX('+p+')';
