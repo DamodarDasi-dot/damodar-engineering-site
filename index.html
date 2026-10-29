@@ -510,6 +510,34 @@ html{scroll-padding-top:calc(var(--hdr-h) + 16px)}
 :root[data-theme="dark"] .hero3 h1 .hl{background:none}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hero3 h1 .hl{background:none}}
 @media (max-width:1099px){.hart{max-width:900px;margin-inline:auto}}
+
+/* hero v7.1: 18 s looping story – wireframe → render → ghost & dims → callouts → hold → back to wireframe */
+@media (prefers-reduced-motion:no-preference){
+  .hwire{animation:hwireLoop 18s linear infinite}
+  .hsolid{animation:hsolidLoop 18s linear infinite}
+  .hscan{animation:hscanLoop 18s linear infinite}
+  .hghost{animation:hghostLoop 18s linear infinite}
+  .ghost-dims{animation:hdimsLoop 18s linear infinite}
+  .hleads{opacity:1;animation:none}
+  .hstack{animation:hfloat 6s ease-in-out infinite}
+  @keyframes hwireLoop{0%{clip-path:inset(0 100% 0 0);opacity:1}16.67%{clip-path:inset(0 0 0 0);opacity:1}33.33%{opacity:1}38.89%{opacity:0;clip-path:inset(0 0 0 0)}81.11%{opacity:0;clip-path:inset(0 0 0 0)}83.33%{opacity:1;clip-path:inset(0 0 0 0)}94.44%{clip-path:inset(0 0 0 0);opacity:1}100%{clip-path:inset(0 0 0 100%);opacity:1}}
+  @keyframes hsolidLoop{0%,16.67%{clip-path:inset(0 100% 0 0)}33.33%,83.33%{clip-path:inset(0 0 0 0)}94.44%,100%{clip-path:inset(0 0 0 100%)}}
+  @keyframes hscanLoop{0%,16.67%{left:0;opacity:0}17.22%{left:0;opacity:1}32.78%{opacity:1}33.33%{left:100%;opacity:0}83.33%{left:0;opacity:0}83.89%{left:0;opacity:1}93.89%{opacity:1}94.44%,100%{left:100%;opacity:0}}
+  @keyframes hghostLoop{0%,33.33%{opacity:0;transform:translateX(18%)}38.89%,80.00%{opacity:.42;transform:none}83.33%,100%{opacity:0;transform:none}}
+  @keyframes hdimsLoop{0%,37.78%{opacity:0}41.11%,80.00%{opacity:1}83.33%,100%{opacity:0}}
+  @keyframes hfloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@keyframes hc0{0%,41.11%{opacity:0;transform:translateY(6px)}43.89%,80.00%{opacity:1;transform:none}83.33%,100%{opacity:0;transform:none}}
+.call-suction,.lk0{animation:hc0 18s linear infinite}
+@keyframes hc1{0%,45.56%{opacity:0;transform:translateY(6px)}48.33%,80.00%{opacity:1;transform:none}83.33%,100%{opacity:0;transform:none}}
+.call-comp,.lk1{animation:hc1 18s linear infinite}
+@keyframes hc2{0%,50.00%{opacity:0;transform:translateY(6px)}52.78%,80.00%{opacity:1;transform:none}83.33%,100%{opacity:0;transform:none}}
+.call-motor,.lk2{animation:hc2 18s linear infinite}
+@keyframes hc3{0%,54.44%{opacity:0;transform:translateY(6px)}57.22%,80.00%{opacity:1;transform:none}83.33%,100%{opacity:0;transform:none}}
+.call-oil,.lk3{animation:hc3 18s linear infinite}
+@keyframes hc4{0%,58.89%{opacity:0;transform:translateY(6px)}61.67%,80.00%{opacity:1;transform:none}83.33%,100%{opacity:0;transform:none}}
+.call-frame,.lk4{animation:hc4 18s linear infinite}
+}
+.call-frame{right:7%}
 </style>
 </head>
 <body>
@@ -877,7 +905,7 @@ html{scroll-padding-top:calc(var(--hdr-h) + 16px)}
   var fig=document.querySelector('.hart'); if(!fig) return;
   var stack=fig.querySelector('.hstack'), svg=fig.querySelector('.hleads'), NS='http://www.w3.org/2000/svg';
   var calls=[].slice.call(fig.querySelectorAll('.hcall'));
-  var parts=calls.map(function(){var l=document.createElementNS(NS,'line'),c=document.createElementNS(NS,'circle');c.setAttribute('r','3.5');svg.appendChild(l);svg.appendChild(c);return [l,c]});
+  var parts=calls.map(function(el,i){var l=document.createElementNS(NS,'line'),c=document.createElementNS(NS,'circle');c.setAttribute('r','3.5');l.setAttribute('class','lk'+i);c.setAttribute('class','lk'+i);svg.appendChild(l);svg.appendChild(c);return [l,c]});
   function draw(){
     var f=fig.getBoundingClientRect(), s=stack.getBoundingClientRect();
     svg.setAttribute('viewBox','0 0 '+f.width+' '+f.height);
