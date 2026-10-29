@@ -34,7 +34,7 @@
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:104px}
 body{margin:0;background:var(--canvas);color:var(--ink);font-family:var(--f-sans);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--canvas)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--surface)}
 .wrap{max-width:1200px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 h1,h2,h3{margin:0;text-wrap:balance;letter-spacing:-.02em;line-height:1.15}
 p{margin:0}
@@ -333,6 +333,36 @@ footer{background:var(--navy);color:var(--on-navy);padding-block:28px}
   .top .btn{height:50px;padding:0 26px;font-size:14px;border-radius:8px}
 }
 html{scroll-padding-top:124px}
+
+/* header v3: full-bleed bar like the reference, menu behind a grid icon */
+.top{padding-top:0;background:var(--surface);border-bottom:1px solid var(--line);transition:transform .32s ease,box-shadow .2s;color:var(--ink)}
+.top.scrolled{box-shadow:0 6px 24px -12px color-mix(in srgb,var(--navy) 35%,transparent)}
+.top.hide{transform:translateY(calc(-100% - env(safe-area-inset-top,0px)))}
+.top .wrap{max-width:none;margin:0;background:transparent;border:0;border-radius:0;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none;height:76px;padding-left:max(clamp(16px,3vw,48px),env(safe-area-inset-left,0px));padding-right:max(clamp(16px,3vw,48px),env(safe-area-inset-right,0px))}
+@media (min-width:881px){.top .wrap{height:104px}}
+.top .nav,.top .btn{display:none!important}
+.menu-btn{width:52px;height:52px;display:grid;place-items:center;border-radius:12px;border:1px solid transparent;background:transparent;color:var(--navy);cursor:pointer;transition:background .15s,border-color .15s}
+.menu-btn:hover{background:var(--recess);border-color:var(--line)}
+:root[data-theme="dark"] .menu-btn{color:var(--ink)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .menu-btn{color:var(--ink)}}
+@media (prefers-reduced-motion:no-preference){.top{animation:hdrIn .5s ease-out backwards}@keyframes hdrIn{from{transform:translateY(-100%)}to{transform:none}}}
+.menu-backdrop{position:fixed;inset:0;z-index:80;background:rgba(6,12,21,.45);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+.menu{position:fixed;top:0;right:0;bottom:0;z-index:90;width:min(420px,100%);background:var(--surface);border-left:1px solid var(--line);display:flex;flex-direction:column;gap:24px;overflow-y:auto;padding:calc(20px + env(safe-area-inset-top,0px)) max(24px,env(safe-area-inset-right,0px)) calc(24px + env(safe-area-inset-bottom,0px)) 24px;box-shadow:-20px 0 60px -20px rgba(6,12,21,.35)}
+@media (prefers-reduced-motion:no-preference){.menu:not([hidden]){animation:menuIn .28s ease-out}@keyframes menuIn{from{transform:translateX(40px);opacity:.4}to{transform:none;opacity:1}}}
+.menu-head{display:flex;justify-content:space-between;align-items:center}
+.menu-close{width:44px;height:44px;display:grid;place-items:center;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+.menu-links{display:flex;flex-direction:column}
+.menu-links a{display:flex;align-items:baseline;gap:14px;padding:14px 4px;border-bottom:1px solid var(--line);font-size:22px;font-weight:700;letter-spacing:-.02em;color:var(--ink);text-decoration:none}
+.menu-links a span{color:var(--blue-ink)}
+.menu-links a:hover{color:var(--blue-ink)}
+.menu-cta{justify-content:center}
+.menu-foot{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:14px;align-items:baseline}
+.menu-foot span:not(.code){overflow-wrap:anywhere}
+.fab-wa{position:fixed;right:max(20px,env(safe-area-inset-right,0px));bottom:max(20px,env(safe-area-inset-bottom,0px));z-index:70;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 24px -6px rgba(37,211,102,.55);transition:transform .15s}
+.fab-wa:hover{transform:scale(1.06)}
+.to-top{position:fixed;right:calc(max(20px,env(safe-area-inset-right,0px)) + 7px);bottom:calc(max(20px,env(safe-area-inset-bottom,0px)) + 72px);z-index:70;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--navy);display:grid;place-items:center;cursor:pointer;box-shadow:0 6px 18px -8px rgba(6,12,21,.35)}
+.to-top[hidden]{display:none!important}
+html{scroll-padding-top:120px}
 </style>
 </head>
 <body>
@@ -344,7 +374,7 @@ html{scroll-padding-top:124px}
     <nav class="nav" aria-label="Sections">
       <a href="#services">Services</a><a href="#projects">Projects</a><a href="#about">About</a><a href="#codes">Codes</a><a href="#process">Process</a><a href="#contact">Contact</a>
     </nav>
-    <a class="btn btn-blue" href="#contact">Request quote</a>
+    <a class="btn btn-blue" href="#contact">Request quote</a><button class="menu-btn" id="menu-open" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="7.5" height="7.5" rx="1"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="1"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="1"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1"/></svg></button>
   </div>
 </header>
 
@@ -606,6 +636,28 @@ html{scroll-padding-top:124px}
   </div>
 </section>
 </main>
+<div class="menu-backdrop" id="menu-backdrop" hidden></div>
+<aside class="menu" id="menu" aria-label="Site menu" hidden>
+  <div class="menu-head"><span class="code eyebrow">Menu</span><button class="menu-close" id="menu-close" type="button" aria-label="Close menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  <nav class="menu-links" aria-label="Sections">
+    <a href="#deliver"><span class="code">01</span>What we deliver</a>
+    <a href="#services"><span class="code">02</span>Services</a>
+    <a href="#projects"><span class="code">03</span>Projects</a>
+    <a href="#about"><span class="code">04</span>About</a>
+    <a href="#codes"><span class="code">05</span>Codes &amp; tools</a>
+    <a href="#process"><span class="code">06</span>Process</a>
+    <a href="#contact"><span class="code">07</span>Contact</a>
+  </nav>
+  <a class="b3 primary menu-cta" href="#contact">Request a quote</a>
+  <div class="menu-foot">
+    <span class="code muted">Enquiries</span><span>info@damodarengineering.com</span>
+    <span class="code muted">Phone / WhatsApp</span><span>+971 50 963 3421</span>
+    <span class="code muted">Based in</span><span>Sharjah, UAE · UAE, GCC &amp; India</span>
+  </div>
+</aside>
+<a class="fab-wa" href="https://wa.me/971509633421" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91A9.9 9.9 0 0 0 12.04 2zm5.8 14.04c-.24.68-1.42 1.3-1.95 1.34-.5.04-.97.23-3.27-.68-2.77-1.09-4.52-3.93-4.66-4.11-.13-.18-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.27.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.61.47.24.56.79 1.93.86 2.07.07.14.11.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.27.14.43.11.59-.07.16-.18.68-.79.86-1.07.18-.27.36-.23.61-.14.25.09 1.59.75 1.86.89.27.14.45.2.52.32.07.11.07.66-.17 1.33z"/></svg></a>
+<button class="to-top" id="to-top" type="button" aria-label="Back to top" hidden><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+
 
 <footer>
   <div class="wrap">
@@ -648,6 +700,23 @@ html{scroll-padding-top:124px}
     window.location.href='mailto:info@damodarengineering.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
     st.textContent='Your email app should open with the enquiry filled in. Press send there. If nothing opens, email info@damodarengineering.com directly.';
   });
+})();
+
+(function(){
+  var hdr=document.querySelector('.top'), last=window.scrollY, toTop=document.getElementById('to-top');
+  window.addEventListener('scroll',function(){
+    var y=window.scrollY;
+    hdr.classList.toggle('scrolled',y>8);
+    if(!document.body.classList.contains('menu-open')) hdr.classList.toggle('hide',y>last&&y>160);
+    last=y; toTop.hidden=y<600;
+  },{passive:true});
+  toTop.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+  var menu=document.getElementById('menu'), bd=document.getElementById('menu-backdrop'), openB=document.getElementById('menu-open'), closeB=document.getElementById('menu-close');
+  function open(){menu.hidden=false;bd.hidden=false;document.body.classList.add('menu-open');document.body.style.overflow='hidden';openB.setAttribute('aria-expanded','true');closeB.focus()}
+  function close(){menu.hidden=true;bd.hidden=true;document.body.classList.remove('menu-open');document.body.style.overflow='';openB.setAttribute('aria-expanded','false');openB.focus()}
+  openB.addEventListener('click',open); closeB.addEventListener('click',close); bd.addEventListener('click',close);
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.hidden=true;bd.hidden=true;document.body.classList.remove('menu-open');document.body.style.overflow='';openB.setAttribute('aria-expanded','false')})});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!menu.hidden)close()});
 })();
 </script>
 
