@@ -321,6 +321,18 @@ footer{background:var(--navy);color:var(--on-navy);padding-block:28px}
   .hero{padding-block:32px 36px}
   .ctas .btn{flex:1 1 100%}
 }
+
+/* header v2: full-width bar, 25% taller */
+.top .wrap{max-width:none;margin-left:max(16px,env(safe-area-inset-left,0px));margin-right:max(16px,env(safe-area-inset-right,0px))}
+@media (min-width:1224px){.top .wrap{margin-left:max(28px,env(safe-area-inset-left,0px));margin-right:max(28px,env(safe-area-inset-right,0px))}}
+@media (min-width:881px){
+  .top .wrap{height:98px;padding-inline:clamp(20px,2.4vw,36px);border-radius:18px}
+  .brand .logo-tag{height:70px}
+  .nav{flex:1;justify-content:center;gap:clamp(4px,1.2vw,18px)}
+  .nav a{font-size:16px;font-weight:600;padding:12px clamp(10px,1.2vw,18px);border-radius:8px}
+  .top .btn{height:50px;padding:0 26px;font-size:14px;border-radius:8px}
+}
+html{scroll-padding-top:124px}
 </style>
 </head>
 <body>
