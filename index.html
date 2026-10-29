@@ -725,6 +725,46 @@ html{scroll-padding-top:calc(var(--hdr-real,var(--hdr-h)) + 16px)}
 /* slow connections: tiny inline blurred wireframe holds the panel until hero-wire.webp has loaded */
 .hstack .hlqip{opacity:.38;filter:blur(5px);transition:opacity .5s ease-out;pointer-events:none}
 .hart.wire-ok .hlqip{opacity:0}
+
+/* mobile fixes: menu toggle, tagline chip, floating quote + WhatsApp stack, phone hero */
+.menu-btn .mi-close{display:none}
+.menu-btn[aria-expanded="true"] .mi-open{display:none}
+.menu-btn[aria-expanded="true"] .mi-close{display:inline}
+.pill-tag{display:none}
+.fab-quote{display:none}
+@media (max-width:880px){
+  .menu-btn{width:44px;height:44px}
+  body.menu-open .top{z-index:95;transform:none!important}
+  .menu{top:var(--hdr-real,77px);padding-top:16px;border-left:0}
+  .menu-close{display:none}
+}
+@media (max-width:767px){
+  :root{--fab-b:max(16px,env(safe-area-inset-bottom,0px));--fab-r:max(16px,env(safe-area-inset-right,0px));--fab-sh:0 10px 24px -8px rgba(25,26,53,.4),0 2px 6px rgba(25,26,53,.12)}
+  /* tagline chip replaces the "Design partner" pill text */
+  .pill3{padding:0 14px;gap:8px;max-width:100%}
+  .pill3 .badge3,.pill3 .pill-txt{display:none}
+  .pill-tag{display:inline;white-space:nowrap;font-size:12px;font-weight:600;letter-spacing:.02em;color:var(--ink)}
+  .pill-tag::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--gold);margin-right:8px;vertical-align:1px}
+  /* hero: left-aligned, shorter lines, stacked full-width buttons */
+  .hero3-in,.hero3-text{text-align:left}
+  .hero3-text{align-items:flex-start!important}
+  /* "fabrication-ready" never breaks: scale the headline so it fits down to 360px */
+  .hero3-text h1{max-width:13ch;font-size:min(43.2px,calc((100vw - 48px) / 7.9))}
+  .hero3-text .hero3-lead{font-size:16.5px;max-width:34ch}
+  .hero3-sub{max-width:36ch}
+  .hero3-ctas{flex-direction:column;align-items:stretch;width:100%;justify-content:flex-start}
+  .hero3-ctas .b3{width:100%;min-height:52px}
+  .hero3-by{text-align:left}
+  /* floating stack: Request quote above WhatsApp, same shadow, 12px apart */
+  .fab-wa{width:56px;height:56px;right:var(--fab-r);bottom:var(--fab-b);box-shadow:var(--fab-sh);transition:transform .2s var(--ease),opacity .2s,visibility .2s}
+  .fab-quote{display:inline-flex;align-items:center;position:fixed;z-index:70;right:var(--fab-r);bottom:calc(var(--fab-b) + 56px + 12px);height:52px;padding:0 22px;border-radius:999px;background:var(--gold);color:var(--on-gold);font:600 15px/1 var(--f-sans);text-decoration:none;box-shadow:var(--fab-sh);transition:transform .2s var(--ease),opacity .2s,visibility .2s}
+  .fab-quote:active,.fab-wa:active{transform:scale(.97)}
+  .fab-off .fab-wa,.fab-off .fab-quote{opacity:0;visibility:hidden;transform:translateY(12px);pointer-events:none}
+  .to-top{right:auto;left:max(16px,env(safe-area-inset-left,0px));bottom:calc(var(--fab-b) + 6px);transition:opacity .2s,visibility .2s}
+  .fab-off .to-top{opacity:0;visibility:hidden;pointer-events:none}
+  /* page never ends under the floating stack */
+  footer::after{content:"";display:block;height:calc(var(--fab-b) + 56px + 12px + 52px + 16px)}
+}
 </style>
 </head>
 <body>
@@ -738,7 +778,7 @@ html{scroll-padding-top:calc(var(--hdr-real,var(--hdr-h)) + 16px)}
     <nav class="nav" aria-label="Sections">
       <a href="#services">Services</a><a href="#projects">Projects</a><a href="#about">About</a><a href="#codes">Codes</a><a href="#process">Process</a><a href="#contact">Contact</a>
     </nav>
-    <a class="btn btn-blue" href="#contact">Request quote</a><button class="menu-btn" id="menu-open" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="7.5" height="7.5" rx="1"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="1"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="1"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1"/></svg></button>
+    <a class="btn btn-blue" href="#contact">Request quote</a><button class="menu-btn" id="menu-open" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path class="mi-open" d="M4 7h16M4 12h16M4 17h16"/><path class="mi-close" d="M6 6l12 12M18 6L6 18"/></svg></button>
   </div>
 </header>
 
@@ -750,7 +790,7 @@ html{scroll-padding-top:calc(var(--hdr-real,var(--hdr-h)) + 16px)}
   <div class="hero-drift" aria-hidden="true"></div>
   <svg class="streaks" viewBox="0 0 358 483" aria-hidden="true"><defs><filter id="blr" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="32"/></filter><linearGradient id="st1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E9B866"/><stop offset="1" stop-color="#FBF3E4"/></linearGradient><linearGradient id="st2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D9A04A"/><stop offset="1" stop-color="#F3E3C4"/></linearGradient></defs><g filter="url(#blr)"><rect x="-87" y="-33" width="72" height="541" rx="36" transform="rotate(-30.8 -87 -33)" fill="url(#st1)"/><rect x="-17" y="-135" width="50" height="541" rx="25" transform="rotate(-30.8 -17 -135)" fill="url(#st2)"/></g></svg>
   <div class="wrap hero3-in"><div class="hero3-text">
-    <a class="pill3 rise d5" href="#deliver"><span class="badge3">Design partner</span><span>Concept → 3D model → Shop drawings</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+    <a class="pill3 rise d5" href="#deliver"><span class="badge3">Design partner</span><span class="pill-txt">Concept → 3D model → Shop drawings</span><span class="pill-tag">From RFQ to fabrication-ready design</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
     <h1 id="hero-title" class="rise d1">Concept to <span class="hl">fabrication&#8209;ready</span> design.</h1>
     <p class="hero3-lead rise d2">Damodar Engineering Design turns concepts into fabrication-ready designs: 3D models, GA and shop drawings for compressor packages, nitrogen generation packages, metering and process skids, storage tanks and fuel systems.</p>
     <p class="hero3-sub rise d2">We work alongside your workshop as your design partner, answering fabrication queries and supporting you through FAT and SAT.</p>
@@ -1036,6 +1076,7 @@ html{scroll-padding-top:calc(var(--hdr-real,var(--hdr-h)) + 16px)}
     <span class="code muted">Based in</span><span>Sharjah, UAE · UAE, GCC &amp; India</span>
   </div>
 </aside>
+<a class="fab-quote" href="#contact">Request quote</a>
 <a class="fab-wa" href="https://wa.me/971509633421" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91A9.9 9.9 0 0 0 12.04 2zm5.8 14.04c-.24.68-1.42 1.3-1.95 1.34-.5.04-.97.23-3.27-.68-2.77-1.09-4.52-3.93-4.66-4.11-.13-.18-1.11-1.48-1.11-2.82 0-1.34.7-2 .95-2.27.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.61.47.24.56.79 1.93.86 2.07.07.14.11.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.56.16.27.71 1.17 1.52 1.9 1.05.93 1.93 1.22 2.2 1.36.27.14.43.11.59-.07.16-.18.68-.79.86-1.07.18-.27.36-.23.61-.14.25.09 1.59.75 1.86.89.27.14.45.2.52.32.07.11.07.66-.17 1.33z"/></svg></a>
 <button class="to-top" id="to-top" type="button" aria-label="Back to top" hidden><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
 
@@ -1094,11 +1135,13 @@ html{scroll-padding-top:calc(var(--hdr-real,var(--hdr-h)) + 16px)}
   },{passive:true});
   toTop.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
   var menu=document.getElementById('menu'), bd=document.getElementById('menu-backdrop'), openB=document.getElementById('menu-open'), closeB=document.getElementById('menu-close');
-  function open(){menu.hidden=false;bd.hidden=false;document.body.classList.add('menu-open');document.body.style.overflow='hidden';openB.setAttribute('aria-expanded','true');closeB.focus()}
-  function close(){menu.hidden=true;bd.hidden=true;document.body.classList.remove('menu-open');document.body.style.overflow='';openB.setAttribute('aria-expanded','false');openB.focus()}
-  openB.addEventListener('click',open);
-  window.matchMedia('(min-width: 881px)').addEventListener('change',function(m){if(m.matches&&!menu.hidden){menu.hidden=true;bd.hidden=true;document.body.classList.remove('menu-open');document.body.style.overflow='';openB.setAttribute('aria-expanded','false')}}); closeB.addEventListener('click',close); bd.addEventListener('click',close);
-  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){menu.hidden=true;bd.hidden=true;document.body.classList.remove('menu-open');document.body.style.overflow='';openB.setAttribute('aria-expanded','false')})});
+  // the header toggle stays above the drawer: three lines when closed, a cross when open
+  function setMenu(on){menu.hidden=!on;bd.hidden=!on;document.body.classList.toggle('menu-open',on);document.body.style.overflow=on?'hidden':'';openB.setAttribute('aria-expanded',on?'true':'false');openB.setAttribute('aria-label',on?'Close menu':'Open menu')}
+  function open(){setMenu(true);var f=menu.querySelector('.menu-links a');if(f)f.focus()}
+  function close(){setMenu(false);openB.focus()}
+  openB.addEventListener('click',function(){menu.hidden?open():close()});
+  window.matchMedia('(min-width: 881px)').addEventListener('change',function(m){if(m.matches&&!menu.hidden)setMenu(false)}); closeB.addEventListener('click',close); bd.addEventListener('click',close);
+  menu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!menu.hidden)close()});
 })();
 
@@ -1268,6 +1311,17 @@ html{scroll-padding-top:calc(var(--hdr-real,var(--hdr-h)) + 16px)}
   // filtered-in project cards and hash jumps must never stay hidden
   addEventListener('hashchange',function(){els.forEach(function(el){var r=el.getBoundingClientRect();if(r.top<innerHeight&&r.bottom>0)el.classList.add('in')})});
   [].forEach.call(document.querySelectorAll('.filters button'),function(b){b.addEventListener('click',function(){els.forEach(function(el){if(el.closest('#plist'))el.classList.add('in')})})});
+})();
+
+(function(){
+  // phones: floating Request quote + WhatsApp step aside while the hero buttons, the contact section or the footer are on screen
+  var mq=matchMedia('(max-width: 767px)'), seen=new Set(), root=document.documentElement;
+  var targets=[document.querySelector('.hero3-ctas'),document.getElementById('contact'),document.querySelector('footer')].filter(Boolean);
+  function sync(){root.classList.toggle('fab-off',mq.matches&&seen.size>0)}
+  if(!('IntersectionObserver' in window)) return;
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){e.isIntersecting?seen.add(e.target):seen.delete(e.target)});sync()});
+  targets.forEach(function(t){io.observe(t)});
+  mq.addEventListener('change',sync);
 })();
 </script>
 
