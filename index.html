@@ -3,15 +3,29 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Damodar Engineering Design: concept to fabrication-ready design. 3D models, GA and shop drawings for skids, packages, tanks and fuel systems, with fabrication and FAT/SAT support. Sharjah, UAE.">
-<meta property="og:title" content="Damodar Engineering Design">
-<meta property="og:description" content="From RFQ to fabrication-ready design. Design partner for fabricators and EPCs in the UAE, GCC and India.">
+<meta name="description" content="Mechanical design for skids, packages, pressure vessels, tanks and fuel systems: 3D models, GA and shop drawings, FAT/SAT support. Sharjah, UAE.">
+<link rel="canonical" href="https://damodarengineering.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Damodar Engineering Design">
+<meta property="og:locale" content="en_GB">
+<meta property="og:url" content="https://damodarengineering.com/">
+<meta property="og:title" content="Damodar Engineering Design | Skid, Package &amp; Pressure Vessel Design, UAE">
+<meta property="og:description" content="From RFQ to fabrication-ready design: 3D models, GA and shop drawings for fabricators, EPC contractors and OEMs in the UAE, GCC and India.">
+<meta property="og:image" content="https://damodarengineering.com/images/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Damodar Engineering Design logo on navy: skid, package and pressure vessel design, Sharjah, UAE">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Damodar Engineering Design | Skid, Package &amp; Pressure Vessel Design, UAE">
+<meta name="twitter:description" content="From RFQ to fabrication-ready design: 3D models, GA and shop drawings for fabricators, EPC contractors and OEMs in the UAE, GCC and India.">
+<meta name="twitter:image" content="https://damodarengineering.com/images/og-image.png">
+<meta name="twitter:image:alt" content="Damodar Engineering Design logo on navy: skid, package and pressure vessel design, Sharjah, UAE">
 <meta name="theme-color" content="#191A35">
-<title>Damodar Engineering Design</title>
+<title>Damodar Engineering Design | Skid, Package &amp; Pressure Vessel Design, UAE</title>
 <link rel="icon" href="images/favicon.ico" sizes="any">
 <link rel="icon" type="image/svg+xml" href="images/logo-icon.svg">
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-<meta name="claude:viewport-fit-sides" content="cover">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "Damodar Engineering Design", "url": "https://damodarengineering.com/", "logo": "https://damodarengineering.com/images/apple-touch-icon.png", "image": "https://damodarengineering.com/images/og-image.png", "email": "info@damodarengineering.com", "telephone": "+971509633421", "address": {"@type": "PostalAddress", "addressLocality": "Sharjah", "addressCountry": "AE"}, "areaServed": [{"@type": "Country", "name": "United Arab Emirates"}, {"@type": "Place", "name": "GCC"}, {"@type": "Country", "name": "India"}], "sameAs": ["https://www.linkedin.com/in/damodar-dasi-3188b331a"]}</script>
 <link rel="preload" as="image" href="images/hero-wire.webp" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -238,14 +252,23 @@ form.card{padding:20px;gap:14px}
 .ch .act{flex:none;font-family:var(--f-mono);font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:7px 12px;border-radius:4px;border:1px solid var(--line);background:var(--canvas);color:var(--blue-ink);text-decoration:none;cursor:pointer}
 .ch .act.solid{background:var(--gold);border-color:var(--gold);color:var(--on-gold)}
 
-/* footer title block */
-footer{background:var(--navy);color:var(--on-navy);padding-block:28px}
-.tb{display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1.4fr;border:1px solid var(--navy-2);border-radius:4px}
-.tb div{padding:12px 14px;border-right:1px solid var(--navy-2);display:flex;flex-direction:column;gap:2px;min-width:0}
-.tb div:last-child{border-right:0}
-.tb span{color:var(--navy-muted)}
-.tb strong{font-family:var(--f-mono);font-size:13px;font-weight:600}
-.copy{margin-top:14px;font-size:12px;color:var(--navy-muted)}
+/* footer */
+footer{background:var(--navy);color:var(--on-navy);padding-block:56px 28px}
+.f-grid{display:grid;gap:36px 32px;grid-template-columns:1fr}
+@media (min-width:600px){.f-grid{grid-template-columns:1fr 1fr}.f-brand{grid-column:1/-1}}
+@media (min-width:1024px){.f-grid{grid-template-columns:1.5fr 1.1fr .8fr 1.1fr}.f-brand{grid-column:auto}}
+.f-home{display:inline-flex;border-radius:var(--r-sm,4px)}
+.f-logo{height:52px;width:auto;max-width:100%}
+.f-tag{margin-top:14px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.f-desc{margin-top:10px;max-width:42ch;font-size:14px;line-height:1.6;color:var(--navy-muted)}
+.f-h{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.f-list,.f-links{list-style:none;margin:0;padding:0}
+.f-list li{font-size:14px;line-height:1.5;color:var(--navy-muted);padding-block:5px}
+.f-links a{display:inline-flex;align-items:center;min-height:44px;font-size:14px;color:var(--on-navy);text-decoration:none;overflow-wrap:anywhere}
+.f-links a:hover{color:var(--gold)}
+.f-loc{font-size:14px;color:var(--navy-muted);margin-top:4px}
+@media (max-width:599px){nav .f-links{display:grid;grid-template-columns:1fr 1fr;column-gap:16px}}
+.copy{margin-top:40px;padding-top:20px;border-top:1px solid var(--navy-2);font-size:12px;color:var(--navy-muted)}
 
 /* responsive */
 @media (max-width:1080px){
@@ -262,10 +285,6 @@ footer{background:var(--navy);color:var(--on-navy);padding-block:28px}
   .stats .wrap{grid-template-columns:1fr 1fr}
   .stat:nth-child(2){border-right:0}
   .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
-  .tb{grid-template-columns:1fr 1fr}
-  .tb div{border-bottom:1px solid var(--navy-2)}
-  .tb div:nth-child(2n){border-right:0}
-  .tb div:last-child{grid-column:1/-1;border-bottom:0}
   section.band{padding-block:52px}
 }
 @media (max-width:560px){
@@ -503,7 +522,7 @@ h1,h2{font-family:var(--f-display)}
 /* drawing sheet behind the wireframe */
 .hs-on .hs-sheet{display:block;position:absolute;left:4%;right:0;top:6%;bottom:2%;pointer-events:none;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:24px 24px;opacity:.55;-webkit-mask-image:radial-gradient(closest-side,#000 55%,transparent);mask-image:radial-gradient(closest-side,#000 55%,transparent)}
 /* one-time light sweep over the final render */
-.hs-on .hs-sweep{display:block;position:absolute;inset:0;overflow:hidden;pointer-events:none;-webkit-mask-image:url(images/hero-render.webp);mask-image:url(images/hero-render.webp);-webkit-mask-size:100% 100%;mask-size:100% 100%}
+.hs-on .hs-sweep{display:block;position:absolute;inset:0;overflow:hidden;pointer-events:none;-webkit-mask-image:url(images/hero-render-1100.webp);mask-image:url(images/hero-render-1100.webp);-webkit-mask-size:100% 100%;mask-size:100% 100%}
 .hs-sweep i{position:absolute;top:0;bottom:0;left:0;width:35%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55) 50%,transparent);transform:translateX(-110%);opacity:0}
 .hs-sw .hs-sweep i{animation:hsSweep 1.1s cubic-bezier(.4,0,.2,1) .12s 1 both}
 @keyframes hsSweep{0%{transform:translateX(-110%);opacity:1}100%{transform:translateX(300%);opacity:1}}
@@ -638,7 +657,7 @@ form.card{padding:var(--s5);gap:var(--s4)}
 .about-card{border-radius:calc(var(--r) + 4px);box-shadow:0 30px 60px -30px rgba(0,0,0,.5)}
 .ac-facts{border-radius:var(--r-sm)}
 .ac-link{display:inline-flex;align-items:center;min-height:44px}
-.tb{border-radius:var(--r-sm)}
+
 .menu-close,.menu-btn{border-radius:var(--r)}
 .menu-links a{min-height:52px;align-items:center}
 
@@ -958,17 +977,17 @@ html{scroll-padding-top:calc(var(--hdr-real,var(--hdr-h)) + 16px)}
     </div>
     <div class="grid g3" id="plist">
       <article class="card" data-c="fuel">
-        <!-- TODO image: images/projects/f-01-emarat-40ft-mobile-fuelling-unit.webp (real project photo or drawing extract, 1200x675, webp q75). When available, replace the line-art below with <img src="images/projects/f-01-emarat-40ft-mobile-fuelling-unit.webp" alt="..." width="1200" height="675" loading="lazy">. --><div class="p-vis" aria-hidden="true"><svg class="ico" viewBox="0 0 48 48"><use href="#i-fuel"/></svg><span class="p-dim"></span></div><div class="card-head code"><span class="eyebrow">Ref F-01</span><span class="tag">Dubai, UAE</span></div><div class="card-body"><h3>Emarat 40 ft mobile fuelling unit</h3><p class="p-lbl code">Scope</p><p class="muted p-scope">Lead mechanical designer, from design through fabrication support and SAT.</p><dl class="spec"><dt>Capacity</dt><dd>42,600 L gross</dd><dt>Codes &amp; regs</dt><dd class="c">UL 142 · UL 2085 · ADR</dd><dt>Systems</dt><dd>Dispenser, ATG, vapour recovery</dd></dl></div><div class="card-foot code"><span class="status">Commissioned in UAE</span></div></article>
+        <!-- TODO image: images/projects/f-01-emarat-40ft-mobile-fuelling-unit.webp (real project photo or drawing extract, 1200x675, webp q75). When available, replace the line-art below with <img src="images/projects/f-01-emarat-40ft-mobile-fuelling-unit.webp" alt="Emarat 40 ft mobile fuelling unit with dispenser, tank and vapour recovery on a trailer skid" width="1200" height="675" loading="lazy">. --><div class="p-vis" aria-hidden="true"><svg class="ico" viewBox="0 0 48 48"><use href="#i-fuel"/></svg><span class="p-dim"></span></div><div class="card-head code"><span class="eyebrow">Ref F-01</span><span class="tag">Dubai, UAE</span></div><div class="card-body"><h3>Emarat 40 ft mobile fuelling unit</h3><p class="p-lbl code">Scope</p><p class="muted p-scope">Lead mechanical designer, from design through fabrication support and SAT.</p><dl class="spec"><dt>Capacity</dt><dd>42,600 L gross</dd><dt>Codes &amp; regs</dt><dd class="c">UL 142 · UL 2085 · ADR</dd><dt>Systems</dt><dd>Dispenser, ATG, vapour recovery</dd></dl></div><div class="card-foot code"><span class="status">Commissioned in UAE</span></div></article>
       <article class="card" data-c="comp">
-        <!-- TODO image: images/projects/c-01-n2-compander-package-marine.webp (real project photo or drawing extract, 1200x675, webp q75). When available, replace the line-art below with <img src="images/projects/c-01-n2-compander-package-marine.webp" alt="..." width="1200" height="675" loading="lazy">. --><div class="p-vis" aria-hidden="true"><svg class="ico" viewBox="0 0 48 48"><use href="#i-comp"/></svg><span class="p-dim"></span></div><div class="card-head code"><span class="eyebrow">Ref C-01</span><span class="tag">Shipyard newbuild</span></div><div class="card-body"><h3>N₂ compander package, marine</h3><p class="p-lbl code">Scope</p><p class="muted p-scope">Package layout with lube-oil console, process gas piping and ABS marine rules coordination.</p><dl class="spec"><dt>Stages / flow</dt><dd>4-stage · 29,605 kg/h</dd><dt>Pressure</dt><dd>7.4 to 35.3 bar(a)</dd><dt>Codes</dt><dd class="c">API 617 · API 614 · ABS</dd></dl></div><div class="card-foot code"><span class="status">FAT tested</span></div></article>
+        <!-- TODO image: images/projects/c-01-n2-compander-package-marine.webp (real project photo or drawing extract, 1200x675, webp q75). When available, replace the line-art below with <img src="images/projects/c-01-n2-compander-package-marine.webp" alt="Four-stage nitrogen compander package with lube-oil console for a shipyard newbuild" width="1200" height="675" loading="lazy">. --><div class="p-vis" aria-hidden="true"><svg class="ico" viewBox="0 0 48 48"><use href="#i-comp"/></svg><span class="p-dim"></span></div><div class="card-head code"><span class="eyebrow">Ref C-01</span><span class="tag">Shipyard newbuild</span></div><div class="card-body"><h3>N₂ compander package, marine</h3><p class="p-lbl code">Scope</p><p class="muted p-scope">Package layout with lube-oil console, process gas piping and ABS marine rules coordination.</p><dl class="spec"><dt>Stages / flow</dt><dd>4-stage · 29,605 kg/h</dd><dt>Pressure</dt><dd>7.4 to 35.3 bar(a)</dd><dt>Codes</dt><dd class="c">API 617 · API 614 · ABS</dd></dl></div><div class="card-foot code"><span class="status">FAT tested</span></div></article>
       <article class="card" data-c="comp">
-        <!-- TODO image: images/projects/c-03-natural-gas-compressor-redesign.webp (real project photo or drawing extract, 1200x675, webp q75). When available, replace the line-art below with <img src="images/projects/c-03-natural-gas-compressor-redesign.webp" alt="..." width="1200" height="675" loading="lazy">. --><div class="p-vis" aria-hidden="true"><svg class="ico" viewBox="0 0 48 48"><use href="#i-comp"/></svg><span class="p-dim"></span></div><div class="card-head code"><span class="eyebrow">Ref C-03</span><span class="tag">Singapore FAT</span></div><div class="card-body"><h3>4-stage natural gas compressor redesign</h3><p class="p-lbl code">Scope</p><p class="muted p-scope">Full 3D redesign of process piping, lube-oil console, dry gas seal racks and acoustic hood.</p><dl class="spec"><dt>Flow</dt><dd>36,980 kg/h</dd><dt>Pressure</dt><dd>13.21 to 50.8 bar(a)</dd><dt>Codes</dt><dd class="c">API 617 · API 692 · B31.3</dd></dl></div><div class="card-foot code"><span class="status">FAT completed in Singapore</span></div></article>
+        <!-- TODO image: images/projects/c-03-natural-gas-compressor-redesign.webp (real project photo or drawing extract, 1200x675, webp q75). When available, replace the line-art below with <img src="images/projects/c-03-natural-gas-compressor-redesign.webp" alt="Four-stage natural gas compressor package with process piping, lube-oil console and acoustic hood" width="1200" height="675" loading="lazy">. --><div class="p-vis" aria-hidden="true"><svg class="ico" viewBox="0 0 48 48"><use href="#i-comp"/></svg><span class="p-dim"></span></div><div class="card-head code"><span class="eyebrow">Ref C-03</span><span class="tag">Singapore FAT</span></div><div class="card-body"><h3>4-stage natural gas compressor redesign</h3><p class="p-lbl code">Scope</p><p class="muted p-scope">Full 3D redesign of process piping, lube-oil console, dry gas seal racks and acoustic hood.</p><dl class="spec"><dt>Flow</dt><dd>36,980 kg/h</dd><dt>Pressure</dt><dd>13.21 to 50.8 bar(a)</dd><dt>Codes</dt><dd class="c">API 617 · API 692 · B31.3</dd></dl></div><div class="card-foot code"><span class="status">FAT completed in Singapore</span></div></article>
       <article class="card" data-c="n2">
-        <!-- TODO image: images/projects/p-01-psa-nitrogen-package.webp (real project photo or drawing extract, 1200x675, webp q75). When available, replace the line-art below with <img src="images/projects/p-01-psa-nitrogen-package.webp" alt="..." width="1200" height="675" loading="lazy">. --><div class="p-vis" aria-hidden="true"><svg class="ico" viewBox="0 0 48 48"><use href="#i-psa"/></svg><span class="p-dim"></span></div><div class="card-head code"><span class="eyebrow">Ref P-01</span><span class="tag">National operator, India</span></div><div class="card-body"><h3>PSA nitrogen generation package</h3><p class="p-lbl code">Scope</p><p class="muted p-scope">High-purity nitrogen unit with carbon molecular sieve towers, buffer vessels and valve skids.</p><dl class="spec"><dt>Vessels</dt><dd>12 m³ receiver + 25 m³ buffer</dd><dt>Output</dt><dd>99.9% purity @ 6 barg</dd><dt>Codes</dt><dd class="c">ASME VIII Div 1 · IS 2825</dd></dl></div><div class="card-foot code"><span class="status">Delivered to site</span></div></article>
+        <!-- TODO image: images/projects/p-01-psa-nitrogen-package.webp (real project photo or drawing extract, 1200x675, webp q75). When available, replace the line-art below with <img src="images/projects/p-01-psa-nitrogen-package.webp" alt="PSA nitrogen generation package with carbon molecular sieve towers, receiver and buffer vessels" width="1200" height="675" loading="lazy">. --><div class="p-vis" aria-hidden="true"><svg class="ico" viewBox="0 0 48 48"><use href="#i-psa"/></svg><span class="p-dim"></span></div><div class="card-head code"><span class="eyebrow">Ref P-01</span><span class="tag">National operator, India</span></div><div class="card-body"><h3>PSA nitrogen generation package</h3><p class="p-lbl code">Scope</p><p class="muted p-scope">High-purity nitrogen unit with carbon molecular sieve towers, buffer vessels and valve skids.</p><dl class="spec"><dt>Vessels</dt><dd>12 m³ receiver + 25 m³ buffer</dd><dt>Output</dt><dd>99.9% purity @ 6 barg</dd><dt>Codes</dt><dd class="c">ASME VIII Div 1 · IS 2825</dd></dl></div><div class="card-foot code"><span class="status">Delivered to site</span></div></article>
       <article class="card" data-c="fuel">
-        <!-- TODO image: images/projects/f-07-maser-portable-fuelling-unit.webp (real project photo or drawing extract, 1200x675, webp q75). When available, replace the line-art below with <img src="images/projects/f-07-maser-portable-fuelling-unit.webp" alt="..." width="1200" height="675" loading="lazy">. --><div class="p-vis" aria-hidden="true"><svg class="ico" viewBox="0 0 48 48"><use href="#i-fuel"/></svg><span class="p-dim"></span></div><div class="card-head code"><span class="eyebrow">Ref F-07</span><span class="tag">Commercial fleet, UAE</span></div><div class="card-body"><h3>Maser portable fuelling unit</h3><p class="p-lbl code">Scope</p><p class="muted p-scope">Integration of Maser Italia fleet telemetry, explosion-proof dispensing and skid drip containment.</p><dl class="spec"><dt>Integration</dt><dd>Maser Italia fleet console</dd><dt>Protection</dt><dd class="c">ATEX Zone 1 · Ex-proof</dd></dl></div><div class="card-foot code"><span class="status">Built &amp; commissioned in UAE</span></div></article>
+        <!-- TODO image: images/projects/f-07-maser-portable-fuelling-unit.webp (real project photo or drawing extract, 1200x675, webp q75). When available, replace the line-art below with <img src="images/projects/f-07-maser-portable-fuelling-unit.webp" alt="Portable fuelling unit with explosion-proof dispensing and skid drip containment" width="1200" height="675" loading="lazy">. --><div class="p-vis" aria-hidden="true"><svg class="ico" viewBox="0 0 48 48"><use href="#i-fuel"/></svg><span class="p-dim"></span></div><div class="card-head code"><span class="eyebrow">Ref F-07</span><span class="tag">Commercial fleet, UAE</span></div><div class="card-body"><h3>Maser portable fuelling unit</h3><p class="p-lbl code">Scope</p><p class="muted p-scope">Integration of Maser Italia fleet telemetry, explosion-proof dispensing and skid drip containment.</p><dl class="spec"><dt>Integration</dt><dd>Maser Italia fleet console</dd><dt>Protection</dt><dd class="c">ATEX Zone 1 · Ex-proof</dd></dl></div><div class="card-foot code"><span class="status">Built &amp; commissioned in UAE</span></div></article>
       <article class="card" data-c="tank">
-        <!-- TODO image: images/projects/s-01-filter-vessel-and-heavy-tanks.webp (real project photo or drawing extract, 1200x675, webp q75). When available, replace the line-art below with <img src="images/projects/s-01-filter-vessel-and-heavy-tanks.webp" alt="..." width="1200" height="675" loading="lazy">. --><div class="p-vis" aria-hidden="true"><svg class="ico" viewBox="0 0 48 48"><use href="#i-tank"/></svg><span class="p-dim"></span></div><div class="card-head code"><span class="eyebrow">Ref S-01</span><span class="tag">Storage &amp; filtration</span></div><div class="card-body"><h3>6,000 L filter vessel &amp; heavy tanks</h3><p class="p-lbl code">Scope</p><p class="muted p-scope">Shell and dished-head sizing coordinated with the vessel designer, nozzle orientations, hydrotest fixtures and transport tie-downs.</p><dl class="spec"><dt>Code</dt><dd class="c">ASME VIII Div 1</dd><dt>Rating</dt><dd>8.0 bar design pressure</dd></dl></div></article>
+        <!-- TODO image: images/projects/s-01-filter-vessel-and-heavy-tanks.webp (real project photo or drawing extract, 1200x675, webp q75). When available, replace the line-art below with <img src="images/projects/s-01-filter-vessel-and-heavy-tanks.webp" alt="Filter vessel and heavy storage tanks with nozzles, hydrotest fixtures and transport tie-downs" width="1200" height="675" loading="lazy">. --><div class="p-vis" aria-hidden="true"><svg class="ico" viewBox="0 0 48 48"><use href="#i-tank"/></svg><span class="p-dim"></span></div><div class="card-head code"><span class="eyebrow">Ref S-01</span><span class="tag">Storage &amp; filtration</span></div><div class="card-body"><h3>6,000 L filter vessel &amp; heavy tanks</h3><p class="p-lbl code">Scope</p><p class="muted p-scope">Shell and dished-head sizing coordinated with the vessel designer, nozzle orientations, hydrotest fixtures and transport tie-downs.</p><dl class="spec"><dt>Code</dt><dd class="c">ASME VIII Div 1</dd><dt>Rating</dt><dd>8.0 bar design pressure</dd></dl></div></article>
     </div>
   </div>
 </section>
@@ -988,7 +1007,7 @@ html{scroll-padding-top:calc(var(--hdr-real,var(--hdr-h)) + 16px)}
           <svg class="ac-mark" viewBox="-70 -70 693 694" aria-hidden="true"><g fill="#D9A04A"><path d="M0 0 H322 L389.2 112 H0 Z"/><path d="M0 132 C48 132 86 170 90 214 H380 L453.8 337 H0 Z"/><path d="M0 360 C48 360 86 398 90 437 H402 L472.2 554 H0 Z"/><path d="M423 0 H550 A258 277 0 0 1 550 554 H515 V442 H550 A135 165 0 0 0 550 112 H423 Z"/></g></svg>
           <div><span class="code ac-role">Principal Design Engineer</span><h3>Damodar Dasi (DD)</h3></div>
         </div>
-        <p class="ac-intro">DD leads every project personally, bringing 6+ years' mechanical design experience, including UAE and GCC projects, across packaged equipment, compressor systems, storage tanks and fuel infrastructure.</p><p class="ac-bio">Mechanical design engineer with 6+ years' experience in packaged equipment: compressor and PSA nitrogen packages for a global compressor OEM, then skid-mounted fuel systems, mobile fuelling units and storage tanks for a UAE fuel-infrastructure manufacturer. Mentored design engineers in previous roles (two mentorship awards).</p>
+        <p class="ac-intro">DD leads every project personally, bringing mechanical design experience, including UAE and GCC projects, across packaged equipment, compressor systems, storage tanks and fuel infrastructure.</p><p class="ac-bio">Mechanical design engineer with 6+ years' experience in packaged equipment: compressor and PSA nitrogen packages for a global compressor OEM, then skid-mounted fuel systems, mobile fuelling units and storage tanks for a UAE fuel-infrastructure manufacturer. Mentored design engineers in previous roles (two mentorship awards).</p>
         <dl class="ac-facts">
           <div><dt class="code">Experience</dt><dd>6+ years · incl. UAE &amp; GCC</dd></div>
           <div><dt class="code">Specialism</dt><dd>Skid &amp; package design</dd></div>
@@ -1056,7 +1075,7 @@ html{scroll-padding-top:calc(var(--hdr-real,var(--hdr-h)) + 16px)}
 
 <section class="band" id="contact">
   <div class="wrap">
-    <div class="sec-head"><span class="code eyebrow">Project enquiries</span><h2>Send us your spec or tender</h2><p class="muted">Tell us what you're building, the governing codes and your schedule. We reply within one working day.</p></div>
+    <div class="sec-head"><span class="code eyebrow">Project enquiries</span><h2>Send me your spec or tender</h2><p class="muted">Tell me what you're building, the governing codes and your schedule. I reply within one working day.</p></div>
     <div class="contact">
       <form class="card" id="rfq" novalidate>
         <div class="row2">
@@ -1070,7 +1089,7 @@ html{scroll-padding-top:calc(var(--hdr-real,var(--hdr-h)) + 16px)}
         <div class="field"><label for="q-type">Package type *</label><select id="q-type" name="type"><option>Skid &amp; package design</option><option>Compressor / compander package</option><option>Mobile fuelling station</option><option>Storage tanks &amp; pressure vessels</option><option>PSA nitrogen / compressed air skid</option><option>Bid &amp; tender support</option><option>Drawing checking / design review</option><option>Other</option></select></div>
         <div class="field"><label for="q-codes">Governing codes</label><input id="q-codes" name="codes" type="text" placeholder="e.g. ASME B31.3, API 650, UL 142"></div>
         <div class="field"><label for="q-msg">Scope &amp; target schedule *</label><textarea id="q-msg" name="msg" required placeholder="Capacity, media, deliverables needed and deadline"></textarea></div>
-        <div class="note"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="flex:none;margin-top:2px"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span>Your drawings and data stay confidential, and we're happy to sign an NDA. To share a spec, P&amp;ID or RFQ, attach it to the email this form opens.</span></div>
+        <div class="note"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" style="flex:none;margin-top:2px"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span>Your drawings and data stay confidential, and I'm happy to sign an NDA. To share a spec, attach it to the email this form opens.<br>For confidential RFQs, P&amp;IDs or drawings, mention it in the email and I'll share an NDA before you send files.</span></div>
         <button class="btn btn-navy" type="submit">Prepare enquiry email</button>
         <p class="form-msg" id="q-status" role="status" hidden></p>
       </form>
@@ -1111,14 +1130,45 @@ html{scroll-padding-top:calc(var(--hdr-real,var(--hdr-h)) + 16px)}
 
 <footer>
   <div class="wrap">
-    <div class="tb code">
-      <div><span>Title</span><strong>Damodar Engineering Design</strong></div>
-      <div><span>Dwg no.</span><strong>DE-001</strong></div>
-      <div><span>Rev</span><strong>A · 2026</strong></div>
-      <div><span>Scale</span><strong>NTS</strong></div>
-      <div><span>Location</span><strong>Sharjah, UAE</strong></div>
+    <div class="f-grid">
+      <div class="f-brand">
+        <a class="f-home" href="#top" aria-label="Damodar Engineering Design, back to top"><svg class="logo f-logo" viewBox="36 30 851 173" width="851" height="173" aria-hidden="true"><g transform="translate(40,40) scale(0.2764)"><use href="#lg-mark" class="lg-gold"/></g><rect class="lg-div" x="293.3" y="34" width="2.5" height="165.1"/><g transform="translate(323.3,58.5)"><use href="#lg-name" class="lg-name"/><use href="#lg-sub" class="lg-sub"/></g></svg></a>
+        <p class="f-tag code">From RFQ to fabrication-ready design</p>
+        <p class="f-desc">Mechanical design for skids, packages, pressure vessels, tanks and fuel systems, for fabricators, EPC contractors and OEMs in the UAE, GCC and India.</p>
+      </div>
+      <div>
+        <p class="f-h code">Core services</p>
+        <ul class="f-list">
+          <li>Skid &amp; package design</li>
+          <li>Compressor &amp; compander packages</li>
+          <li>PSA nitrogen &amp; compressed air</li>
+          <li>Storage tanks &amp; pressure vessels</li>
+          <li>Mobile fuelling stations &amp; fuel skids</li>
+          <li>Bid &amp; tender support</li>
+        </ul>
+      </div>
+      <nav aria-label="Footer">
+        <p class="f-h code">Navigate</p>
+        <ul class="f-links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#codes">Standards</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div>
+        <p class="f-h code">Contact</p>
+        <ul class="f-links">
+          <li><a href="tel:+971509633421">+971 50 963 3421</a></li>
+          <li><a href="mailto:info@damodarengineering.com">info@damodarengineering.com</a></li>
+          <li><a href="https://www.linkedin.com/in/damodar-dasi-3188b331a" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+        <p class="f-loc">Sharjah, UAE</p>
+      </div>
     </div>
-    <p class="copy">© 2026 Damodar Engineering Design · From RFQ to fabrication-ready design</p>
+    <p class="copy">© 2026 Damodar Engineering Design</p>
   </div>
 </footer>
 
@@ -1147,9 +1197,10 @@ html{scroll-padding-top:calc(var(--hdr-real,var(--hdr-h)) + 16px)}
     if(bad.length){st.textContent='Please fill in your name, a valid email, company and scope.';bad[0].focus();return}
     var v=function(id){return document.getElementById(id).value.trim()};
     var subject='Design RFQ: '+v('q-type')+' – '+v('q-company');
-    var body='Name: '+v('q-name')+'\nCompany: '+v('q-company')+'\nEmail: '+v('q-email')+'\nLocation: '+v('q-loc')+'\nPackage type: '+v('q-type')+'\nGoverning codes: '+(v('q-codes')||'-')+'\n\nScope & schedule:\n'+v('q-msg')+'\n';
-    window.location.href='mailto:info@damodarengineering.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
-    st.textContent='Your email app should open with the enquiry filled in. Press send there. If nothing opens, email info@damodarengineering.com directly.';
+    var body=('Name: '+v('q-name')+'\nCompany: '+v('q-company')+'\nEmail: '+v('q-email')+'\nLocation: '+v('q-loc')+'\nPackage type: '+v('q-type')+'\nGoverning codes: '+(v('q-codes')||'-')+'\n\nScope & schedule:\n'+v('q-msg')+'\n').replace(/\r?\n/g,'\r\n');
+    var url='mailto:info@damodarengineering.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+    window.location.href=url;
+    st.textContent='Your email app should open with the enquiry filled in. Press send there. If nothing opens, email info@damodarengineering.com directly.'+(url.length>1800?' Your scope is long and some email apps shorten it: if it is cut off, paste the rest from this form.':'');
   });
 })();
 
@@ -1297,21 +1348,27 @@ html{scroll-padding-top:calc(var(--hdr-real,var(--hdr-h)) + 16px)}
     requestAnimationFrame(function(){ticking=false;if(mode) update()});
   }
   // progressive loading after page load: last (exploded) and first frame, then coarse to fine from the exploded end
+  // key frames (last + first) after page load; the rest only once the visitor scrolls, so a first visit stays light
+  var wanted=false;
+  function want(){if(wanted) return;wanted=true;removeEventListener('scroll',want);if(next) next()}
+  addEventListener('scroll',want,{passive:true});
+  var next=null;
   function load(){
     if(started||!mode) return;
     started=true;
     var s=set, order=[s.n-1,0], seen={0:1}, q=0, busy=0;
     seen[s.n-1]=1;
     [16,8,4,2,1].forEach(function(step){for(var i=s.n-1;i>=0;i-=step) if(!seen[i]){seen[i]=1;order.push(i)}});
-    function next(){
-      while(busy<4&&q<order.length) (function(i){
+    next=function(){
+      while(busy<4&&q<order.length&&(wanted||q<2)) (function(i){
         var img=new Image();busy++;
         img.decoding='async';
         img.onload=function(){busy--;if(set!==s) return;frames[i]=img;cur=-1;schedule();next()};
         img.onerror=function(){busy--;if(set===s) next()};
         img.src=s.dir+'frame-'+('00'+(i+1)).slice(-3)+'.webp';
       })(order[q++]);
-    }
+    };
+    if(scrollY>0) want();
     next();
   }
 
