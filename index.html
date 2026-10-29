@@ -563,9 +563,87 @@ h1,h2{font-family:var(--f-display)}
 .nav a{color:var(--navy-muted)}.nav a:hover{color:var(--on-navy);background:var(--navy-2)}
 /* alternate bands on white so gold text (#9A6516) keeps 4.5:1 */
 section.alt{background:var(--surface)}
+
+/* ===== v10 design system: one radius, spacing, shadow, type and button scale ===== */
+:root{
+  --r:10px; --r-sm:6px;
+  --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px; --s6:32px; --s7:48px; --s8:72px;
+  --sh-1:0 1px 2px rgba(25,26,53,.05),0 4px 12px -4px rgba(25,26,53,.08);
+  --sh-2:0 2px 4px rgba(25,26,53,.05),0 18px 36px -14px rgba(25,26,53,.22);
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+:root[data-theme="dark"]{--sh-1:0 1px 2px rgba(0,0,0,.3),0 4px 12px -4px rgba(0,0,0,.4);--sh-2:0 2px 4px rgba(0,0,0,.3),0 18px 36px -14px rgba(0,0,0,.6)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--sh-1:0 1px 2px rgba(0,0,0,.3),0 4px 12px -4px rgba(0,0,0,.4);--sh-2:0 2px 4px rgba(0,0,0,.3),0 18px 36px -14px rgba(0,0,0,.6)}}
+
+/* focus: gold-text ring on light, gold on navy */
+:focus-visible{outline:2px solid var(--blue-ink);outline-offset:3px}
+.top :focus-visible,.about :focus-visible,footer :focus-visible,.tag.ink:focus-visible{outline-color:var(--gold)}
+.skip{position:fixed;left:16px;top:-80px;z-index:200;background:var(--gold);color:var(--on-gold);padding:12px 18px;border-radius:var(--r);font-weight:600;text-decoration:none;box-shadow:var(--sh-2);transition:top .15s}
+.skip:focus{top:12px}
+#main{display:block;height:0;outline:0}
+
+/* header: solid navy at the top, translucent navy with blur once scrolled */
+.top{background:var(--navy);transition:background .25s,box-shadow .25s}
+.top.scrolled{background:color-mix(in srgb,var(--navy) 84%,transparent);-webkit-backdrop-filter:blur(16px) saturate(1.4);backdrop-filter:blur(16px) saturate(1.4);box-shadow:0 10px 30px -18px rgba(10,11,28,.6)}
+.nav a{min-height:44px;display:inline-flex;align-items:center;border-radius:var(--r-sm);transition:color .15s,background .15s}
+
+/* buttons: primary gold / navy text, secondary navy outline; same height, radius and type everywhere */
+.btn,.b3{min-height:48px;height:auto;padding:0 22px;border-radius:var(--r);font:600 15px/1.2 var(--f-sans);letter-spacing:.01em;text-transform:none;gap:8px;justify-content:center;transition:background .18s var(--ease),border-color .18s var(--ease),box-shadow .18s var(--ease),transform .18s var(--ease),color .18s}
+.top .btn{min-height:44px;height:44px;padding:0 20px;font-size:14px;border-radius:var(--r)}
+.btn-blue,.btn-navy,.b3.primary{background:var(--gold);color:var(--on-gold);border:1px solid var(--gold);box-shadow:0 1px 0 rgba(255,255,255,.35) inset,0 8px 20px -10px color-mix(in srgb,var(--gold) 80%,transparent)}
+.btn-blue:hover,.btn-navy:hover,.b3.primary:hover{background:var(--gold-hover);border-color:var(--gold-hover);transform:translateY(-1px);box-shadow:0 1px 0 rgba(255,255,255,.35) inset,0 12px 24px -10px color-mix(in srgb,var(--gold) 90%,transparent);filter:none}
+.b3.secondary{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.b3.secondary:hover{background:color-mix(in srgb,var(--ink) 6%,transparent);transform:translateY(-1px);filter:none}
+.btn:active,.b3:active{transform:none}
+.btn-navy{width:100%}
+
+/* surfaces */
+.card{border-radius:var(--r);box-shadow:var(--sh-1);overflow:hidden}
+.card-head{padding:12px var(--s4);background:linear-gradient(180deg,var(--surface),color-mix(in srgb,var(--recess) 55%,var(--surface)))}
+.card-body{padding:var(--s4) var(--s4) var(--s5);gap:var(--s3)}
+.card h3{font-size:17px;line-height:1.3;letter-spacing:-.01em}
+.card ul{gap:6px;line-height:1.5}
+.card-foot{padding:4px var(--s4);min-height:48px}
+.card-foot a{display:inline-flex;align-items:center;min-height:44px;padding-inline:4px;margin-right:-4px}
+.tag{border-radius:var(--r-sm)}
+.sec-head{margin-bottom:var(--s6)}
+.sec-head h2{font-size:clamp(1.7rem,3vw,2.3rem);line-height:1.12}
+.sec-head .muted{font-size:16px;line-height:1.6;max-width:62ch}
+section.band{padding-block:clamp(56px,7vw,96px)}
+.journey li{border-radius:var(--r);box-shadow:var(--sh-1);padding:var(--s5) var(--s4)}
+.steps{border-radius:var(--r);box-shadow:var(--sh-1)}
+.steps li::before{border-radius:var(--r-sm)}
+.stats{background:linear-gradient(180deg,var(--surface),color-mix(in srgb,var(--recess) 40%,var(--surface)))}
+.track li{border-radius:var(--r-sm)}
+
+/* projects: filters as 44px chips */
+.filters{gap:var(--s2);padding:2px 2px var(--s2)}
+.filters button{min-height:44px;padding:0 16px;border-radius:var(--r);transition:background .15s,border-color .15s,color .15s}
+.filters button:hover{border-color:color-mix(in srgb,var(--ink) 35%,var(--line))}
+.spec{border-radius:var(--r-sm)}
+
+/* contact */
+form.card{padding:var(--s5);gap:var(--s4)}
+.field input,.field select,.field textarea{border-radius:var(--r-sm);min-height:48px;transition:border-color .15s,box-shadow .15s}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--blue-ink);box-shadow:0 0 0 3px color-mix(in srgb,var(--gold) 28%,transparent)}
+.field input[aria-invalid="true"],.field textarea[aria-invalid="true"]{border-color:#B42318}
+.note{border-radius:var(--r-sm)}
+.ch{border-radius:var(--r);box-shadow:var(--sh-1)}
+.ch .act{min-height:44px;min-width:44px;display:inline-flex;align-items:center;justify-content:center;padding:0 16px;border-radius:var(--r-sm);transition:background .15s,border-color .15s}
+.ch .act:not(.solid):hover{border-color:var(--blue-ink)}
+.pill3{min-height:44px}
+
+/* about (navy): translucent panels, fine borders */
+.about-card{border-radius:calc(var(--r) + 4px);box-shadow:0 30px 60px -30px rgba(0,0,0,.5)}
+.ac-facts{border-radius:var(--r-sm)}
+.ac-link{display:inline-flex;align-items:center;min-height:44px}
+.tb{border-radius:var(--r-sm)}
+.menu-close,.menu-btn{border-radius:var(--r)}
+.menu-links a{min-height:52px;align-items:center}
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
 
 <header class="top">
@@ -579,6 +657,7 @@ section.alt{background:var(--surface)}
 </header>
 
 <main id="top">
+<span id="main" tabindex="-1"></span>
 <section class="hero3" aria-labelledby="hero-title">
   <div class="hs-track"><div class="hs-pin">
   <div class="hero3-wash" aria-hidden="true"></div>
@@ -902,6 +981,7 @@ section.alt{background:var(--surface)}
     e.preventDefault();
     var bad=[].slice.call(form.querySelectorAll('[required]')).filter(function(i){return !i.value.trim()||(i.type==='email'&&!/^\S+@\S+\.\S+$/.test(i.value))});
     st.hidden=false;
+    [].forEach.call(form.querySelectorAll('[required]'),function(i){if(bad.indexOf(i)>-1)i.setAttribute('aria-invalid','true');else i.removeAttribute('aria-invalid')});
     if(bad.length){st.textContent='Please fill in your name, a valid email, company and scope.';bad[0].focus();return}
     var v=function(id){return document.getElementById(id).value.trim()};
     var subject='Design RFQ: '+v('q-type')+' – '+v('q-company');
