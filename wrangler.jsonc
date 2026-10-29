@@ -1,11 +1,10 @@
 {
-  // Damodar Engineering Design – static website served from Cloudflare Workers
+  // Damodar Engineering Design – React + Vite site, built to ./dist and served as static assets
   "name": "damodar-engineering-site",
   "compatibility_date": "2026-10-01",
   "assets": {
-    "directory": "./",
-    "not_found_handling": "404-page"
+    "directory": "./dist"
   },
   "workers_dev": true,
-  "preview_urls": false
+  "preview_urls": true
 }

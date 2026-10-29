@@ -1,0 +1,143 @@
+.site-footer {
+  border-top: var(--frame);
+  padding-block: var(--space-7) var(--space-8);
+}
+
+.site-footer__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.site-footer__nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--space-5);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-footer__nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  min-width: 44px;
+  color: var(--ink);
+  font-weight: 500;
+  font-size: var(--text-sm);
+}
+
+.site-footer__nav a:hover {
+  color: var(--dim);
+}
+
+/* Full drawing title block */
+.footer-tb {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 0;
+  border: 2px solid var(--ink);
+  outline: 1px solid var(--ink);
+  outline-offset: 3px;
+  background: var(--paper-raised);
+  font-family: var(--font-mono);
+}
+
+.footer-tb > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  padding: var(--space-3);
+  border-bottom: 1px solid var(--ink);
+}
+
+/* Phones: TITLE full width, then DWG | REV, SCALE | LOCATION, CONTACT full width */
+.footer-tb > div:nth-child(2),
+.footer-tb > div:nth-child(4) {
+  border-right: 1px solid var(--ink);
+}
+
+.footer-tb dt {
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  color: var(--ink-muted);
+}
+
+.footer-tb dd {
+  margin: 0;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.footer-tb__title,
+.footer-tb__contact {
+  grid-column: 1 / -1;
+}
+
+.footer-tb__title dd {
+  font-family: var(--font-sans);
+  font-size: var(--text-xl);
+  font-weight: 700;
+}
+
+.footer-tb > .footer-tb__contact {
+  border-bottom: 0;
+}
+
+.footer-tb__contact dd {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--space-4);
+}
+
+.footer-tb__contact a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.site-footer__copy {
+  font-size: var(--text-sm);
+  color: var(--ink-muted);
+}
+
+@media (min-width: 1024px) {
+  .footer-tb {
+    grid-template-columns: 2.2fr 1fr 1fr 0.7fr 1fr 1.8fr;
+  }
+
+  .footer-tb > div {
+    border-bottom: 0;
+    border-right: 1px solid var(--ink);
+  }
+
+  .footer-tb__title,
+  .footer-tb__contact {
+    grid-column: auto;
+  }
+
+  .footer-tb > div:last-child {
+    border-right: 0;
+  }
+
+  .footer-tb__title dd {
+    font-size: var(--text-lg);
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer-tb__contact dd {
+    flex-direction: column;
+  }
+}
+
+/* Compact stacked links for mouse users only; touch tablets keep 44px */
+@media (min-width: 1024px) and (pointer: fine) {
+  .footer-tb__contact a {
+    min-height: 24px;
+  }
+}

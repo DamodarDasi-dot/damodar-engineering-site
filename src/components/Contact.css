@@ -1,0 +1,232 @@
+.contact__inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-7);
+}
+
+.contact__layout {
+  display: grid;
+  gap: var(--space-6);
+  align-items: start;
+}
+
+/* Form */
+.enquiry {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  min-width: 0;
+  padding: var(--space-5) var(--space-4);
+}
+
+.enquiry__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-5);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.field__label {
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.field__opt {
+  font-weight: 400;
+  color: var(--ink-muted);
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: var(--space-3);
+  background: var(--paper);
+  border: 1.5px solid var(--ink-muted);
+  border-radius: var(--radius);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  transition: border-color var(--dur-fast) var(--ease);
+}
+
+.field textarea {
+  resize: vertical;
+  line-height: var(--leading-body);
+}
+
+.field input::placeholder {
+  color: var(--ink-muted);
+  opacity: 1;
+}
+
+.field input:hover,
+.field select:hover,
+.field textarea:hover {
+  border-color: var(--ink);
+}
+
+.field input:focus-visible,
+.field select:focus-visible,
+.field textarea:focus-visible {
+  border-color: var(--dim);
+  outline-offset: 1px;
+}
+
+.field--error input,
+.field--error select,
+.field--error textarea {
+  border-color: var(--error);
+}
+
+.field__error {
+  display: flex;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--error);
+}
+
+.field__error::before {
+  content: '!';
+  flex-shrink: 0;
+  display: inline-grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  border: 1.5px solid currentColor;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.enquiry__actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--grid);
+}
+
+.enquiry__actions .btn {
+  align-self: stretch;
+}
+
+.enquiry__note {
+  font-size: var(--text-sm);
+  color: var(--ink-muted);
+}
+
+.enquiry__status:empty {
+  display: none;
+}
+
+.enquiry__status {
+  padding: var(--space-3) var(--space-4);
+  border-left: 2px solid var(--dim);
+  background: var(--paper);
+  font-size: var(--text-sm);
+}
+
+/* Direct channels */
+.channels {
+  display: flex;
+  flex-direction: column;
+  border-top: 1.5px solid var(--ink);
+  min-width: 0;
+}
+
+.channel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding-block: var(--space-4);
+  border-bottom: 1px solid var(--rule);
+}
+
+.channel__label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-mono);
+  color: var(--ink-muted);
+}
+
+.channel__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-4);
+}
+
+.channel__value {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-size: var(--text-lg);
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.channel__text {
+  font-size: var(--text-base);
+  font-weight: 500;
+}
+
+.copy-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  min-width: 72px;
+  padding: 0 var(--space-4);
+  background: transparent;
+  border: 1.5px solid var(--ink);
+  border-radius: var(--radius);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color var(--dur-base) var(--ease),
+    color var(--dur-base) var(--ease);
+}
+
+.copy-btn:hover {
+  background: var(--ink);
+  color: var(--on-ink);
+  text-decoration: none;
+}
+
+@media (min-width: 640px) {
+  .enquiry {
+    padding: var(--space-6);
+  }
+
+  .enquiry__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .enquiry__full {
+    grid-column: 1 / -1;
+  }
+
+  .enquiry__actions .btn {
+    align-self: flex-start;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contact__layout {
+    grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+    gap: var(--space-7);
+  }
+}

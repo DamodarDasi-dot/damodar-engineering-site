@@ -1,0 +1,26 @@
+.wa-fab {
+  position: fixed;
+  right: max(var(--gutter), env(safe-area-inset-right, 0px));
+  bottom: calc(var(--space-4) + env(safe-area-inset-bottom, 0px));
+  z-index: 40;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  background: var(--ink);
+  border: 1.5px solid var(--ink);
+  color: var(--on-ink);
+}
+
+.wa-fab:hover {
+  text-decoration: none;
+  background: var(--dim);
+  border-color: var(--dim);
+}
+
+@media (min-width: 768px) {
+  .wa-fab {
+    display: none;
+  }
+}
