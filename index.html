@@ -12,7 +12,7 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@300;400;500;700;800&family=JetBrains+Mono:wght@500;600&display=swap">
 <style>
 /* Layout: Stitch "Industrial Precision" system — navy masthead, tonal blueprint compartments, 12-col grid collapsing to one column. */
 :root{
@@ -538,6 +538,21 @@ html{scroll-padding-top:calc(var(--hdr-h) + 16px)}
 .call-frame,.lk4{animation:hc4 18s linear infinite}
 }
 .call-frame{right:7%}
+
+/* premium type: Manrope display, lighter weights, refined sizing */
+:root{--f-display:"Manrope","Inter",system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2{font-family:var(--f-display)}
+.hero3 h1,.hero3-text h1{font-family:var(--f-display);font-weight:300;font-size:clamp(2.7rem,4.15vw,4.35rem);letter-spacing:-.035em;line-height:1.06;max-width:13ch;color:var(--ink)}
+.hero3 h1 .hl{font-weight:800;letter-spacing:-.04em}
+.hero3-text .hero3-lead,.hero3-lead{font-family:var(--f-sans);font-size:clamp(16px,1.12vw,18px);line-height:1.72;font-weight:400;color:var(--muted);max-width:52ch}
+.hero3-in{gap:clamp(24px,3vw,56px)}
+.hero3-text{gap:26px!important}
+.pill3{font-size:13px}
+.badge3{font-size:10.5px;letter-spacing:.14em}
+.b3{font-size:16px;height:52px;padding:0 24px;letter-spacing:.005em}
+.hero3-by{letter-spacing:.12em;font-size:11px}
+.sec-head h2{font-weight:700;letter-spacing:-.03em}
+.about h2{font-weight:700;letter-spacing:-.03em}
 </style>
 </head>
 <body>
