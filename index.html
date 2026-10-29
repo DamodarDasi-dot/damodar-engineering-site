@@ -694,6 +694,12 @@ form.card{padding:var(--s5);gap:var(--s4)}
 .journey li .eyebrow{display:inline-flex;align-items:center;gap:8px}
 #codes .card-body .eyebrow{display:inline-block;margin-bottom:-2px}
 .chips .tag{padding:4px 10px}
+
+/* scroll reveals: only when JS adds .rv-on and the user allows motion */
+@media (prefers-reduced-motion:no-preference){
+  .rv-on .rv{opacity:0;transform:translateY(18px);transition:opacity .6s var(--ease),transform .6s var(--ease);transition-delay:var(--rv-d,0s)}
+  .rv-on .rv.in{opacity:1;transform:none}
+}
 </style>
 </head>
 <body>
@@ -1203,6 +1209,23 @@ form.card{padding:var(--s5);gap:var(--s4)}
   if('ResizeObserver' in window) new ResizeObserver(function(){if(mode){measure();schedule()}}).observe(sec);
   addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(load)});
   setup();
+})();
+
+(function(){
+  // gentle reveal for content below the hero; skipped without IntersectionObserver or with reduced motion
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var groups=['.sec-head','.grid','.journey','.steps','.about-grid','.values','.contact','.stats .wrap','.codes-strip h2'];
+  var els=[];
+  groups.forEach(function(g){[].forEach.call(document.querySelectorAll(g),function(el){
+    var kids=/grid|journey|values|stats|contact|about-grid/.test(g)?[].slice.call(el.children):[el];
+    kids.forEach(function(k,i){k.classList.add('rv');k.style.setProperty('--rv-d',Math.min(i,4)*.07+'s');els.push(k)});
+  })});
+  document.documentElement.classList.add('rv-on');
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+  els.forEach(function(el){io.observe(el)});
+  // filtered-in project cards and hash jumps must never stay hidden
+  addEventListener('hashchange',function(){els.forEach(function(el){var r=el.getBoundingClientRect();if(r.top<innerHeight&&r.bottom>0)el.classList.add('in')})});
+  [].forEach.call(document.querySelectorAll('.filters button'),function(b){b.addEventListener('click',function(){els.forEach(function(el){if(el.closest('#plist'))el.classList.add('in')})})});
 })();
 </script>
 
