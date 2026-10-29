@@ -558,6 +558,32 @@ h1,h2{font-family:var(--f-display)}
 .hero3-in{padding-top:clamp(14px,1.4vw,24px)!important}
 .hero3-text{gap:22px!important}
 @media (min-width:1100px){.hart{margin-top:-24px}}
+
+/* hero v8: scroll story – wireframe → scan to 3D model → exploded frame sequence. JS adds .hs-on (+ .hs-d pinned hero ≥1100px, .hs-m pinned figure below); without it the v7.1 loop above runs unchanged */
+.hs-stage{width:100%;min-width:0}
+.hs-cv,.hs-cap,.hs-bar,.hs-run,.hs-run-d{display:none}
+.hero3.hs-on{overflow:clip}
+.hs-on .hero3-in{z-index:auto}
+.hs-on .hwire,.hs-on .hsolid,.hs-on .hscan,.hs-on .hghost,.hs-on .ghost-dims,.hs-on .hcall,.hs-on .hleads,.hs-on .hleads *,.hs-on .hstack{animation:none!important}
+.hs-on .hghost,.hs-on .ghost-dims,.hs-on .hcall,.hs-on .hleads line,.hs-on .hleads circle,.hs-on .hscan{opacity:0}
+.hs-on .hwire{clip-path:none}
+.hs-on .hsolid{clip-path:inset(0 100% 0 0)}
+.hs-on .hcall{transform:none}
+.hs-on .hs-cv{display:block;position:absolute;left:7.39%;bottom:.09%;width:96.33%;height:auto;aspect-ratio:16/9;mix-blend-mode:multiply;opacity:0;pointer-events:none}
+:root[data-theme="dark"] .hs-on .hs-cv{mix-blend-mode:normal;border-radius:12px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .hs-on .hs-cv{mix-blend-mode:normal;border-radius:12px}}
+.hs-on .hs-cap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;list-style:none;margin:14px 0 0;padding:0;text-align:left}
+.hs-cap li{display:flex;align-items:baseline;gap:8px;font-size:13px;font-weight:600;line-height:1.35;color:var(--muted);transition:color .2s}
+.hs-cap li.on{color:var(--ink)}
+.hs-cap .code{color:var(--blue-ink)}
+.hs-on .hs-bar{display:block;height:2px;margin-top:10px;background:var(--line)}
+.hs-bar i{display:block;height:100%;background:var(--blue);transform:scaleX(0);transform-origin:left}
+.hero3.hs-d{padding-top:0}
+.hs-d .hs-pin{position:sticky;top:var(--pin-top,0px);min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding-top:calc(var(--hdr-h) + env(safe-area-inset-top,0px));padding-bottom:16px;background:var(--canvas)}
+.hs-d .hs-run-d{display:block;height:180vh}
+.hs-m .hs-sticky{position:sticky;top:var(--pin-top,calc(var(--hdr-h) + 8px));min-height:calc(100vh - var(--hdr-h) - 16px);min-height:calc(100svh - var(--hdr-h) - 16px);display:flex;flex-direction:column;justify-content:center;margin-inline:-16px;padding:8px 16px;background:var(--canvas)}
+.hs-m .hs-run{display:block;height:150vh;height:150svh}
+@media (max-width:479px){.hs-cap li{flex-direction:column;gap:2px;font-size:12px}}
 </style>
 </head>
 <body>
@@ -575,6 +601,7 @@ h1,h2{font-family:var(--f-display)}
 
 <main id="top">
 <section class="hero3" aria-labelledby="hero-title">
+  <div class="hs-track"><div class="hs-pin">
   <div class="hero3-wash" aria-hidden="true"></div>
   <svg class="streaks" viewBox="0 0 358 483" aria-hidden="true"><defs><filter id="blr" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="32"/></filter><linearGradient id="st1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5AA6E6"/><stop offset="1" stop-color="#E6F1FF"/></linearGradient><linearGradient id="st2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2878D0"/><stop offset="1" stop-color="#C1D9F8"/></linearGradient></defs><g filter="url(#blr)"><rect x="-87" y="-33" width="72" height="541" rx="36" transform="rotate(-30.8 -87 -33)" fill="url(#st1)"/><rect x="-17" y="-135" width="50" height="541" rx="25" transform="rotate(-30.8 -17 -135)" fill="url(#st2)"/></g></svg>
   <div class="wrap hero3-in"><div class="hero3-text">
@@ -586,7 +613,8 @@ h1,h2{font-family:var(--f-display)}
       <a class="b3 secondary" href="https://wa.me/971509633421" target="_blank" rel="noopener"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>Book a call</a>
     </div>
     <p class="hero3-by code rise d4">Led by Damodar Dasi · Principal Design Engineer · 6+ yrs UAE/GCC</p>
-  </div><figure class="hart" aria-label="Centrifugal compressor package: concept wireframe and fabrication-ready 3D model"><div class="hghost"><img src="images/hero-wire.webp" alt="" width="1774" height="887" decoding="async"><svg class="ghost-dims" viewBox="0 0 1774 887" aria-hidden="true"><path d="M420 -70H1480M420 -95V-45M1480 -95V-45M420 -60V40M1480 -60V40"/><path d="M-40 20V610M-65 20H-15M-65 610H-15M-55 20H420M-55 610H80"/><path d="M40 680L700 960M22 718L58 642M682 998L718 922"/><text x="950" y="-92" text-anchor="middle">3200</text><text x="-90" y="330" text-anchor="end">2500</text><text x="330" y="900" text-anchor="middle" transform="rotate(23 330 900)">1800</text></svg></div><div class="hstack"><img class="hwire" src="images/hero-wire.webp" alt="" width="1774" height="887" decoding="async"><img class="hsolid" src="images/hero-render.webp" alt="3D render of a skid-mounted centrifugal compressor package with drive motor, lube oil system and overhead suction piping" width="1774" height="887" decoding="async"><span class="hscan" aria-hidden="true"></span></div><svg class="hleads" aria-hidden="true"></svg><div class="hcall call-suction" data-ax="0.33" data-ay="0.085"><span class="hc-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h10a4 4 0 1 0-4-4M3 16h13a3 3 0 1 1-3 3M3 8h3"/></svg></span><span class="hc-t">Suction<br>system</span></div><div class="hcall call-comp" data-ax="0.47" data-ay="0.37"><span class="hc-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5c3 2.4 3 6 0 8.5s-3 6.1 0 8.5M3.6 10c3.4-1 6.4.2 8.4 2s5 3 8.4 2"/><circle cx="12" cy="12" r="1.6"/></svg></span><span class="hc-t">Centrifugal<br>compressor</span></div><div class="hcall call-motor" data-ax="0.8" data-ay="0.47"><span class="hc-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="7" width="13" height="10" rx="2"/><path d="M16.5 12h4M7 7V5h6v2M7.5 10v4M10 10v4M12.5 10v4"/></svg></span><span class="hc-t">Drive<br>motor</span></div><div class="hcall call-oil" data-ax="0.175" data-ay="0.5"><span class="hc-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.4 6 11a6 6 0 0 1-12 0c0-4.6 6-11 6-11z"/><path d="M9.5 15a2.5 2.5 0 0 0 2.5 2.5"/></svg></span><span class="hc-t">Lube oil<br>system</span></div><div class="hcall call-frame" data-ax="0.83" data-ay="0.885"><span class="hc-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8l9-4 9 4-9 4z"/><path d="M3 8v6l9 4 9-4V8M12 12v6"/></svg></span><span class="hc-t">Fabricated<br>base frame</span></div></figure></div>
+  </div><div class="hs-stage"><div class="hs-sticky"><figure class="hart" aria-label="Centrifugal compressor package: concept wireframe, fabrication-ready 3D model and exploded view"><div class="hghost"><img src="images/hero-wire.webp" alt="" width="1774" height="887" decoding="async"><svg class="ghost-dims" viewBox="0 0 1774 887" aria-hidden="true"><path d="M420 -70H1480M420 -95V-45M1480 -95V-45M420 -60V40M1480 -60V40"/><path d="M-40 20V610M-65 20H-15M-65 610H-15M-55 20H420M-55 610H80"/><path d="M40 680L700 960M22 718L58 642M682 998L718 922"/><text x="950" y="-92" text-anchor="middle">3200</text><text x="-90" y="330" text-anchor="end">2500</text><text x="330" y="900" text-anchor="middle" transform="rotate(23 330 900)">1800</text></svg></div><div class="hstack"><img class="hwire" src="images/hero-wire.webp" alt="" width="1774" height="887" decoding="async"><img class="hsolid" src="images/hero-render.webp" alt="3D render of a skid-mounted centrifugal compressor package with drive motor, lube oil system and overhead suction piping" width="1774" height="887" decoding="async"><span class="hscan" aria-hidden="true"></span></div><canvas class="hs-cv" aria-hidden="true"></canvas><svg class="hleads" aria-hidden="true"></svg><div class="hcall call-suction" data-ax="0.33" data-ay="0.085"><span class="hc-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h10a4 4 0 1 0-4-4M3 16h13a3 3 0 1 1-3 3M3 8h3"/></svg></span><span class="hc-t">Suction<br>system</span></div><div class="hcall call-comp" data-ax="0.47" data-ay="0.37"><span class="hc-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5c3 2.4 3 6 0 8.5s-3 6.1 0 8.5M3.6 10c3.4-1 6.4.2 8.4 2s5 3 8.4 2"/><circle cx="12" cy="12" r="1.6"/></svg></span><span class="hc-t">Centrifugal<br>compressor</span></div><div class="hcall call-motor" data-ax="0.8" data-ay="0.47"><span class="hc-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="7" width="13" height="10" rx="2"/><path d="M16.5 12h4M7 7V5h6v2M7.5 10v4M10 10v4M12.5 10v4"/></svg></span><span class="hc-t">Drive<br>motor</span></div><div class="hcall call-oil" data-ax="0.175" data-ay="0.5"><span class="hc-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3s6 6.4 6 11a6 6 0 0 1-12 0c0-4.6 6-11 6-11z"/><path d="M9.5 15a2.5 2.5 0 0 0 2.5 2.5"/></svg></span><span class="hc-t">Lube oil<br>system</span></div><div class="hcall call-frame" data-ax="0.83" data-ay="0.885"><span class="hc-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8l9-4 9 4-9 4z"/><path d="M3 8v6l9 4 9-4V8M12 12v6"/></svg></span><span class="hc-t">Fabricated<br>base frame</span></div></figure><ol class="hs-cap" aria-hidden="true"><li><span class="code">01</span>Concept wireframe</li><li><span class="code">02</span>Fabrication-ready 3D model</li><li><span class="code">03</span>Exploded for the shop floor</li></ol><span class="hs-bar" aria-hidden="true"><i></i></span></div><div class="hs-run" aria-hidden="true"></div></div></div>
+  </div><div class="hs-run-d" aria-hidden="true"></div></div>
   <div class="wrap feat"><ul>
     <li><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 5l16 9v20l-16 9-16-9V14z"/><path d="M8 14l16 9 16-9M24 23v20"/></svg><div><b>3D modelling</b><span>Detailed and accurate models</span></div></li>
     <li><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M12 5h17l9 9v29H12z"/><path d="M29 5v9h9M17 24h8v6h-8zM28 24h6M28 30h6M17 36h17"/></svg><div><b>GA &amp; layout drawings</b><span>Optimized for fabrication</span></div></li>
@@ -942,6 +970,109 @@ h1,h2{font-family:var(--f-display)}
   draw(); window.addEventListener('resize',draw);
   if('ResizeObserver' in window) new ResizeObserver(draw).observe(fig);
   if(document.fonts&&document.fonts.ready) document.fonts.ready.then(draw);
+})();
+
+(function(){
+  var sec=document.querySelector('.hero3'), fig=sec&&sec.querySelector('.hart'), cv=fig&&fig.querySelector('.hs-cv');
+  if(!cv||!cv.getContext||!window.CSS||!CSS.supports) return;
+  var ctx=cv.getContext('2d'), pin=sec.querySelector('.hs-pin'), stick=sec.querySelector('.hs-sticky');
+  var stack=fig.querySelector('.hstack'), wire=fig.querySelector('.hwire'), solid=fig.querySelector('.hsolid'), scan=fig.querySelector('.hscan');
+  var ghost=fig.querySelector('.hghost'), dims=fig.querySelector('.ghost-dims'), bar=sec.querySelector('.hs-bar i');
+  var calls=[].slice.call(fig.querySelectorAll('.hcall')), caps=[].slice.call(sec.querySelectorAll('.hs-cap li'));
+  var leads=calls.map(function(c,i){return [].slice.call(fig.querySelectorAll('.hleads .lk'+i))});
+  var rm=matchMedia('(prefers-reduced-motion: reduce)'), small=matchMedia('(max-width: 767px)');
+  var SETS={d:{dir:'frames/hero/desktop/',n:96,w:1400,h:788},m:{dir:'frames/hero/mobile/',n:48,w:960,h:540}};
+  var mode='', el=null, set=null, frames=[], cur=-1, started=false, ticking=false;
+
+  function clamp(v){return v<0?0:v>1?1:v}
+  function seg(p,a,b){return clamp((p-a)/(b-a))}
+  function ease(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2}
+  function all(){return [stack,wire,solid,scan,ghost,dims,cv,pin,stick,bar].concat(calls,caps,[].concat.apply([],leads))}
+
+  function reset(){
+    sec.classList.remove('hs-on','hs-d','hs-m');
+    all().forEach(function(e){if(e){e.removeAttribute('style');e.classList.remove('on')}});
+  }
+  function pickMode(){
+    if(rm.matches||!CSS.supports('overflow','clip')) return '';
+    return innerWidth>=1100?'d':'m';
+  }
+  function setup(){
+    var m=pickMode();
+    if(m!==mode){reset();mode=m;if(!m) return;sec.classList.add('hs-on','hs-'+m);el=m==='d'?pin:stick}
+    if(!m) return;
+    var s=(small.matches||(navigator.connection&&navigator.connection.saveData))?SETS.m:SETS.d;
+    if(s!==set){set=s;frames=[];cur=-1;started=false;cv.width=s.w;cv.height=s.h;if(document.readyState==='complete') load()}
+    measure();schedule();
+  }
+  // pin at the top, or (if taller than the viewport) where its bottom meets the viewport bottom
+  function measure(){
+    var hdr=parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--hdr-h'))||76;
+    var base=mode==='d'?0:hdr+8, gap=mode==='d'?0:8;
+    el.style.setProperty('--pin-top',Math.min(base,innerHeight-el.offsetHeight-gap)+'px');
+  }
+  function progress(){
+    var r=el.parentElement.getBoundingClientRect(), top=parseFloat(el.style.getPropertyValue('--pin-top'))||0, d=r.height-el.offsetHeight;
+    return d>0?clamp((top-r.top)/d):0;
+  }
+  function draw(i){
+    var n=set.n, j=-1;
+    for(var d=0;d<n&&j<0;d++){if(frames[i-d]) j=i-d; else if(frames[i+d]) j=i+d}
+    if(j<0||j===cur) return;
+    cur=j;ctx.clearRect(0,0,cv.width,cv.height);ctx.drawImage(frames[j],0,0,cv.width,cv.height);
+  }
+  function update(){
+    var p=progress();
+    // part 1: wireframe → scan line reveals the 3D model → ghost, dimensions and callouts
+    var s=ease(seg(p,.04,.3)), out=1-seg(p,.5,.55), g=ease(seg(p,.32,.38));
+    solid.style.clipPath='inset(0 '+(100-s*100)+'% 0 0)';
+    scan.style.left=s*100+'%';scan.style.opacity=s>0&&s<1?1:0;
+    wire.style.opacity=1-seg(p,.3,.36);
+    ghost.style.opacity=.42*g*out;ghost.style.transform='translateX('+18*(1-g)+'%)';
+    dims.style.opacity=seg(p,.36,.4);
+    calls.forEach(function(c,i){
+      var o=seg(p,.38+.025*i,.42+.025*i)*out;
+      c.style.opacity=o;leads[i].forEach(function(l){l.style.opacity=o});
+    });
+    // part 2: crossfade to the frame sequence, then scrub assembled → exploded
+    var x=frames[0]?ease(seg(p,.55,.6)):0;
+    cv.style.opacity=x;stack.style.opacity=1-x;
+    if(x>0) draw(Math.round(seg(p,.58,1)*(set.n-1)));
+    var k=p<.2?0:p<.56?1:2;
+    caps.forEach(function(c,i){c.classList.toggle('on',i===k)});
+    bar.style.transform='scaleX('+p+')';
+  }
+  function schedule(){
+    if(ticking) return;
+    ticking=true;
+    requestAnimationFrame(function(){ticking=false;if(mode) update()});
+  }
+  // progressive loading after page load: first and last frame, then coarse to fine
+  function load(){
+    if(started||!mode) return;
+    started=true;
+    var s=set, order=[0,s.n-1], seen={0:1}, q=0, busy=0;
+    seen[s.n-1]=1;
+    [16,8,4,2,1].forEach(function(step){for(var i=0;i<s.n;i+=step) if(!seen[i]){seen[i]=1;order.push(i)}});
+    function next(){
+      while(busy<4&&q<order.length) (function(i){
+        var img=new Image();busy++;
+        img.decoding='async';
+        img.onload=function(){busy--;if(set!==s) return;frames[i]=img;cur=-1;schedule();next()};
+        img.onerror=function(){busy--;if(set===s) next()};
+        img.src=s.dir+'frame-'+('00'+(i+1)).slice(-3)+'.webp';
+      })(order[q++]);
+    }
+    next();
+  }
+
+  function on(mq,f){mq.addEventListener?mq.addEventListener('change',f):mq.addListener(f)}
+  on(rm,setup);on(small,setup);
+  addEventListener('scroll',schedule,{passive:true});
+  addEventListener('resize',setup);
+  if('ResizeObserver' in window) new ResizeObserver(function(){if(mode){measure();schedule()}}).observe(sec);
+  addEventListener('load',function(){(window.requestIdleCallback||setTimeout)(load)});
+  setup();
 })();
 </script>
 
