@@ -163,6 +163,17 @@ PAGES = [
       scope=['20 ft &amp; 40 ft containerised stations', 'Dual-compartment tanks with spill containment', 'Stage 1 vapour recovery &amp; ATG', 'Single &amp; double-wall fuel tanks', 'Baffles, vortex breakers &amp; hydrotest fixtures', 'Zone layout drawings based on the client’s area classification'],
       deliver=['Station GA &amp; fit-out drawings', 'Tank &amp; containment drawings', 'Zone layout drawings', 'Fabrication drawings', 'BOM'],
       codes=['UL 142', 'UL 2085', 'IEC 60079', 'ATEX 2014/34/EU', 'ADR', 'TRAKHEES'], projects=['F-01', 'F-07']),
+ dict(slug='tank-and-vessel-design', icon='i-tank', crumb='Tank &amp; vessel design',
+      title='Tank &amp; Vessel Design UAE | Damodar Engineering Design',
+      desc='Storage tank and pressure vessel design in the UAE: single and double-wall fuel tanks, nozzle orientations, hydrotest fixtures, fabrication drawings and BOMs.',
+      h1='Storage tank &amp; pressure vessel design',
+      intro=['Storage tank and pressure vessel design for fabricators, EPC contractors and equipment OEMs in the UAE, the GCC and India: single and double-wall fuel tanks, filter vessels and heavy tanks, issued as fabrication drawings, nozzle orientation drawings, hydrotest fixture details and weight, BOM and centre of gravity reports.',
+             'The track record covers more than 25 tanks from 500 L to 60 kL, including a 6,000 L filter vessel with heavy tanks at 8.0 bar design pressure. Shell and dished-head sizing is coordinated with the vessel designer, while nozzles, manways, baffles, vortex breakers, hydrotest fixtures and transport tie-downs are detailed for the workshop.'],
+      scope=['Single &amp; double-wall fuel tanks', 'Nozzles &amp; manways; shell/head sizing coordinated with the vessel designer', 'Baffles, vortex breakers &amp; hydrotest fixtures', 'Nozzle orientations &amp; transport tie-downs', 'Weight, BOM &amp; centre of gravity'],
+      deliver=['Fabrication drawings', 'Nozzle orientation drawings', 'Hydrotest fixture details', 'Weight, BOM &amp; CoG'],
+      codes=['UL 142', 'UL 2085', 'ASME VIII Div 1', 'API 650 · vertical atmospheric'],
+      codes_note='UL 142 and UL 2085 apply to horizontal fuel tanks, ASME VIII Div 1 to pressure vessels, and API 650 only to vertical atmospheric tanks.',
+      projects=['S-01', 'F-01']),
 ]
 
 for p in PAGES:
@@ -249,7 +260,7 @@ for p in PAGES:
   <div class="wrap">
     <div class="sec-head"><span class="code eyebrow">Standards</span><h2 id="codes-title">Relevant codes and standards</h2></div>
     <div class="svc-codes code">{''.join('<span class="tag">%s</span>' % c for c in p['codes'])}</div>
-    <p class="muted cap-note">{DISCLAIMER}</p>
+    {('<p class="cap-note">%s</p>' % p['codes_note']) if p.get('codes_note') else ''}<p class="muted cap-note">{DISCLAIMER}</p>
   </div>
 </section>
 
